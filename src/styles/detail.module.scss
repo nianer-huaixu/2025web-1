@@ -1,0 +1,68 @@
+@tailwind utilities;
+
+.detail1{
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #37383c, #1b1c20);
+  .productDetail1 {
+    display: flex;
+    padding-top: 30px;
+    padding-top: 160px;
+    justify-content: space-between;
+    .productImgWrap {
+      width: 760px;
+      height: 740px;
+      position: relative;
+      .imgBig{
+        width: 100%;
+        img{
+          margin: auto;
+          width: 100%;
+        }
+      }
+      .productImgList {
+        position: absolute;
+        bottom: 15px;
+        width: inherit;
+      }
+    }
+  
+    /* 参数详情 */
+    .produceParamWrap {
+      margin-left: 30px;
+      width: 560px;
+      position: relative;
+      color: #fff;
+      h6 {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 36px;
+        color: #FD2621;
+        margin-bottom: 40px;
+      }
+      p {
+        line-height: 36px;
+      }
+  
+      .productParamList1 {
+        margin-top: 30px;
+        display: flex;
+        align-items: flex-end;
+        a {
+          margin-right: 40px;
+          img {
+            display: block;
+            margin-right: 10px;
+          }
+        }
+      }
+  
+      .productParamBtnGroup {
+        position: absolute;
+        left: 0;
+        bottom: 40px;
+      }
+    }
+  }
+}
+/* 产品图片和具体参数 */

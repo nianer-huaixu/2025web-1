@@ -1,0 +1,145 @@
+@tailwind utilities;
+
+.productTag{
+  background-color: #CD241D;
+  div{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+  .tagWrap{
+    div{
+      flex-direction: column;
+      justify-content: center;
+      width: 120px;
+      height: 120px;
+      border-radius: 10px;
+      border: 2px solid #FFFFFF;
+      margin-right: 40px;
+      cursor: pointer;
+      img{
+        width: 50px;
+        margin: auto;
+      }
+    }
+    .activeDiv{
+      background-color: #fff;
+      color: #CD241D;
+      transition: var(--transition);
+      -webkit-transition: var(--webkit-transition);
+    }
+  }
+}
+.productBox{
+  padding-bottom: 40px;
+  .productWrap{
+    display: flex;
+    justify-content: space-between;
+    color: #000;
+    margin-top: 30px;
+    .productL{
+      width:30%;
+      height: 562px;
+      background: #FFFFFF;
+      border-radius: 20px;
+      text-align: center;
+      margin-right: 30px;
+      padding: 80px 0;
+      p{
+        font-size: 36px;
+      }
+      img{
+        margin: 20px auto 40px;
+      }
+      h4{
+        font-size: 32px;
+        color: #E71E19;
+        font-weight: 700;
+      }
+      b{
+        font-size: 40px;
+        font-weight: normal;
+      }
+      pre{
+        width: 120px;
+        height: 34px;
+        background: #CD241D;
+        border-radius: 17px;
+        color: #fff;
+        margin: 40px auto 0;
+        line-height: 34px;
+        cursor: pointer;
+        img{
+          display:inline-flex;
+          width: 20px;
+          height: 20px;
+          margin: 0;
+        }
+      }
+    }
+    .productR{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-column-gap:30px;
+      grid-row-gap:30px;
+      width: -webkit-fill-available;
+      -webkit-transition:all 0.5s linear;
+      transition:all 0.5s linear;
+      cursor: pointer;
+      div{
+        position: relative;
+        height: 266px;
+        background: #FFFFFF;
+        border-radius: 20px;
+        padding: 24px;
+        h5{
+          font-weight: bold;
+          font-size: 24px;
+          margin-bottom: 20px;
+        }
+        b{
+          font-weight: 400;
+          font-size: 16px;
+          color: #666666;
+          display: block;
+          line-height: 30px;
+        }
+        a{
+          display: block;
+          width: 120px;
+          height: 34px;
+          background: #CD241D;
+          border-radius: 17px;
+          color: #fff;
+          text-align: center;
+          line-height: 34px;
+          position: absolute;
+          left: 20px;
+          bottom: 20px;
+        }
+        img{
+          position: absolute;
+          right: 10px;
+          top: 40px;
+          width: 280px;
+          height: auto;
+        }
+        &:hover{
+          -webkit-transition:all 0.5s linear;
+          transition:all 0.5s linear;
+          background: #CD241D;
+          color: #fff;
+          b{
+            color: #fff;
+          }
+          a{
+            background: #fff;
+            color: #CD241D;
+          }
+        }
+      }
+    }
+  }
+}
