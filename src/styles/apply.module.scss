@@ -25,3 +25,51 @@
     }
   }
 }
+.applyWrap{
+  width: 100%;
+  background-color: #fff;
+  padding: 40px 0;
+  .applyCase{
+    position: relative;
+    margin-bottom: 40px;
+    height: 680px;
+    border-radius: 10px;
+    border: 1px solid #eaedf0;
+    .applyCaseL{
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 40px 0 0 40px;
+      h4{
+        font-size: 36px;
+        color: #E30212;
+        letter-spacing: 4px;
+      }
+      p{
+        width: 614px;
+        font-size: 16px;
+        color: #333333;
+        margin-bottom: 40px;
+        text-align: justify;
+      }
+      .linkgroup{
+        display: flex;
+        a{
+          display: block;
+          width: 90px;
+          height: 33px;
+          border-radius: 8px;
+          border: 1px solid #E30212;
+          color: #E30212;
+          text-align: center;
+          line-height: 33px;
+          margin-right: 20px;
+          &:hover{
+            background-color: rgba(227,2,18);
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

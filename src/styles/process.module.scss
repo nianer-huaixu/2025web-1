@@ -1,0 +1,433 @@
+.processTitle{
+  text-align: center;
+  position: relative;
+  height: 80px;
+  h4{
+    font-weight: bold;
+    font-size: 48px;
+    color: #333333;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    &::after{
+      content: '';
+      position: absolute;
+      width: 121px;
+      height: 4px;
+      background: #E30212;
+      left: 50%;
+      bottom: -4px;
+      transform: translateX(-50%);
+    }
+  }
+  span{
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    // z-index: 1;
+    font-weight: bold;
+    font-size: 50px;
+    color: #DDDDDD;
+  }
+}
+.process1{
+  background: #fff url('https://www.yangdong.co:8443/yangdong-new/process/bg-1.png')no-repeat left top;
+  height: initial;
+  .process1Box{
+    .process1Top{
+      height: 235px;
+      display: flex;
+      justify-content: space-between;
+      .process1TopL{
+        padding: 40px 0 0 60px;
+        h4{
+          font-size: 48px;
+          color: #FEFEFE;
+          position: relative;
+          margin-bottom: 40px;
+          &::after{
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            content: '';
+            width: 190px;
+            height: 3px;
+            background: #FFFFFF;
+          }
+        }
+        p{
+          font-size: 24px;
+          color: #FEFEFE;
+        }
+      }
+      .process1TopR{
+        width: 360px;
+        background: #010102;
+        img{
+          margin: 40px auto;
+        }
+      }
+    }
+    .process1Cen{
+      display: flex;
+      div{
+        flex: 1;
+        text-align: center;
+        padding: 40px 0;
+        img{
+          margin: 0 auto 20px;
+        }
+        p,span{
+          font-size: 24px;
+          color: #FEFEFE;
+        }
+        p{
+          position: relative;
+          margin-bottom: 10px;
+          &::after{
+            position: absolute;
+            content: '';
+            width: 63px;
+            height: 3px;
+            background: #E30212;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
+    .process1BH{
+      text-align: center;
+      color: #010102;
+      margin: 40px auto;
+      h4{
+        font-size: 48px;
+        position: relative;
+        margin-bottom: 40px;
+        &::after{
+          content: '';
+          position: absolute;
+          width: 190px;
+          height: 3px;
+          background: #010102;
+          bottom: -20px;
+          left: 50%;
+          transform: translateX(-50%);
+          
+        }
+      }
+      p{
+        font-size: 24px;
+      }
+    }
+    .process1B{
+      display: flex;
+      .process1BItem{
+        flex: 1;
+        margin: 0 5px;
+        text-align: center;
+        img{
+          margin: auto;
+          position: relative;
+          z-index: 3;
+        }
+        .process1BItemB{
+          height: 370px;
+          background: #F3F3F3;
+          padding: 100px 10px 40px;
+          border-radius: 30px;
+          position: relative;
+          z-index: 2;
+          top: -85px;
+          overflow: hidden;
+          &::before{
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 190px;
+            height: 190px;
+            border-radius: 50%;
+            transform: translate(-50%,-50%);
+            background: #FDD9D9;
+            -webkit-transition:all 0.5s linear;
+            transition:all 0.5s linear;
+          }
+          span{
+            font-size: 30px;
+            color: #333333;
+            font-weight: bold;
+            position: relative;
+            top: 20px;
+            -webkit-transition:all 0.5s linear;
+            transition:all 0.5s linear;
+            &::before{
+              content: '';
+              position: absolute;
+              width: 41px;
+              height: 3px;
+              background: #333333;
+              bottom: -14px;
+              left: 50%;
+              transform: translateX(-50%);
+              -webkit-transition:all 0.5s linear;
+              transition:all 0.5s linear;
+            }
+          }
+          p{
+            font-size: 18px;
+            color: #010102;
+            margin-top: 60px;
+            line-height: 36px;
+          }
+          &:hover{
+            box-shadow: var(--shadow);
+            -webkit-transition:all 0.5s linear;
+            transition:all 0.5s linear;
+            &::before{
+              background: #E30212;
+              -webkit-transition:all 0.5s linear;
+              transition:all 0.5s linear;
+            }
+            span{
+              color: #E30212;
+              -webkit-transition:all 0.5s linear;
+              transition:all 0.5s linear;
+              &::before{
+              background: #E30212;
+              -webkit-transition:all 0.5s linear;
+              transition:all 0.5s linear;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.process2{
+  background: url('https://www.yangdong.co:8443/yangdong-new/process/bg-2.png')no-repeat;
+  height: 792px;
+  .process2C{
+    display: flex;
+    padding-top: 60px;
+    .process2CL{
+      width: 50%;
+      h4{
+        font-size: 48px;
+        color: #F0EEEE;
+      }
+      p{
+        font-size: 18px;
+        color: #F0EEEE;
+      }
+      a{
+        display: block;
+        width: 231px;
+        height: 49px;
+        background: #E30212;
+        border-radius: 25px;
+        font-size: 18px;
+        color: #F0EEEE;
+        text-align: center;
+        line-height: 49px;
+        margin: 30px 0;
+      }
+      .process2CList{
+        display: flex;
+        margin: 60px 0;
+        .process2CListI{
+          width: 160px;
+          text-align: center;
+          div{
+            width: 88px;
+            height: 88px;
+            margin: auto;
+            background: #E30212;
+            border-radius: 50%;
+            position: relative;
+            margin-bottom: 20px;
+            img{
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%,-50%);
+            }
+          }
+        }
+      }
+    }
+    .process2CR{
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+      .process2CR1,.process2CR2{
+        h4{
+          font-weight: 500;
+          font-size: 48px;
+          color: #FDFCFC;
+          margin-left: 20px;
+        }
+        div{
+          width: 322px;
+          height: 308px;
+          margin-left: 20px;
+          background: #FFFFFF;
+          border-radius: 10px;
+          position: relative;
+          padding: 10px;
+          span{
+            position: absolute;
+            top: 80px;
+            z-index: 3;
+            font-weight: bold;
+            font-size: 30px;
+            color: #333333;
+          }
+          b{
+            position: absolute;
+            z-index: 2;
+            right: 20px;
+            top: 0px;
+            font-family: Impact;
+            font-weight: 400;
+            font-size: 104px;
+            color: #F0EEEE;
+          }
+          p{
+            font-weight: 400;
+            font-size: 18px;
+            color: #333333;
+            margin-top: 140px;
+          }
+      }
+      
+      }
+    }
+  }
+}
+.process3{
+  padding-top: 60px;
+  width: 100%;
+  margin-bottom: 40px;
+  .process3Top{
+    display: flex;
+    margin-top: 40px;
+    div{
+      text-align: center;
+      flex: 1;
+      background: #F7F7F7;
+      font-size: 30px;
+      color: #333333;
+      padding: 10px 0;
+      cursor: pointer;
+      img{
+        margin: 0 auto 10px;
+      }
+    }
+    .activeBox{
+      background: #E30212;
+      color: #FFF;
+      position: relative;
+      &::after{
+        content: '';
+        position: absolute;
+        bottom: -16px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-top: 16px solid #E30212;
+        border-right: 10px solid transparent;
+        border-left: 10px solid transparent;
+      }
+    }
+  }
+  .process3C{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    .process3CR{
+      margin-left: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .process3CRT{
+        h5{
+          font-size: 30px;
+          color: #333333;
+          margin-bottom: 20px;
+        }
+        p{
+          font-size: 18px;
+          color: #666666;
+        }
+      }
+      .process3CRB{
+        display: flex;
+        img{
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+.process4{
+  padding-top: 80px;
+  width: 100%;
+  padding-bottom: 40px;
+  background: url('https://www.yangdong.co:8443/yangdong-new/process/bg-3.png')no-repeat;
+  .process4C{
+    margin-top: 40px;
+    .process4Cgrid{
+      display: grid;
+      gap: 24px; /* 项目间距 */
+      div{
+        height: 267px;
+        position: relative;
+        span{
+          position: absolute;
+          font-size: 24px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          color: #FFF;
+          background: rgba(227,2,18,0.6);
+          padding: 5px 10px;
+        }
+      }
+    }
+    .process4Cgrid1{
+      grid-template-columns: repeat(1, 626px 362px 363px);
+    }
+    .process4Cgrid2{
+      grid-template-columns: repeat(3, 32.6%);
+      margin: 24px 0;
+      .diyBox{
+        background: #E30212;
+        color: #FFF;
+        span{
+          font-family: Roboto;
+          width: 336px;
+          color: rgba(255, 255, 255, 0.2);
+          z-index: 4;
+        }
+        p{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          z-index: 5;
+          font-size: 48px;
+          font-weight: bold;
+          color: #FFFFFF;
+        }
+      }
+    }
+    img{
+      
+    }
+  }
+}

@@ -1,14 +1,14 @@
 const data = [
   {type:'铝板',classify:[
   {serise:'1系',texture:'工业纯铝',e_t:'ONE',product:[
-      {
-          name:'1050',
-          ply:['H12','H14']
-      },
-      {
-          name:'1060',
-          ply:['H14','H24']
-      }
+    {
+      name:'1050',
+      ply:['H12','H14']
+    },
+    {
+      name:'1060',
+      ply:['H14','H24']
+    }
   ]},
   {serise:'2系',texture:'军工硬铝',e_t:'TWO',product:[
       {
