@@ -7,7 +7,9 @@ class Common {
     makeObservable(this, {
       cate: observable,
       url:observable,
-      changeCate: action
+      newIndex:observable,
+      changeCate: action,
+      changeNewIndex:action
     })
   }
   cate = 0
@@ -15,5 +17,9 @@ class Common {
     this.cate = val
   }
   url = 'https://www.yangdong.co:8443/yangdong-new/'
+  newIndex = 0
+  changeNewIndex(index){
+    this.newIndex = index
+  }
 }
 export default Common
