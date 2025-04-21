@@ -408,7 +408,7 @@ export default function Home() {
         </section>
         <section className={styles.indexBW}>
           <div className="main">
-            <p>您离解决离您的铝材方案只有一个【联系我们】的距离</p>
+            <p>您离解决您的铝材方案只有一个【联系我们】的距离</p>
             <a href=""></a>
           </div>
         </section>
@@ -418,5 +418,5 @@ export default function Home() {
           transition={{ duration: 3 }}
         /> */}
     </div>
-  );
+  ); 
 }

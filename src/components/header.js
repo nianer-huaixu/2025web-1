@@ -14,7 +14,7 @@ function MuneItem(props){
     {label:'应用领域',route:'/apply',isApp:true},
     {label:'行业方案',route:'/case'},
     {label:'走进扬东',route:'/about'},
-    {label:'新闻资讯',route:'/new',isList:true},
+    {label:'新闻资讯',route:'/news',isList:true},
     {label:'联系我们',route:'/contact'}
   ]
   const muneItem = headData.map(item =>{

@@ -28,6 +28,7 @@
 .companyNew{
   .firstNew{
     position: relative;
+    cursor: pointer;
     img{
       width: 860px;
       height: 560px;
@@ -93,6 +94,7 @@
   row-gap: 40px;
   cursor: pointer;
   .itemNew{
+    cursor: pointer;
     .imgBox{
       position: relative;
       height: 310px;
@@ -140,7 +142,9 @@
         transition: var(--transition);
         -webkit-transition: var(--webkit-transition);
       }
-      &:hover{
+    }
+    &:hover{
+      .itemNewC{
         background: #E30212;
         span,p,i{
           color: #FFFFFF;
@@ -154,7 +158,6 @@
         }
       }
     }
-    
   }
   
 }
@@ -169,6 +172,9 @@
   row-gap: 40px;
   .videoItem{
     box-shadow: 0px 3px 10px 2px rgba(35,24,21,0.1);
+    video{
+      position: relative;
+    }
   }
   .videoTitle{
     padding:10px;
@@ -177,5 +183,38 @@
     font-weight:bold;
     border:1px solid #efefef;
     color: #E30212;
+  }
+}
+
+/* 新闻内页 */
+.newDetail{
+  width:1400px;
+  padding-top:60px;
+  padding-bottom: 60px;
+  margin:auto;
+  h5{
+    text-align:center;
+    font-size:26px;
+    color: #000000;
+  }
+  p{
+    color:#737373;
+    margin:20px 0;
+    font-size: 16px;
+  }
+  img{
+    margin:60px auto 30px;
+  }
+  .linkBox{
+    a{
+      color:#737373;
+      margin:20px 0;
+      &:first-child{
+        float:left;
+      }
+      &:last-child{
+        float:right;
+      }
+    }
   }
 }

@@ -1,14 +1,22 @@
+'use client';
 import { useState,useEffect } from "react"
 import useStore from "@/hook/useStore"
 import Banner from "@/components/banner"
+import VideoPlayer from "@/components/videoPlay"
 import styles from '@/styles/new.module.scss'
+import Router from 'next/router'
 
 
 function CompanyNews(props){
   const store = useStore()
   const {list} = props.data
+  function chooseLink(i){
+    Router.push({
+      pathname:`/news/0_${i}`
+    })
+  }
   return <div className={[styles.companyNew,"main"].join(' ')}>
-    <div className={styles.firstNew}>
+    <div className={styles.firstNew} onClick={()=> chooseLink(0)}>
       <img src={store.common.url + list[0]?.img}/>
       <div className={styles.firstNewR}>
         <h4>多年沉淀  笃志前行</h4>
@@ -23,10 +31,10 @@ function CompanyNews(props){
     </div>
     <div className={styles.newsWrap}>
       {list.map((item,i)=> {
-        if(i>0) return <div key={i} className={styles.itemNew}>
+        if(i>0) return <div key={i} className={styles.itemNew} onClick={()=> chooseLink(i)}>
           <div className={styles.imgBox}><img src={store.common.url + item.img}/></div>
           <div className={styles.itemNewC}>
-            <span>{item.year}-{item.month}-{item.day}</span>
+            <span>{item.date}-{item.month}-{item.day}</span>
             <p>{item.title}</p>
             <i>More+</i>
           </div>
@@ -39,14 +47,42 @@ function CompanyNews(props){
 function IndustryNews(props){
   const store = useStore()
   const {list} = props.data
-
+  function chooseLink(i){
+    Router.push({
+      pathname:`/news/1_${i}`
+    })
+  }
   return <div className={[styles.industryNew,"main"].join(' ')}>
     <div className={styles.newsWrap}>
       {list.map((item,i)=> {
-        return <div key={i} className={styles.itemNew}>
+        return <div key={i} className={styles.itemNew} onClick={()=> chooseLink(i)}>
           <div className={styles.imgBox}><img src={store.common.url + item.img}/></div>
           <div className={styles.itemNewC}>
             <span>{item.year}-{item.month}-{item.day}</span>
+            <p>{item.title}</p>
+            <i>More+</i>
+          </div>
+        </div>
+      })}
+    </div>
+  </div>
+}
+
+function Knowledge(props){
+  const store = useStore()
+  const {list} = props.data
+  function chooseLink(i){
+    Router.push({
+      pathname:`/news/2_${i}`
+    })
+  }
+  return <div className={[styles.industryNew,"main"].join(' ')}>
+    <div className={styles.newsWrap}>
+      {list.map((item,i)=> {
+        return <div key={i} className={styles.itemNew} onClick={()=> chooseLink(i)}>
+          <div className={styles.imgBox}><img src={store.common.url + item.img}/></div>
+          <div className={styles.itemNewC}>
+            <span>{item.date}</span>
             <p>{item.title}</p>
             <i>More+</i>
           </div>
@@ -107,9 +143,7 @@ function VideoCom(){
   ]
   const Item = videoList.map((item,i)=>{
     return <div className={styles.videoItem} key={i}>
-      <video width="100%" controls preload="auto" muted>
-        <source src={item.src} type="video/mp4" />
-      </video>
+      <VideoPlayer src={item.src}/>
       <div className={styles.videoTitle}>{item.title}</div>
     </div>
   })
@@ -166,6 +200,7 @@ export default function New(){
       </div>
       {store.common.newIndex == 0 && <CompanyNews data={data}/>}
       {store.common.newIndex == 1 && <IndustryNews data={data}/>}
+      {store.common.newIndex == 2 && <Knowledge data={data}/>}
       {store.common.newIndex == 3 && <VideoCom/>}
     </>
   )

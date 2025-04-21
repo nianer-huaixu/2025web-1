@@ -38,7 +38,7 @@ body {
 h1,h2,h3,h4,h5,h6,p,span,b,i,li,tr,img,video{
   user-select:none;/*禁止鼠标选中*/
 }
-img,video{
+img{
   pointer-events: none;/*禁止图片所有点击事件*/
 }
 p,i,b,li,a{
