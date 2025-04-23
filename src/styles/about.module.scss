@@ -1,0 +1,407 @@
+.titleCom{
+    font-weight: bold;
+    font-size: 48px;
+    color: #E30212;
+    position: relative;
+    &::after{
+      position: absolute;
+      left: 0;
+      top: -14;
+      width: 390px;
+      height: 42px;
+      font-weight: bold;
+      font-size: 40px;
+      color: rgba(149, 148, 148, 0.3);
+    }
+}
+.about1wrap{
+  height: 100vh;
+  min-height: 960px;
+  width: 100%;
+  background: url('https://www.yangdong.co:8443/yangdong-new/about/bg-1.png')no-repeat center;
+  background-size: cover;
+  .about1wrapC{
+    padding-top: 120px;
+    position: relative;
+    .about1wrapL{
+      h4{
+        &::after{
+          content: 'About the Company';
+        }
+      }
+      b{
+        font-size: 24px;
+        color: #010000;
+        position: relative;
+        &::after{
+          position: absolute;
+          content: '';
+          left: 0;
+          bottom: -10px;
+          width: 83px;
+          height: 4px;
+          background: #FF0000;
+        }
+      }
+      p{
+        width: 640px;
+        font-size: 18px;
+        color: #333333;
+        margin-top: 60px;
+        text-align: justify;
+      }
+      .about1wrapList{
+        margin-top: 100px;
+        display: flex;
+        div{
+          margin-right: 40px;
+        }
+        pre,pre>i{
+          font-family: Roboto;
+          font-weight: bold;
+          font-size: 60px;
+          color: #FD2621;
+          i{
+            font-style: normal;
+          }
+        }
+        p{
+          margin-top: 0px;
+          color: #333333;
+          width: 160px;
+        }
+      }
+    }
+    img{
+      position: absolute;
+      right: 0;
+      top: 100;
+    }
+  }
+  
+}
+.about2Wrap{
+  width: 100%;
+  height: 886px;
+  background: url('https://www.yangdong.co:8443/yangdong-new/about/bg-2.png');
+  .about2C{
+    margin-top: 80px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    h4{
+      &::after{
+        content: 'History of Development';
+        width: 464;
+      }
+    }
+    .about2CTop{
+      display: flex;
+      .about2CTopItem{
+        margin-right: 60px;
+        p{
+          width: calc(1400  / 3 - 60);
+          font-family: Roboto;
+          font-weight: bold;
+          font-size: 120px;
+          color: #E1E0E0;
+        }
+        span{
+          font-size: 24px;
+          color: #555555;
+        }
+      }
+      
+    }
+    .historyText{
+      margin-top: 40px;;
+      height: 240px;
+      p{
+        font-size: 16px;
+        color: #000;
+        text-align: justify;
+      }
+      div{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        p{
+          width: 49%;
+          letter-spacing: -0.0063rem;
+        }
+      }
+      
+    }
+    .btnGroup{
+      display: flex;
+      button{
+        width: 62px;
+        height: 62px;
+        cursor: pointer;
+        &:first-child{
+          margin-right: 80px;
+        }
+      }
+      button[disabled]{
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+.about3wrap{
+  height: 870px;
+  h4{
+    margin-top: 80px;
+    margin-bottom: 40px;
+    &::after{
+      content: 'Certificate of Honor';
+    }
+  }
+  .about3C{
+    display: flex;
+    justify-content: space-between;
+    .about3L{
+      display: grid;
+      grid-template-columns:repeat(2,2fr);
+      grid-column-gap: 40px;
+      grid-row-gap: 20px;
+      width: 760px;
+      div{
+        text-align: center;
+        position: relative;
+        padding-top: 100px;
+        span{
+          font-size: 24px;
+          color: #000000;
+        }
+        p{
+          margin-top: 20px;
+          font-weight: 400;
+          font-size: 16px;
+          color: #555555;
+        }
+        &::before{
+          position: absolute;
+          content: '';
+        }
+        &:nth-child(1){
+          background: url('https://www.yangdong.co:8443/yangdong-new/about/icon-r-1.png')no-repeat top center;
+        }
+        &:nth-child(2){
+          background: url('https://www.yangdong.co:8443/yangdong-new/about/icon-r-2.png')no-repeat top center;
+        }
+        &:nth-child(3){
+          background: url('https://www.yangdong.co:8443/yangdong-new/about/icon-r-3.png')no-repeat top center;
+        }
+        &:nth-child(4){
+          background: url('https://www.yangdong.co:8443/yangdong-new/about/icon-r-4.png')no-repeat top center;
+        }
+        &:hover{
+          &:nth-child(1){
+            background: url('https://www.yangdong.co:8443/yangdong-new/about/icon-g-1.png')no-repeat top center;
+          }
+          &:nth-child(2){
+            background: url('https://www.yangdong.co:8443/yangdong-new/about/icon-g-2.png')no-repeat top center;
+          }
+          &:nth-child(3){
+            background: url('https://www.yangdong.co:8443/yangdong-new/about/icon-g-3.png')no-repeat top center;
+          }
+          &:nth-child(4){
+            background: url('https://www.yangdong.co:8443/yangdong-new/about/icon-g-4.png')no-repeat top center;
+          }
+        }
+      }
+    }
+    .about3R{
+      width: 600px;
+      height: 507px;
+      position: relative;
+      overflow: hidden;
+      video{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: none;
+      }
+      .videoPlay{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 51px;
+        height: 51px;
+        background: rgba(8,11,0,0.75);
+        border-radius: 50%;
+      }
+    }
+  }
+  
+}
+.about4wrap{
+  width: 100%;
+  height: 852px;
+  background: url('https://www.yangdong.co:8443/yangdong-new/about/bg-3.png');
+  div{
+    padding-top: 100px;
+    h4{
+      &::after{
+        content: 'Certificate of Honor';
+      }
+    }
+  }
+}
+.about5wrap{
+  h4{
+    &::after{
+      content: 'Strength of The Company';
+      width: 500px;
+    }
+  }
+  .about5C{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    .about5ImgWrap{
+      margin-top: 40px;
+      display: flex;
+      .about5ImgL{
+        width: 626px;
+        height: 562px;
+        position: relative;
+        overflow: hidden;
+        p{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          width: 469px;
+          padding: 40px 30px;
+          background: rgba(227,2,18,0.6);
+          font-size: 18px;
+          color: #FFFFFF;
+          line-height: 36px;
+          text-align: center;
+        }
+      }
+      .about5ImgR{
+        margin-left: 15px;
+        .about5ImgRgrid1,.about5ImgRgrid2{
+          display: grid;
+          gap:15px;
+          .imgWrap{
+            position: relative;
+            display: inline-block;
+            overflow: hidden; /* 确保线框不会超出容器 */
+            img{
+              object-fit: cover; /* 保持图片比例 */
+              display: block;
+              transition: all 0.3s ease;
+            }
+            &::before{
+              content: '';
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              width: 0;
+              height: 0;
+              border: 2px solid transparent;
+              transform: translate(-50%, -50%);
+              transition: all 0.8s ease-out;
+              z-index: 10;
+              pointer-events: none; /* 确保不影响鼠标事件 */
+            }
+            &:hover{
+              &::before{
+                width: 80%;
+                height: 80%;
+                border-color: #E30212;
+              }
+              img{
+                transform: scale(1.2);
+                transition: all 0.8s ease-out;
+              }
+            }
+          }
+        }
+        .about5ImgRgrid1{
+          grid-template-columns:repeat(2,1fr);
+          margin-bottom: 15px;
+        }
+        .about5ImgRgrid2{
+          grid-template-columns:repeat(3,1fr);
+        }
+      }
+    }
+  }
+}
+.about6{
+  margin-top: 40px;
+  h4{
+    text-align: center;
+    margin-bottom: 40px;
+    &::after{
+      content: 'Core Values';
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .about6C{
+    display: flex;
+    .about6CItem{
+      flex: 1;
+      position: relative;
+      div{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: inherit;
+        height: 100%;
+        text-align: center;
+        background-color: rgba(0,0,0,0.3);
+        span{
+          font-size: 30px;
+          color: #FFFFFF;
+        }
+        p{
+          font-size: 18px;
+          color: #FFFFFF;
+          padding: 0px 60px;
+          text-align: justify;
+          line-height: 30px;
+          height: 84px;
+          // overflow: hidden;     /* 隐藏溢出内容 */
+          // text-overflow: ellipsis; /* 用省略号代替溢出文本 */
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+      }
+      &:nth-child(odd){
+        div{
+          padding-top: 40px;
+          transition: all 0.4s ease-out;
+        }
+      }
+      &:nth-child(even){
+        div{
+          padding-top: 320px;
+          transition: all 0.4s ease-out;
+        }
+      }
+      &:hover{
+        div{
+          background-color: rgba(0,0,0,0.1);
+          transition: all 0.4s ease-out;
+        }
+        &:nth-child(odd),&:nth-child(even){
+          div{
+            padding-top: 120px;
+            p{
+              height: 360px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
