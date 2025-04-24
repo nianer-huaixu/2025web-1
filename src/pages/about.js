@@ -147,6 +147,7 @@ function About2(){
       p2:'以客户为中心,绝不失信于任何人,以我的说到做到感染他人,赢得尊重。',
       p3:[]
     }
+    
   ]
   const [index,setIndex] = useState(0)
   function add(){
@@ -158,7 +159,7 @@ function About2(){
   return <section className={styles.about2Wrap}>
     <div className={[styles.about2C,'main'].join(' ')}>
       <h4 className={styles.titleCom}>发展历程</h4>
-      <div className={styles.about2CTop}>
+      <div className={styles.about2CTop} style={{marginLeft: `${-(1400/3)*index}px`}}>
         {data.map((item,i)=>{
           return <div className={styles.about2CTopItem} key={i}>
             <p style={{color:index == i ? '#FD2621' :'#E1E0E0'}}>{item.year}</p>

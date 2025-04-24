@@ -2,6 +2,7 @@ import { useState,useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import Slider from "react-slick"
+import ProductCom from '@/components/productCom'
 import styles from '@/styles/detail.module.scss'
 import useStore from '@/hook/useStore'
 
@@ -27,7 +28,8 @@ function Detail1(props){
     autoplay:false,
     slidesToShow: 4,
     slidesToScroll: 1,
-    arrows:imgListArr.length == 4 ? false :true,
+		arrows:false
+    // arrows:imgListArr.length == 4 ? false :true,
   };
   useEffect(()=>{
     setImg(0)
@@ -79,6 +81,132 @@ function Detail1(props){
   </div>
 }
 
+function Param({chemical,physics,mechanical}){
+	return (
+	<div className={styles.paramM}>
+		<div className={[styles.paramMC,'main'].join(' ')}>
+			<div className={styles.tableL}>化学成分</div>
+			<table border={0} className={styles.productTableW}>
+				<thead>
+					<tr>
+						<th colSpan={2}>合金牌号</th>
+						<th>硅Si</th>
+						<th>铁Fe</th>
+						<th>铜Cu</th>
+						<th>锰Mn</th>
+						<th>镁Gg</th>
+						<th>铬Cr</th>
+						<th>锌Zn</th>
+						<th>钛Ti</th>
+						<th>锆Zr</th>
+						<th>镍Ni</th>
+						<th colSpan={2}>其他</th>
+						<th>铝Al</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>新牌号</td>
+						<td>旧牌号</td>
+						<td rowSpan={2}>{chemical.si}</td>
+						<td rowSpan={2}>{chemical.fe}</td>
+						<td rowSpan={2}>{chemical.cu}</td>
+						<td rowSpan={2}>{chemical.mn}</td>
+						<td rowSpan={2}>{chemical.gg}</td>
+						<td rowSpan={2}>{chemical.cr}</td>
+						<td rowSpan={2}>{chemical.zn}</td>
+						<td rowSpan={2}>{chemical.ti}</td>
+						<td rowSpan={2}>{chemical.zr}</td>
+						<td rowSpan={2}>{chemical.ni}</td>
+						<td>每个</td>
+						<td>总量</td>
+						<td rowSpan={2}>{chemical.al}</td>
+					</tr>
+					<tr>
+					<td>{chemical.new_mark}</td>
+					<td>{chemical.old_mark}</td>
+					<td>{chemical.each}</td>
+					<td>{chemical.amount}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div className={[styles.paramMC,'main'].join(' ')}>
+			<div className={styles.tableL}>物理性能</div>
+			<table border={0} className={styles.productTableW}>
+				<thead>
+					<tr>
+						<th>铝合金牌号及状态<br></br>(参考值)</th>
+						<th>热膨胀系数<br></br>(20-100°C)μm/m·k </th>
+						<th>熔点范围<br></br>(°C)</th>
+						<th>电导率<br></br>20°C(68°F)(%IACS)</th>
+						<th>电阻率<br></br>20°C(68*F) Ωmm2/m</th>
+						<th>密度<br></br>(20°C)(g/cm3)</th>
+					</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>{physics.refer}</td>
+					<td>{physics.coefficent}</td>
+					<td>{physics.melting}</td>
+					<td>{physics.conductance}</td>
+					<td>{physics.electrical}</td>
+					<td>{physics.density}</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<div className={[styles.paramMC,'main'].join(' ')}>
+			<div className={styles.tableL}>机械性能</div>
+			<table border={0} className={styles.productTableW}>
+				<thead>
+					<tr>
+						<th>铝合金牌号及状态<br></br>（参考值）</th>
+						<th>抗拉强度<br></br>Rm/Mpa</th>
+						<th>屈服强度<br></br>Rp0.2/Mpa</th>
+						<th>延伸率/%</th>
+						<th>硬度/HBWa</th>
+					</tr>
+			</thead>
+			<tbody>
+					<tr>
+						<td>{mechanical.refer}</td>
+						<td>{mechanical.resist}</td>
+						<td>{mechanical.surrender}</td>
+						<td>{mechanical.extend}</td>
+						<td>{mechanical.hardness}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	)
+}
+
+function Typical({use,label}){
+	console.log(label,'le');
+	const lastDigitIndex = label.search(/\d(?=\D*$)/);
+	console.log(lastDigitIndex);
+	console.log(label.slice(lastDigitIndex + 1));
+	
+	const store = useStore()
+	return (
+		<div className={styles.typical}>
+			<div className={[styles.typicalC,'main'].join(' ')}>
+				<div>
+					<img src={store.common.url +'product/use_t.png'}/>
+					<p>
+						<b>{use.title}主要特征及应用范围：</b><br></br>
+						{use.introduce}
+					</p>
+					<p>{use.typeuse}</p>
+				</div>
+				<img src={store.common.url + 'product/' + label.slice(lastDigitIndex + 1) + '.png'}/>
+			</div>
+		</div>
+	)
+}
+
 function productDetail(){
   const searchParams = useSearchParams()
   const detail = searchParams.get('detail')
@@ -101,6 +229,23 @@ function productDetail(){
 	}
   return <>
     <Detail1 data={data.productMain} product={detail}/>
+		<div className={styles.anchor}>
+			<a href='#'>产品简介</a>
+			<a href='#'>性能参数</a>
+			<a href='#'>典型用途</a>
+			<a href='#advantage'>产品优势</a>
+			<a href='#apply'>性能参数</a>
+			<a href='#strength'>公司实力</a>
+		</div>
+		
+    <div className='upwards' id='param'></div>
+		<div className={styles.paramTitle}>
+			<p className='main'>性能参数Parameters of performance</p>
+		</div>
+		<Param chemical={data.chemical} physics={data.physics} mechanical={data.mechanical}/>
+    <div className='upwards' id='typical'></div>
+		<Typical use={data.use} label={detail}/>
+		<ProductCom/>
   </>
 }
 
