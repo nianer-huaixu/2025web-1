@@ -258,6 +258,7 @@
   width: 100%;
   height: 852px;
   background: url('https://www.yangdong.co:8443/yangdong-new/about/bg-3.png');
+  background-size: contain;
   div{
     padding-top: 100px;
     h4{
@@ -401,7 +402,7 @@
       }
       &:nth-child(even){
         div{
-          padding-top: 320px;
+          padding-top: 260px;
           transition: all 0.4s ease-out;
         }
       }

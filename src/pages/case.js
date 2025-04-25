@@ -1,13 +1,17 @@
 import Banner from "@/components/banner"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import useStore from "@/hook/useStore"
 import styles from '@/styles/case.module.scss'
 export default function Case(){
   const store = useStore()
-  const [index,setIndex] = useState(0)
+  const [index,setIndex] = useState(store.common.caseIndex)
   function seleceIndex(index){
-    setIndex(index);
+    setIndex(index)
+    store.common.changeCaseIndex(index)
   }
+  useEffect(()=>{
+    setIndex(store.common.caseIndex)
+  },[store.common.caseIndex])
   const data1 = [
     {text:'工程机械'},
     {text:'电子电器'},

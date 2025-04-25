@@ -1,3 +1,4 @@
+"use client"
 import { useState,useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
@@ -10,12 +11,11 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
 function Detail1(props){
-  const {data,product} = props
+  const {data,model,type} = props
   const store = useStore()
-  const lastDigitIndex = product.search(/\d(?=\D*$)/);
   let imgListArr = []
-  for(let i = 1;i<=data.amount;i++){
-    imgListArr.push(`https://www.yangdong.co:8443/${product.slice(lastDigitIndex + 1)}/${product.slice(0, lastDigitIndex + 1)}/${i}.png`)
+  for(let i = 1;i<=4;i++){
+    imgListArr.push(`https://www.yangdong.co:8443/${type}/${model}/${i}.png`)
   }
   const [currImg,setImg] = useState(0)
   // 点击选中图片
@@ -33,7 +33,7 @@ function Detail1(props){
   };
   useEffect(()=>{
     setImg(0)
-  },[product])
+  },[model,type])
   return <div className={styles.detail1}> 
 			<div className={[styles.productDetail1,'main'].join(' ')}>
 				<div className={styles.productImgWrap}>
@@ -73,8 +73,8 @@ function Detail1(props){
 						<a><img src={store.common.url +'product/icon3.png'}/>服务与支持</a>
 				</p>
 				<p className={styles.productParamBtnGroup}>
-						<button className='redBtn'><a  target="_blank" href='https://html.ecqun.com/kf/sdk/openwin.html?corpid=11627559&cstype=rand&mode=0&cskey=kkd1a23CLKZMWrHPzz&scheme=2&source=100'>立即询价</a></button>
-						<button className='whiteBtn' style={{marginLeft:'20px'}}><Link href='/contactus'>联系我们</Link></button>
+					<button className='redBtn'><a  target="_blank" href='https://html.ecqun.com/kf/sdk/openwin.html?corpid=11627559&cstype=rand&mode=0&cskey=kkd1a23CLKZMWrHPzz&scheme=2&source=100'>立即询价</a></button>
+					<button className='whiteBtn' style={{marginLeft:'20px'}}><Link href='/contactus'>联系我们</Link></button>
 				</p>
 			</div>
 		</div>
@@ -183,12 +183,7 @@ function Param({chemical,physics,mechanical}){
 	)
 }
 
-function Typical({use,label}){
-	console.log(label,'le');
-	const lastDigitIndex = label.search(/\d(?=\D*$)/);
-	console.log(lastDigitIndex);
-	console.log(label.slice(lastDigitIndex + 1));
-	
+function Typical({use,model,type}){
 	const store = useStore()
 	return (
 		<div className={styles.typical}>
@@ -201,7 +196,7 @@ function Typical({use,label}){
 					</p>
 					<p>{use.typeuse}</p>
 				</div>
-				<img src={store.common.url + 'product/' + label.slice(lastDigitIndex + 1) + '.png'}/>
+				<img src={store.common.url + 'product/' + type + '.png'}/>
 			</div>
 		</div>
 	)
@@ -209,17 +204,19 @@ function Typical({use,label}){
 
 function productDetail(){
   const searchParams = useSearchParams()
-  const detail = searchParams.get('detail')
+  const model = searchParams.get('model')
+  const type = searchParams.get('type')
+	
   const [data,setData] = useState({productMain:{},intro:{},chemical:{},physics:{},mechanical:{},use:{}})
 	useEffect(() => {
-		if(detail != null)fetchData()
-	}, [detail])
+		if(model != null)fetchData()
+	}, [model,type])
 	const fetchData = async () => {
 		try {
 			const response = await fetch('/api/productAPI',{
 				method:'POST',
 				headers:{'Content-Type':'application/json'},
-				body:JSON.stringify({name:detail})
+				body:JSON.stringify({name:model+type})
 			})
 			const res = await response.json()
 			setData(res)
@@ -228,7 +225,7 @@ function productDetail(){
 		}
 	}
   return <>
-    <Detail1 data={data.productMain} product={detail}/>
+    <Detail1 data={data.productMain} model={model} type={type}/>
 		<div className={styles.anchor}>
 			<a href='#'>产品简介</a>
 			<a href='#'>性能参数</a>
@@ -244,7 +241,7 @@ function productDetail(){
 		</div>
 		<Param chemical={data.chemical} physics={data.physics} mechanical={data.mechanical}/>
     <div className='upwards' id='typical'></div>
-		<Typical use={data.use} label={detail}/>
+		<Typical use={data.use} model={model} type={type}/>
 		<ProductCom/>
   </>
 }

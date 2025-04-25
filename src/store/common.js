@@ -9,7 +9,8 @@ class Common {
       url:observable,
       newIndex:observable,
       changeCate: action,
-      changeNewIndex:action
+      changeNewIndex:action,
+      changeCaseIndex:action
     })
   }
   cate = 0
@@ -20,6 +21,10 @@ class Common {
   newIndex = 0
   changeNewIndex(index){
     this.newIndex = index
+  }
+  caseIndex = 0
+  changeCaseIndex(index){
+    this.caseIndex = index
   }
 }
 export default Common

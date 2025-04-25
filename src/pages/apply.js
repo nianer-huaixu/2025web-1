@@ -203,7 +203,7 @@ export default function Application(){
       <section className={styles.apply0}>
         <div className="main">
           <p className={styles.anchorBox}>{linkData.map((item,i)=>{
-            return <a key={i} href={'#'+ item.link}>{item.text}</a>
+            return <Link key={i} href={'/apply/#'+ item.link}>{item.text}</Link>
           })}</p>
         </div>
       </section>
@@ -220,7 +220,7 @@ export default function Application(){
               <p style={{fontSize:'24px',marginBottom:'20px'}}>典型合金如：</p>
               <div className={styles.linkgroup}>
                 {item.model.map((btn,b)=>{
-                  return <Link key={b} href={{pathname:'/product/detail',query:{detail:btn.lebel+btn.text}}}>{btn.lebel}</Link>
+                  return <Link key={b} href={{pathname:'/product/detail',query:{model:btn.lebel,type:btn.text}}}>{btn.lebel}</Link>
                 })}
               </div>
             </div>

@@ -37,6 +37,11 @@ function Product(){
       })
     }catch{}
   }
+  const [index,setCateIndex] =useState(store.common.cate)
+  function setCate(i){
+    setCateIndex(i)
+    store.common.changeCate(i)
+  }
   function showItem(index){
     if(isshow){
       setShow(false)
@@ -57,7 +62,7 @@ function Product(){
           <div className={styles.tagWrap}>
             {labelData.map((item,i)=>{
               return <div key={i} className={store.common.cate == item.index ? styles.activeDiv : ''}
-                onClick={()=>store.common.changeCate(item.index)}
+                onClick={()=>setCate(item.index)}
               >
                 <img src={store.common.url + 'product/icon-'+(store.common.cate == item.index? 'r' :'w')+'-'+i+'.png'}/>
                 <p>{item.lebel}</p>
@@ -83,7 +88,7 @@ function Product(){
                   <h5>{productItem.name}{item.texture}</h5>
                   <b>· {productItem.name}-{productItem.ply[0]}{data.list.type}</b>
                   {productItem.ply[1] && <b>· {productItem.name}-{productItem.ply[1]}{data.list.type}</b>}
-                  <Link href={{pathname:'/product/detail',query:{detail:productItem.name+data.list.type}}}>查看更多</Link>
+                  <Link href={{pathname:'/product/detail',query:{model:productItem.name,type:data.list.type}}}>查看更多</Link>
                   <img src={'https://www.yangdong.co:8443/' + data.list.type +'/'+ productItem.name + '/1.png'}/>
                 </div>
               })}
