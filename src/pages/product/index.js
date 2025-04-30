@@ -11,8 +11,8 @@ function Product(){
   const labelData = [
     {index:0,lebel:'铝板'},
     {index:1,lebel:'铝棒'},
-    {index:2,lebel:'铝管'},
-    {index:3,lebel:'铝卷'},
+    {index:2,lebel:'铝卷'},
+    {index:3,lebel:'铝管'},
     {index:4,lebel:'铝型材'},
     {index:5,lebel:'铝锻件'},
   ]

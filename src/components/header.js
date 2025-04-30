@@ -74,6 +74,23 @@ function ProductMain(){
   </div>
   </>
 }
+function Process(){
+  const store = useStore()
+  const data = [
+    {text:'加工服务',href:'/process/#process1'},
+    {text:'加工优势',href:'/process/#process2'},
+    {text:'加工案例',href:'/process/#process3'},
+    {text:'加工实力',href:'/process/#process4'}
+  ]
+  return <div className='header-process'>
+  <img src={store.common.url +'header/process.png'}/>
+  <div className='right-box'>
+    {data.map((item,i)=>{
+      return <Link key={i} href={item.href}>{item.text}</Link>
+    })}
+  </div>
+</div>
+}
 function Apply(){
   const store = useStore()
   const [index,setIndex] = useState(0)
@@ -117,7 +134,7 @@ function Case(){
     <div className='right-box'>
       {data.map((item,i)=>{
         return <Link key={i} href='/case' onClick={()=>store.common.changeCaseIndex(i)}>
-          {item.text}<span>&rarr;</span>
+          {item.text}
         </Link>
       })}
     </div>
@@ -137,7 +154,7 @@ function About(){
     <img src={store.common.url +'header/about.png'}/>
     <div className='right-box'>
       {data.map((item,i)=>{
-        return <Link key={i} href={item.href}>{item.text}<span>&rarr;</span></Link>
+        return <Link key={i} href={item.href}>{item.text}</Link>
       })}
     </div>
   </div>
@@ -154,7 +171,7 @@ function News(){
     <img src={store.common.url +'header/news.png'}/>
     <div className='right-box'>
       {data.map((item,i)=>{
-        return <Link key={i} href='news' onClick={()=>store.common.changeNewIndex(i)}>{item.text}<span>&rarr;</span></Link>
+        return <Link key={i} href='news' onClick={()=>store.common.changeNewIndex(i)}>{item.text}</Link>
       })}
     </div>
   </div>
@@ -177,32 +194,35 @@ function MuneItem(props){
     return <li key={item.label} className={[('/'+path.split('/')[1]) == item.route?'menu-ul-li selectAcitve':'menu-ul-li'].join('')}>
       <Link href={{pathname:item.route}} className='menu-route-a'>{item.label}</Link>
       {item.isChildren && (<div className='header-product'><ProductMain /></div>)}
+      {item.isProcess && <Process />}
       {item.isApp && <Apply />}
       {item.isCase && <Case />}
       {item.isAbout && <About />}
       {item.isNews && <News />}
-      {/* {item.isList && (<div className='header-newList'><NewSList /></div>)}
-      {item.isProcess && (<div className='header-process'><Process /></div>)} */}
     </li>
   });
   return (<ul className='menu-ul'>{muneItem}</ul>)
 }
 
 export default function Header(){
-  
-  // alert('test')
-  // console.log('test');
-  
-  // console.log(useRouter,'useRouter');
+  const [scrollHeight,setScrollHeight] = useState(0)
   const pathname = usePathname();
-  // console.log(pathname,'searchParams');
-  // console.log(pathname,'pathname');
-  
-  // let curPath = router.asPath
-  // useEffect(()=>{
-  //   // console.log(pathname,'searchParams');
-    
-  // },[pathname])
+  useEffect(()=>{
+    let throttleTimeout = null;
+    const handleScroll =()=>{
+      if(throttleTimeout === null){
+        throttleTimeout = setTimeout(()=>{
+          setScrollHeight(document.documentElement.scrollTop)
+          throttleTimeout = null
+        },200)
+      }
+    }
+    window.addEventListener('scroll',handleScroll)
+    return()=>{
+      window.removeEventListener('scroll',handleScroll)
+      clearTimeout(throttleTimeout)
+    }
+  },[scrollHeight])
   return <header>
     <div className="header-warp main">
         <div className='logo-wrap'>
@@ -210,5 +230,6 @@ export default function Header(){
         </div>
         <MuneItem path={pathname}/>
       </div>
+    <div className='up' style={{opacity:scrollHeight>1000?'1':'0'}} onClick={()=>window.scrollTo(0,0)}></div>
   </header>
 }

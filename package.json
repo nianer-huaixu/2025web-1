@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "next build && npm run move",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "move": "xcopy /e /i .next\\static .next\\standalone\\.next\\static"
   },
   "dependencies": {
     "@amap/amap-jsapi-loader": "^1.0.1",

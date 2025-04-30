@@ -1,3 +1,6 @@
+// @tailwind base;
+// @tailwind components;
+// @tailwind utilities;
 @import "tailwindcss/preflight";
 @tailwind utilities;
 
@@ -84,16 +87,7 @@ header{
         &:nth-child(3){
           &:hover{
             .header-process{
-              height:416px;
-              -webkit-transition:all 0.5s linear;
-              transition:all 0.5s linear;
-            }
-          }
-        }
-        &:nth-child(7){
-          &:hover{
-            .header-newList{
-              height:200px;
+              height:230px;
               -webkit-transition:all 0.5s linear;
               transition:all 0.5s linear;
             }
@@ -171,7 +165,7 @@ header{
       }
     }
   }
-  .header-product,.header-appList,.header-case,.header-about,.header-news{
+  .header-product,.header-appList,.header-case,.header-about,.header-news,.header-process{
     position:fixed;
     left:0;
     top:80px;
@@ -275,32 +269,6 @@ header{
     }
     
   }
-  .header-newList{
-    position: fixed;
-    margin-left: -30px;
-    background-color: #fff;
-    box-shadow: 0px 10px 18px 0px rgba(35,24,21,0.1);
-    height: 0px;
-    overflow: hidden;
-    -webkit-transition:all 0.5s linear;
-    transition:all 0.5s linear;
-    ul{
-      padding: 20px 0px;
-      li{
-        height: 40px;
-        padding: 0 30px;
-        line-height: 40px;
-        color: #666;
-        -webkit-transition:all 0.3s linear;
-        transition:all 0.3s linear;        
-        &:hover{
-          background-color:#efefef;
-          -webkit-transition:all 0.3s linear;
-          transition:all 0.3s linear;        
-        }
-      }
-    }
-  }
   .header-appList{
     height: 0px;
     // height: 430px;  
@@ -333,65 +301,7 @@ header{
       }
     }
   }
-  .header-process{
-    position:fixed;
-    left:0;
-    top:80px;
-    background-color:#fff;
-    box-shadow: 0px 10px 18px 0px rgba(35,24,21,0.1);
-    width:100%;
-    height: 0px;
-    overflow: hidden;
-    -webkit-transition:all 0.3s linear;
-    transition:all 0.3s linear;   
-    .header-process-main{
-      display: flex;
-      padding-bottom: 30px;
-      border-left: 2px solid #efefef;
-      .header-process-item{
-        flex: 1;
-        border-right: 2px solid #efefef;
-        padding-left: 20px;
-        h3{
-          line-height: 60px;
-          a{
-            font-size: 26px;
-            color: #FD2621;
-            padding-left: 35px;
-            font-weight: bold;
-          }
-        }
-        ul{
-          li{
-            p{
-              color: #000;
-              font-size: 14px;
-              line-height: 36px;
-            }
-          }
-        }
-        background-repeat: no-repeat;
-        background-position: 20px 15px;
-        &:nth-child(1){
-          background-image: url('/icon/process01.svg');
-        }
-        &:nth-child(2){
-          flex: 1.5;
-          background-image: url('/icon/process02.svg');
-        }
-        &:nth-child(3){
-          background-image: url('/icon/process03.svg');
-        }
-        &:nth-child(4){
-          background-image: url('/icon/process04.svg');
-        }
-        &:nth-child(5){
-          background-image: url('/icon/process05.svg');
-        }
-      }
-    }
-  }
-  .header-case,.header-about,.header-news{
+  .header-case,.header-about,.header-news,.header-process{
     height: 0px;
     // height: 230px;
     display: flex;
@@ -414,15 +324,12 @@ header{
         border-bottom: 1px solid #eee;
         position: relative;
         transition:all 0.5s linear;
-        span{
-          position: absolute;
-          right: 0;
-          font-size: 24px;
-        }
+        background: url('https://www.yangdong.co:8443/yangdong-new/header/w-r.png')no-repeat center right;
         &:hover{
           color: #CD241D;
           border-color: #CD241D;
           transition:all 0.5s linear;
+          background: url('https://www.yangdong.co:8443/yangdong-new/header/r-r.png')no-repeat center right;
         }
       }
     }
@@ -446,110 +353,71 @@ header{
       color:var(--activeColor);
     }
   }
-  .categoryActive{
-    padding:0px 0px 4px!important;
-    border-bottom: 2px solid var(--activeColor);
-    color:var(--activeColor);
-  }
-  .seriseActive{
-    position:relative;
-    color:var(--activeColor);
-    &::after{
-      content:'';
-      position: absolute;
-      border-style: solid;
-      border-width: 0 10px 10px;
-      border-color: transparent transparent var(--activeColor);
-      bottom:-15px;
-      margin-left:-50%;
-      transform: translateX(-50%);
-    }
-  }
-  .mobileMenu{
-    width: 100%;
-    display: none;
-    justify-content: space-between;
-    height: inherit;
-    background-color: #000;
-    padding: 10px;
-    .mobileLogo{
-      height: 100%;
-      width: auto;
-    }
-    .mobileMenuBtn{
-      width: 36px;
-      height: 36px;
-      background-color: #fff;
-      border-radius: 5px;
-      margin-top: 3px;
-      img{
-        margin: 2px auto 0;
-        
-      }
-    }
-    .moboliMenu{
-      position: fixed;
-      height: calc(100% - 120px);
-      overflow-y: scroll;
-      top: 60px;
-      width: 50%;
-      padding-left: 20px;
-      background-color: rgba(158, 0, 11, 0.9);
-      -webkit-transition:all 0.3s linear;
-      transition:all 0.3s linear;
-      p,a{
-        height: 50px;
-        color: #FFF;
-        line-height: 50px;
-        border-bottom: 1px solid #fff;
-        font-size: 18px;
-        position: relative;      
-      }
-      .Hide{
-        padding-left: 10px;
-        overflow: hidden;
-        li{
-          a{
-            // color: #FFF;
-            height: 36px;
-            border-bottom: none;
-            line-height: 36px;
-          }
-        }
-      }
-      p{
-        span{
-          position: absolute;
-          right: 10px;
-        }
-      }
-      a{
-        display: block;
-        span{
-          position: absolute;
-          right: 10px;
-        }
-      }
-    }
-    .modileHidden{
-      position: fixed;
-      left: 0;
-      top: 60px;
-      width: 100%;
-      height: calc(100% - 120px);
-      z-index: -1;
+  .up{
+    width: 64px;
+    height: 64px;
+    background: url('https://www.yangdong.co:8443/yangdong-new/header/top.png')no-repeat center;
+    position: fixed;
+    right: 80px;
+    bottom: 50px;
+    right: 40px;
+    bottom: 40px;
+    border-radius: 50%;
+    box-shadow: 0px 5px 9px 0px rgba(35,24,21,0.1);
+    -webkit-transition:all 0.2s linear;
+    transition:all 0.2s linear;
+    cursor:pointer;
+    &:hover{
+      box-shadow: 0px 8px 15px 0px rgba(35,24,21,0.2);
+      -webkit-transition:all 0.2s linear;
+      transition:all 0.2s linear;
+      background-color:#fafafa;
     }
   }
 }
 // 导航栏 end
+/* 定义跳动动画 */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
+  80% {
+    transform: translateY(-3px);
+  }
+}
+
 // banner
 .bannerWrap{
-  // margin-top: var(--headerHeight);
+  position: relative;
+  img{
+    width: 100%;
+  }
+  .contactDown{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 80px;
+    background: url('https://www.yangdong.co:8443/yangdong-new/contact/down.png')no-repeat;
+    animation: bounce 1s infinite; /* 1秒循环一次 */
+    cursor: pointer;
+    &:hover{
+      animation-play-state: paused;
+    }
+  }
 }
 // footer start
 footer{
   padding-top: 40px;
   background: url('https://www.yangdong.co:8443/yangdong-new/footer/bg.png')no-repeat;
+  background-size: cover;
   .footer-wrap{
     display:flex;
     justify-content: space-between;
@@ -646,7 +514,7 @@ footer{
   padding-right: 26px;
   .slick-slider{
     .slick-list{
-      width: 90%;
+      width: 79%;
       margin: auto;
     }
     .slick-prev::before,.slick-next::before{
@@ -678,6 +546,11 @@ footer{
     }
     .active{
       border: 1px solid #FD2621;
+      background-color: #fff;
+      
+    }
+    .bgF{
+      background-color: #fff;
     }
   }
 }

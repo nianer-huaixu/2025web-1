@@ -1,3 +1,5 @@
+@tailwind components;
+
 .apply0{
   background: #EEEEEE;
 }
@@ -9,6 +11,8 @@
   line-height: 60px;
   height: 60px;
   a{
+    display: block;
+    height: 60px;
     width:100%;
     text-align:center;
     color:#000;
@@ -37,6 +41,8 @@
     border: 1px solid #eaedf0;
     .applyCaseL{
       position: absolute;
+      background: linear-gradient(to right, #f4f5fc,rgba(255,255,255,0));
+      height: 100%;
       top: 0;
       left: 0;
       padding: 40px 0 0 40px;

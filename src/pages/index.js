@@ -5,6 +5,9 @@ import CountUp from "react-countup"
 import { AnimatePresence } from "motion/react"
 import * as motion from "motion/react-client"
 import styles from '@/styles/index.module.scss'
+import Link from "next/link"
+import { useRouter } from 'next/navigation'
+import useStore from "@/hook/useStore"
 const URL= 'https://www.yangdong.co:8443/yangdong-new/'
 // product start
 function ProductShow(){
@@ -24,62 +27,62 @@ function ProductShow(){
     {
       label:'铝板系列',text:'铝板系列涵盖亮面铝板、贴膜铝板、预拉伸铝板、超宽铝板、特厚铝板、超平铝板、精铸铝板、锻造铝板、花纹铝板等',
       series:[
-        {serie:'七系',label:'铝板',child:['7050','7075','7A04','7A09']},
-        {serie:'六系',label:'铝板',child:['6061','6063','6082']},
-        {serie:'五系',label:'铝板',child:['5052','5083','5754','5A02','5A05','5A06']},
-        {serie:'三系',label:'铝板',child:['3003','3A21']},
-        {serie:'二系',label:'铝板',child:['2017','2024','2A12']},
-        {serie:'一系',label:'铝板',child:['1050','1060']},
+        {serie:'七系列',label:'铝板',child:['7050','7075','7A04','7A09']},
+        {serie:'六系列',label:'铝板',child:['6061','6063','6082']},
+        {serie:'五系列',label:'铝板',child:['5052','5083','5754','5A02','5A05','5A06']},
+        {serie:'三系列',label:'铝板',child:['3003','3A21']},
+        {serie:'二系列',label:'铝板',child:['2017','2024','2A12']},
+        {serie:'一系列',label:'铝板',child:['1050','1060']},
       ]
     },
     {label:'铝棒系列',text:'铝棒系列涵盖纯铝棒、合金铝棒、大直径铝棒、挤压铝棒、光亮铝棒、精拉铝棒、超硬铝棒、铸造铝棒、研磨铝棒等',
       series:[
-        {serie:'七系',label:'铝棒',child:['7050','7075','7A04','7A09']},
-        {serie:'六系',label:'铝棒',child:['6061','6063','6082']},
-        {serie:'五系',label:'铝棒',child:['5052','5083','5754','5A02','5A05','5A06']},
-        {serie:'三系',label:'铝棒',child:['3003','3A21']},
-        {serie:'二系',label:'铝棒',child:['2017','2024','2A12']},
-        {serie:'一系',label:'铝棒',child:['1050','1060']},
+        {serie:'七系列',label:'铝棒',child:['7050','7075','7A04','7A09']},
+        {serie:'六系列',label:'铝棒',child:['6061','6063','6082']},
+        {serie:'五系列',label:'铝棒',child:['5052','5083','5754','5A02','5A05','5A06']},
+        {serie:'三系列',label:'铝棒',child:['3003','3A21']},
+        {serie:'二系列',label:'铝棒',child:['2017','2024','2A12']},
+        {serie:'一系列',label:'铝棒',child:['1050','1060']},
       ]
     },
     {label:'铝卷系列',text:'铝卷系列涵盖纯铝卷、铝带、铝箔、合金铝卷、防锈铝卷、保温铝卷、冲压铝卷、花纹铝卷、超宽铝卷、超宽铝卷等',
       series:[
-        {serie:'七系',label:'铝卷',child:['7075']},
-        {serie:'六系',label:'铝卷',child:['6061','6063']},
-        {serie:'五系',label:'铝卷',child:['5052','5083','5754','5A02']},
-        {serie:'三系',label:'铝卷',child:['3003','3A21']},
-        {serie:'二系',label:'铝卷',child:['2024','2A12']},
-        {serie:'一系',label:'铝卷',child:['1050','1060']},
+        {serie:'七系列',label:'铝卷',child:['7075']},
+        {serie:'六系列',label:'铝卷',child:['6061','6063']},
+        {serie:'五系列',label:'铝卷',child:['5052','5083','5754','5A02']},
+        {serie:'三系列',label:'铝卷',child:['3003','3A21']},
+        {serie:'二系列',label:'铝卷',child:['2024','2A12']},
+        {serie:'一系列',label:'铝卷',child:['1050','1060']},
       ]
     },
     {label:'铝管系列',text:'铝管系列涵盖挤压铝管、无缝铝管、锻造铝管、拉拔铝管、薄壁铝管、厚壁铝管、大口径铝管等',
       series:[
-        {serie:'七系',label:'铝管',child:['7050','7075','7A04','7A09']},
-        {serie:'六系',label:'铝管',child:['6061','6063','6082']},
-        {serie:'五系',label:'铝管',child:['5052','5083','5754','5A02','5A05','5A06']},
-        {serie:'三系',label:'铝管',child:['3003','3A21']},
-        {serie:'二系',label:'铝管',child:['2017','2024','2A12']},
-        {serie:'一系',label:'铝管',child:['1050','1060']},
+        {serie:'七系列',label:'铝管',child:['7050','7075','7A04','7A09']},
+        {serie:'六系列',label:'铝管',child:['6061','6063','6082']},
+        {serie:'五系列',label:'铝管',child:['5052','5083','5754','5A02','5A05','5A06']},
+        {serie:'三系列',label:'铝管',child:['3003','3A21']},
+        {serie:'二系列',label:'铝管',child:['2017','2024','2A12']},
+        {serie:'一系列',label:'铝管',child:['1050','1060']},
       ]
     },
     {label:'铝型材系列',text:'铝型材系列涵盖铝方棒、铝扁棒、铝排、铝方管、矩形管、六角铝棒、等边角铝、不等边角铝、槽铝等',
       series:[
-        {serie:'七系',label:'铝型材',child:['7050','7075','7A04','7A09']},
-        {serie:'六系',label:'铝型材',child:['6061','6063','6082']},
-        {serie:'五系',label:'铝型材',child:['5052','5083','5754','5A02','5A05','5A06']},
-        {serie:'三系',label:'铝型材',child:['3003','3A21']},
-        {serie:'二系',label:'铝型材',child:['2017','2024','2A12']},
-        {serie:'一系',label:'铝型材',child:['1050','1060']},
+        {serie:'七系列',label:'铝型材',child:['7050','7075','7A04','7A09']},
+        {serie:'六系列',label:'铝型材',child:['6061','6063','6082']},
+        {serie:'五系列',label:'铝型材',child:['5052','5083','5754','5A02','5A05','5A06']},
+        {serie:'三系列',label:'铝型材',child:['3003','3A21']},
+        {serie:'二系列',label:'铝型材',child:['2017','2024','2A12']},
+        {serie:'一系列',label:'铝型材',child:['1050','1060']},
       ]
     },
     {label:'铝锻件系列',text:'铝锻件系列涵盖锻板、锻棒、锻管、锻环、锻饼、锻筒、锻锥形等',
       series:[
-        {serie:'七系',label:'铝锻件',child:['7050','7075','7A04','7A09']},
-        {serie:'六系',label:'铝锻件',child:['6061','6063','6082']},
-        {serie:'五系',label:'铝锻件',child:['5052','5083','5754','5A02','5A05','5A06']},
-        {serie:'三系',label:'铝锻件',child:['3003','3A21']},
-        {serie:'二系',label:'铝锻件',child:['2017','2024','2A12']},
-        {serie:'一系',label:'铝锻件',child:['1050','1060']},
+        {serie:'七系列',label:'铝锻件',child:['7050','7075','7A04','7A09']},
+        {serie:'六系列',label:'铝锻件',child:['6061','6063','6082']},
+        {serie:'五系列',label:'铝锻件',child:['5052','5083','5754','5A02','5A05','5A06']},
+        {serie:'三系列',label:'铝锻件',child:['3003','3A21']},
+        {serie:'二系列',label:'铝锻件',child:['2017','2024','2A12']},
+        {serie:'一系列',label:'铝锻件',child:['1050','1060']},
       ]
     }
   ]
@@ -121,7 +124,7 @@ function ProductShow(){
             return <ul key={i}>
               {item.serie + item.label}
               {item.child.map((li,l)=>{
-                return <li key={l}><a>{li + item.label}</a></li>
+                return <li key={l}><Link href={{pathname:'/product/detail',query:{model:li,type:item.label}}}>{li + item.label}</Link></li>
               })}
             </ul>
           })}
@@ -151,23 +154,23 @@ function Case(){
     setIndex(i)
   }
   const data = [
-    {img:URL + 'index/case0.png',text1:'航空航天用铝合金',text2:'具有航空领域用高端铝铁材料的提供能力，其中一些标准产品等新型发动机涡轮盘、压气盘、叶片用铝成功应用于轰炸机、强毒机等核心部件制作。'},
-    {img:URL + 'index/case1.png',text1:'轨道交通用铝合金',text2:'供应的铁路用铝主要有铁路弹簧铝、扣件用铝、道岔用铝、钩尾框用铝、铁路轴承铝、欧标合金铝，美标合金铝等产品，全部通过国家铁道部认可并具备了批量供货能力，大量用于指导铁路货车、高速客车、动车组列车的关键部件，成为其铁路优秀供应商。'},
-    {img:URL + 'index/case2.png',text1:'汽车智造用铝合金',text2:'更高效，更高的强重比，可满足复杂形状的要求。在当今燃料及环境问题日益严峻的时期，铝合金扮演着一个助推汽车轻量化及提升燃油能效的重要角色，从而帮助缓解能源及环境问题。节能环保已成为当今世界的主旋律，而高昂的能源费用和材料的循环利用已成为汽车制造商正面临的主要难题。当此时机，铝合金凭借其优越的比强度、优良的成型性和高效的循环利用率，逐步成为汽车制造商的宠儿，“铝代钢”已大势所趋。'},
-    {img:URL + 'index/case3.png',text1:'船舶运输用铝合金',text2:'扬东铝业集团供应的海洋系泊链铝用于船舶和石油工业，强度高，韧性好，具备耐海水腐蚀、抗疲劳、耐磨损等特性。其中四级系泊链是目前海洋用的最高级别系链，需求量较大，成功通过国际著名船级社品质认证，填补了国内空白，实物质量达到国际水平，已经形成批量化供应铝产品能力，广泛用于勘探平台、浮时采油平台、海上储油转运站和辅助船队等海洋工程及专用船舶领域。'},
-    {img:URL + 'index/case4.png',text1:'消费电子用铝合金',text2:'扬东铝业集团助力电子电器制造企业在世界范围内占据有利的竞争位置，实现让产品更轻、更薄、更耐用的愿望。铝合金拥有良好的可加工性和导电性，是绝佳的散热材料。能按照客户需求提供各类挤压型材，适用于大功率变电装置、稳压电源、通讯电源、净化电源、广播电视发射装置、逆变电源等各种大型电源产品，也用于自动控制仪表等电力电子产品领域。'},
-    {img:URL + 'index/case5.png',text1:'医疗设备用铝合金',text2:'扬东铝业集团铝合金在医疗行业应用广泛，早期简单的器械类包括拐杖、轮椅、担架、助力器、油膏缸、消毒盒、病床等等。'},
-    {img:URL + 'index/case6.png',text1:'化工容器用铝合金',text2:'扬东铝业集团5000系铝合金材料具有良好的抗腐蚀性和可焊接性能，用铝合金制造的体，内部不需要任何防护涂层就可以运输各种液体或者液化气，并且因为没有腐蚀，从而保证油品更清洁，罐体强制报废后回收价值也更高同时，因为铝合金具有良好的导电性能，很少集聚静电在罐体上，所以不会产生火花而导致爆炸，而且铝合金能很好的吸收罐体在碰撞时所产生的照间能力，不会造成罐体开裂而产生泄漏。'},
-    {img:URL + 'index/case7.png',text1:'工业模具用铝合金',text2:'扬东铝业集团是国内机械加工铝供应及服务极高的市场声誉，工模具被誉为“现代工业之母”在现代工业被广泛应用。随着市场的发展及铝合金技术的提高，目前欧美市场逐渐呈现铝模替代钢模的现象。制造成本低。铝模具在制造、装置、注塑车间装置调整时间、运输等比钢模具更具优越性成本更低，重量轻。'},
-    {img:URL + 'index/case8.png',text1:'机器制造用铝合金',text2:'扬东铝业集团是国内机械加工铝供应及服务极高的市场声誉，铝与钢的密度比为1:3，铝模取代钢模在质量方面可节约1/2。采用钢-铝复合模。铝合金模的成本约比钢模低15%以上。铝模制造时间比钢模的短得多，因此占用资金的时间少，优势明显。'},
-    {img:URL + 'index/case9.png',text1:'建筑工程用铝合金',text2:'扬东铝业集团是国内建筑建材供应及服务极高的市场声誉，随着铝合金隐框幕墙的发展，铝板幕墙也异军突起，配合铝合金玻璃幕墙在幕墙工程中进行使用墙作为一项高技术产品在建筑业发展突飞猛进。'}
+    {href:'apply/#apply01',img:URL + 'index/case0.png',text1:'航空航天用铝合金',text2:'具有航空领域用高端铝铁材料的提供能力，其中一些标准产品等新型发动机涡轮盘、压气盘、叶片用铝成功应用于轰炸机、强毒机等核心部件制作。'},
+    {href:'apply/#apply02',img:URL + 'index/case1.png',text1:'轨道交通用铝合金',text2:'供应的铁路用铝主要有铁路弹簧铝、扣件用铝、道岔用铝、钩尾框用铝、铁路轴承铝、欧标合金铝，美标合金铝等产品，全部通过国家铁道部认可并具备了批量供货能力，大量用于指导铁路货车、高速客车、动车组列车的关键部件，成为其铁路优秀供应商。'},
+    {href:'apply/#apply03',img:URL + 'index/case2.png',text1:'汽车智造用铝合金',text2:'更高效，更高的强重比，可满足复杂形状的要求。在当今燃料及环境问题日益严峻的时期，铝合金扮演着一个助推汽车轻量化及提升燃油能效的重要角色，从而帮助缓解能源及环境问题。节能环保已成为当今世界的主旋律，而高昂的能源费用和材料的循环利用已成为汽车制造商正面临的主要难题。当此时机，铝合金凭借其优越的比强度、优良的成型性和高效的循环利用率，逐步成为汽车制造商的宠儿，“铝代钢”已大势所趋。'},
+    {href:'apply/#apply04',img:URL + 'index/case3.png',text1:'船舶运输用铝合金',text2:'扬东铝业集团供应的海洋系泊链铝用于船舶和石油工业，强度高，韧性好，具备耐海水腐蚀、抗疲劳、耐磨损等特性。其中四级系泊链是目前海洋用的最高级别系链，需求量较大，成功通过国际著名船级社品质认证，填补了国内空白，实物质量达到国际水平，已经形成批量化供应铝产品能力，广泛用于勘探平台、浮时采油平台、海上储油转运站和辅助船队等海洋工程及专用船舶领域。'},
+    {href:'apply/#apply05',img:URL + 'index/case4.png',text1:'消费电子用铝合金',text2:'扬东铝业集团助力电子电器制造企业在世界范围内占据有利的竞争位置，实现让产品更轻、更薄、更耐用的愿望。铝合金拥有良好的可加工性和导电性，是绝佳的散热材料。能按照客户需求提供各类挤压型材，适用于大功率变电装置、稳压电源、通讯电源、净化电源、广播电视发射装置、逆变电源等各种大型电源产品，也用于自动控制仪表等电力电子产品领域。'},
+    {href:'apply/#apply06',img:URL + 'index/case5.png',text1:'医疗设备用铝合金',text2:'扬东铝业集团铝合金在医疗行业应用广泛，早期简单的器械类包括拐杖、轮椅、担架、助力器、油膏缸、消毒盒、病床等等。'},
+    {href:'apply/#apply07',img:URL + 'index/case6.png',text1:'化工容器用铝合金',text2:'扬东铝业集团5000系铝合金材料具有良好的抗腐蚀性和可焊接性能，用铝合金制造的体，内部不需要任何防护涂层就可以运输各种液体或者液化气，并且因为没有腐蚀，从而保证油品更清洁，罐体强制报废后回收价值也更高同时，因为铝合金具有良好的导电性能，很少集聚静电在罐体上，所以不会产生火花而导致爆炸，而且铝合金能很好的吸收罐体在碰撞时所产生的照间能力，不会造成罐体开裂而产生泄漏。'},
+    {href:'apply/#apply08',img:URL + 'index/case7.png',text1:'工业模具用铝合金',text2:'扬东铝业集团是国内机械加工铝供应及服务极高的市场声誉，工模具被誉为“现代工业之母”在现代工业被广泛应用。随着市场的发展及铝合金技术的提高，目前欧美市场逐渐呈现铝模替代钢模的现象。制造成本低。铝模具在制造、装置、注塑车间装置调整时间、运输等比钢模具更具优越性成本更低，重量轻。'},
+    {href:'apply/#apply09',img:URL + 'index/case8.png',text1:'机器制造用铝合金',text2:'扬东铝业集团是国内机械加工铝供应及服务极高的市场声誉，铝与钢的密度比为1:3，铝模取代钢模在质量方面可节约1/2。采用钢-铝复合模。铝合金模的成本约比钢模低15%以上。铝模制造时间比钢模的短得多，因此占用资金的时间少，优势明显。'},
+    {href:'apply/#apply10',img:URL + 'index/case9.png',text1:'建筑工程用铝合金',text2:'扬东铝业集团是国内建筑建材供应及服务极高的市场声誉，随着铝合金隐框幕墙的发展，铝板幕墙也异军突起，配合铝合金玻璃幕墙在幕墙工程中进行使用墙作为一项高技术产品在建筑业发展突飞猛进。'}
   ]
   return (
     <div className={[styles.caseWrapM,'main'].join(' ')}>
       <nav>
         <ul>
           {tabs.map((item,i)=>{
-            return <motion.li key={i} onClick={()=>selectIndex(i)}
+            return <motion.li key={i} onMouseEnter={()=>selectIndex(i)}
               inherit={false}
               animate={{backgroundColor: i == index ? '#eee' :'#eee0'}}
               className={[i==index?styles.liActive:'']}            
@@ -195,7 +198,7 @@ function Case(){
             <div>
               <h5>{data[index].text1}</h5>
               <p>{data[index].text2}</p>
-              <button>了解详情</button>
+              <button><Link href={data[index].href}>了解详情</Link></button>
             </div>
             <img src={data[index].img}/>
           </motion.div>
@@ -206,6 +209,8 @@ function Case(){
 }
 
 export default function Home() {
+  const router = useRouter()
+  const store = useStore()
   const box = {
     width: 100,
     height: 100,
@@ -246,27 +251,60 @@ export default function Home() {
     setIndex(i)
   }
   const newLabel =[
-    {index:0,text:'公司动态'},
-    {index:1,text:'行业新闻'},
-    {index:2,text:'铝材知识'},
-    {index:3,text:'加工视频'}
+    {text:'公司动态'},
+    {text:'行业新闻'},
+    {text:'铝材知识'},
+    {text:'加工视频'}
   ]
+  const [newIndex,setNewIndex] = useState(0)
+  function selectNew(i){
+    if(i!==3){
+      setNewIndex(i)
+    }else{
+      router.push({
+        pathname:'/news'
+      })
+      store.common.changeNewIndex(3)
+    }
+  }
+  function selectNewDetail(i){
+    router.push({
+      pathname:'/news/'+newIndex+'_'+i
+    })
+  }
   const newData =[
     {
-      new:[
-        {index:0,lebel:'“精工品质，真诚合作”扬东集团客户好评不断诚信可靠',date:'null'},
-        {index:1,lebel:'扬东集团被中国兵器工业集团纳入优选供应商名录',date:'2023-07-15'},
-        {index:2,lebel:'【喜讯】扬东集团荣获3A级企业信用等级证书',date:'2015-02-14'},
-        {index:3,lebel:'西南铝为天舟三号提供多个铝合金材料',date:'2023-07-15'},
-        {index:4,lebel:'西南铝为天舟三号提供多个铝合金材料',date:'2023-07-15'}
+      list:[
+        {index:0,img:'news/company1.png',lebel:'“精工品质，真诚合作”扬东集团客户好评不断诚信可靠',date:'null'},
+        {index:4,lebel:'扬东集团被中国兵器工业集团纳入优选供应商名录',date:'2023-07-15'},
+        {index:3,lebel:'【喜讯】扬东集团荣获3A级企业信用等级证书',date:'2023-07-20'},
+        {index:1,img:'news/company2.png',lebel:'江苏扬东铝业集团公司开展员工拓展活动',date:'2023-10-20'},
+        {index:4,img:'news/company5.png',lebel:'扬东集团被中国兵器工业集团纳入优选供应商名录',date:'2023-07-15'}
+      ]
+    },
+    {
+      list:[
+        {index:0,img:'news/company1.png',lebel:'西南铝为天舟三号提供多个铝合金关键材料',date:'null'},
+        {index:1,lebel:'【国企改革三年行动】广西南南铝加工向行业排头兵迈进',date:'2023-09-20'},
+        {index:2,lebel:'纳米焊丝解决了7075铝合金焊接难题',date:'2023-08-08'},
+        {index:4,img:'news/industry5.png',lebel:'铝材市场前景分析',date:'2023-06-24'},
+        {index:8,img:'news/industry9.png',lebel:'工业铝型材为什么能逐渐代替钢铁型材',date:'2023-02-19'}
+      ]
+    },
+    {
+      list:[
+        {index:0,img:'news/knowledge1.png',lebel:'铝合金和镁合金的区别',date:'null'},
+        {index:1,lebel:'花纹铝板该如何做保养',date:'2019-07-23'},
+        {index:2,lebel:'铝板厂家讲解什么是5052合金铝板的点解着色',date:'2020-10-28'},
+        {index:3,img:'news/knowledge3.png',lebel:'铝板的拉丝与喷砂处理',date:'2019-09-11'},
+        {index:4,img:'news/knowledge5.png',lebel:'精密机械零件加工对材质有哪些注意事项',date:'2020-07-06'}
       ]
     }
   ]
   const evaData = ['1V1响应接待','极速发货','贴心售后','实力工厂']
-  const [newIndex,setNewIndex] = useState(0)
   return (
     <div className={styles.indexWrap}>
-        <video width="100%" height="800" controls preload="none" autoPlay muted playsInline loop>
+        <video width="100%" controls preload="none" autoPlay muted playsInline loop>
           <source src="https://www.yangdong.co:8443/video/%E5%AE%A3%E4%BC%A0%E8%A7%86%E9%A2%91.mp4" type="video/mp4" />
         </video>
         <section className={styles.aboutM}>
@@ -281,7 +319,7 @@ export default function Home() {
             致力于成为华东地区集铝批发零售、原材料加工、国际贸易和技术咨询为一体的大型多元化企业，主要从事高精铝材的加工和销售。
             </motion.b>
             <motion.p>
-              <a>查看更多</a>
+              <Link href="/about">查看更多</Link>
             </motion.p>
           </motion.div>
           <div className={styles.aboutIntro}>
@@ -308,7 +346,7 @@ export default function Home() {
           <p style={{margin:'10px 0'}}>20+年行业生产经验 实力雄厚 工艺精湛 高效产能 贴心售后 品牌优势</p>
           <div className={[styles.reasonS,'main'].join(' ')}>
             {reasonData.map((item,i)=>{
-              return <div key={i} className={styles.reasonSI} style={{borderBottom:i==reasonIndex?'3px solid #e30212':''}} onClick={()=>changeReason(i)}>
+              return <div key={i} className={styles.reasonSI} style={{borderBottom:i==reasonIndex?'3px solid #e30212':''}} onMouseEnter={()=>changeReason(i)}>
                 <div className={styles.reasonImgW}><img src={URL + 'index/reason-icon-'+ i +'.png'}/></div>
                 <span>{item.label}</span>
               </div>
@@ -319,7 +357,7 @@ export default function Home() {
               <div className={styles.reasonMCB}>
                 <h5>{reasonData[reasonIndex].text1}</h5>
                 <p>{reasonData[reasonIndex].text2}</p>
-                <a>查看更多》》</a>
+                <a></a>
               </div>
             </div>
           </div>
@@ -333,40 +371,46 @@ export default function Home() {
               </div>
               <div className={styles.newWrapMHR}>
                 {newLabel.map((item,i)=>{
-                  return <a key={i}>
+                  return <div key={i} style={{backgroundColor:i==newIndex?'#CD241D':''}} onClick={()=>selectNew(i)}>
                     <img src={URL + 'index/new-icon-'+ i +'.png'}/>
                     {item.text}
-                  </a>
+                  </div>
                 })}
               </div>
             </div>
             <div className={styles.newWrapMC}>
                 <div className={styles.newWrapMCL}>
-                  <div className={styles.newWrapMCLT}>
-                      <img src={URL + 'index/new-img-1.png'}/>
-                      <p>“精工品质，真诚合作”扬东集团客户好评不断诚信可靠</p>
+                  <div className={styles.newWrapMCLT} onClick={()=>{selectNewDetail(newData[newIndex].list[0].index)}}>
+                      <div style={{width:'915px',height:'420px',overflow:'hidden'}}>
+                        <img style={{}} src={URL + newData[newIndex].list[0].img}/>
+                      </div>
+                      <p>{newData[newIndex].list[0].lebel}</p>
                   </div>
                   <div className={styles.newWrapMCLB}>
-                    <div>
-                      <p>扬东集团被中国兵器工业集团纳入优选供应商名录</p>
-                      <p><i>2023-07-15</i><i>查看更多</i></p>
+                    <div onClick={()=>{selectNewDetail(newData[newIndex].list[1].index)}}>
+                      <p style={{height:'72px'}}>{newData[newIndex].list[1].lebel}</p>
+                      <p><i>{newData[newIndex].list[1].date}</i><i>查看更多</i></p>
                     </div>
-                    <div>
-                      <p>【喜讯】扬东集团荣获3A级企业信用等级证书</p>
-                      <p><i>2015-02-14</i><i>查看更多</i></p>
+                    <div onClick={()=>{selectNewDetail(newData[newIndex].list[2].index)}}>
+                      <p style={{height:'72px'}}>{newData[newIndex].list[2].lebel}</p>
+                      <p><i>{newData[newIndex].list[2].date}</i><i>查看更多</i></p>
                     </div>
                   </div>
                 </div>
                 <div className={styles.newWrapMCR}>
-                  <div>
-                    <img src={URL + 'index/new-img-2.png'}/>
-                    <p>西南铝为天舟三号提供多个铝合金材料</p>
-                    <p><i>2023-07-15</i></p>
+                  <div onClick={()=>{selectNewDetail(newData[newIndex].list[3].index)}}>
+                    <div style={{width:'465px',height:'200px',overflow:'hidden'}}>
+                      <img width={465} height={200} src={URL + newData[newIndex].list[3].img}/>
+                    </div>
+                    <p>{newData[newIndex].list[3].lebel}</p>
+                    <p><i>{newData[newIndex].list[3].date}</i></p>
                   </div>
-                  <div>
-                    <img src={URL + 'index/new-img-2.png'}/>
-                    <p>西南铝为天舟三号提供多个铝合金材料</p>
-                    <p><i>2023-07-15</i></p>
+                  <div onClick={()=>{selectNewDetail(newData[newIndex].list[4].index)}}>
+                    <div style={{width:'465px',height:'200px',overflow:'hidden'}}>
+                      <img width={465} height={200} src={URL + newData[newIndex].list[4].img}/>
+                    </div>
+                    <p>{newData[newIndex].list[4].lebel}</p>
+                    <p><i>{newData[newIndex].list[4].date}</i></p>
                   </div>
                 </div>
             </div>
@@ -409,7 +453,7 @@ export default function Home() {
         <section className={styles.indexBW}>
           <div className="main">
             <p>离解决您的铝材方案只有一个【联系我们】的距离</p>
-            <a href=""></a>
+            <a target="_blank" href="https://html.ecqun.com/kf/sdk/openwin.html?corpid=11627559&cstype=special&mode=0&cskey=kkd1a23CLKZMWrHPzz&scheme=3&source=100&csid=18724918"></a>
           </div>
         </section>
         {/* <motion.div 

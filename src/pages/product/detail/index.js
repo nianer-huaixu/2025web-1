@@ -1,5 +1,5 @@
 "use client"
-import { useState,useEffect } from 'react'
+import { useState,useEffect,useRef } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import Slider from "react-slick"
@@ -14,7 +14,7 @@ function Detail1(props){
   const {data,model,type} = props
   const store = useStore()
   let imgListArr = []
-  for(let i = 1;i<=4;i++){
+  for(let i = 1;i<=data.png;i++){
     imgListArr.push(`https://www.yangdong.co:8443/${type}/${model}/${i}.png`)
   }
   const [currImg,setImg] = useState(0)
@@ -28,8 +28,9 @@ function Detail1(props){
     autoplay:false,
     slidesToShow: 4,
     slidesToScroll: 1,
-		arrows:false
-    // arrows:imgListArr.length == 4 ? false :true,
+		variableWidth: true,
+		// arrows:false
+    arrows:imgListArr.length == 4 ? false :true,
   };
   useEffect(()=>{
     setImg(0)
@@ -43,8 +44,8 @@ function Detail1(props){
 							<div className='slider-container product-slider'>
 							<Slider {...settings}>
 								{imgListArr.map((item,i)=>{
-									return <div key={i} 
-                    className={currImg == i? 'active' :' '}
+									return <div key={i} style={{width:'160.8px'}}
+                    className={currImg == i? 'active' :'bgF'}
 										onClick={()=>selectImg(i)}
 									>
 										<img src={item}/>
@@ -73,12 +74,69 @@ function Detail1(props){
 						<a><img src={store.common.url +'product/icon3.png'}/>服务与支持</a>
 				</p>
 				<p className={styles.productParamBtnGroup}>
-					<button className='redBtn'><a  target="_blank" href='https://html.ecqun.com/kf/sdk/openwin.html?corpid=11627559&cstype=rand&mode=0&cskey=kkd1a23CLKZMWrHPzz&scheme=2&source=100'>立即询价</a></button>
-					<button className='whiteBtn' style={{marginLeft:'20px'}}><Link href='/contactus'>联系我们</Link></button>
+					<button className='redBtn'><a  target="_blank" href='https://html.ecqun.com/kf/sdk/openwin.html?corpid=11627559&cstype=rand&mode=0&cskey=kkd1a23CLKZMWrHPzz&scheme=3&source=100'>立即询价</a></button>
+					<button className='whiteBtn' style={{marginLeft:'20px'}}><Link href='/contact'>联系我们</Link></button>
 				</p>
 			</div>
 		</div>
   </div>
+}
+
+function Intro({intro,model,type}){
+	const {kinds,criterion,status} = intro
+	
+	const store = useStore()
+	const URL = 'https://www.yangdong.co:8443/video/'
+	const videoRef = useRef(null);
+  const togglePlay = () => {
+    if (!videoRef.current) return;
+    if (videoRef.current.paused) {
+      videoRef.current.play();
+    } else {
+      videoRef.current.pause();
+    }
+  }
+	return <div className={styles.introWrap}>
+		<div className={[styles.introMain,'main'].join(' ')}>
+		<div className={styles.introL}>
+			<video width={700} type="video/mp4" onClick={()=>togglePlay()} autoPlay muted playsInline ref={videoRef} src={URL + type +'/'+ model +'.mp4'}/>
+			{/* <div className={styles.videoKZ}>
+				<img onClick={()=>togglePlay()} src={store.common.url + (videoRef.current?.paused ? 'product/pause.png' : 'product/play.png')}/>
+			</div> */}
+		</div>
+		<div className={styles.introR}>
+			<h5>产品简介 product brief introduction</h5>
+			<div className={styles.introRI}>
+				<img src={store.common.url + 'product/intro1.png'}/>
+				<div>
+					<p>{type}种类</p>
+					<ul>
+					{kinds && kinds.split(',').map((item,i)=>{return <li key={i}>{item}</li>})}
+					</ul>
+				</div>
+			</div>
+			<div className={styles.introRI}>
+				<img src={store.common.url + 'product/intro2.png'}/>
+				<div>
+					<p>生产标准</p>
+					<ul>
+					{criterion && criterion.split(',').map((item,i)=>{return <li key={i}>{item}</li>})}
+					</ul>
+				</div>
+			</div>
+			<div className={styles.introRI}>
+				<img src={store.common.url + 'product/intro3.png'}/>
+				<div>
+					<p>供货状态</p>
+					<ul>
+					{status && status.split(',').map((item,i)=>{return <li key={i}>{item}</li>})}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	
 }
 
 function Param({chemical,physics,mechanical}){
@@ -227,14 +285,15 @@ function productDetail(){
   return <>
     <Detail1 data={data.productMain} model={model} type={type}/>
 		<div className={styles.anchor}>
-			<a href='#'>产品简介</a>
-			<a href='#'>性能参数</a>
-			<a href='#'>典型用途</a>
+			<a href='#intro'>产品简介</a>
+			<a href='#param'>性能参数</a>
+			<a href='#typical'>典型用途</a>
 			<a href='#advantage'>产品优势</a>
-			<a href='#apply'>性能参数</a>
+			<a href='#apply'>应用领域</a>
 			<a href='#strength'>公司实力</a>
 		</div>
-		
+    <div className='upwards' id='intro'></div>
+		<Intro intro={data.intro} model={model} type={type}/>
     <div className='upwards' id='param'></div>
 		<div className={styles.paramTitle}>
 			<p className='main'>性能参数Parameters of performance</p>

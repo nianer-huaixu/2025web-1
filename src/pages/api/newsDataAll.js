@@ -179,110 +179,110 @@ const data =[
     }
   ]
 },
-{category:'',
+{category:'knowledge',
   list:[
     {
       id:0,
       title:'铝合金和镁合金的区别',
-      img:'news/knowledge.png',
+      img:'news/knowledge1.png',
       tag:'精选知识',
       date:'2019-10-12'
     },
     {
       id:1,
       title:'花纹铝板该如何做保养?',
-      img:'news/knowledge.png',
+      img:'news/knowledge2.png',
       tag:'精选知识',
       date:'2019-07-23'
     },
     {
       id:2,
       title:'铝板厂家讲解什么是5052合金铝板的点解着色',
-      img:'news/knowledge.png',
+      img:'news/knowledge3.png',
       tag:'铝材知识',
       date:'2020-10-28'
     },
     {
       id:3,
       title:'铝板的拉丝与喷砂处理',
-      img:'news/knowledge.png',
+      img:'news/knowledge4.png',
       tag:'技术知识',
       date:'2019-09-11'
     },
     {
       id:4,
       title:'精密机械零件加工对材质有哪些注意事项',
-      img:'news/knowledge.png',
+      img:'news/knowledge5.png',
       tag:'铝材知识',
       date:'2020-07-06'
     },
     {
       id:5,
       title:'无缝铝管和有缝铝管的区别',
-      img:'news/knowledge.png',
+      img:'news/knowledge6.png',
       tag:'技术知识',
       date:'2020-05-05'
     },
     {
       id:6,
       title:'铝合金T6和T651区别',
-      img:'news/knowledge.png',
+      img:'news/knowledge7.png',
       tag:'铝材知识',
       date:'2019-02-01'
     },
     {
       id:7,
       title:'铝模具和钢模具区别及优势',
-      img:'news/knowledge.png',
+      img:'news/knowledge8.png',
       tag:'精选知识',
       date:'2018-12-19'
     },
     {
       id:8,
       title:'铝板表面出现瑕疵的原因',
-      img:'news/knowledge.png',
+      img:'news/knowledge9.png',
       tag:'铝材知识',
       date:'2019-10-12'
     },
     {
       id:9,
       title:'为什么7075铝合金氧化效果不稳定',
-      img:'news/knowledge.png',
+      img:'news/knowledge10.png',
       tag:'精选知识',
       date:'2019-09-22'
     },
     {
       id:10,
       title:'工业铝型材采购需注意的几点',
-      img:'news/knowledge.png',
+      img:'news/knowledge11.png',
       tag:'技术知识',
       date:'2024-06-20'
     },
     {
       id:11,
       title:'铝型材加工常识',
-      img:'news/knowledge.png',
+      img:'news/knowledge12.png',
       tag:'铝材知识',
       date:'2022-04-19'
     },
     {
       id:12,
       title:'您知道工业用铝型材的分类与应用有哪些吗?',
-      img:'news/knowledge.png',
+      img:'news/knowledge13.png',
       tag:'技术知识',
       date:'2021-08-19'
     },
     {
       id:13,
       title:'铝型材有哪些分类？',
-      img:'news/knowledge.png',
+      img:'news/knowledge14.png',
       tag:'铝材知识',
       date:'2024-03-20'
     },
     {
       id:14,
       title:'影响铝卷铝材质量的几大要素',
-      img:'news/knowledge.png',
+      img:'news/knowledge15.png',
       tag:'精选知识',
       date:'2023-06-03'
     }

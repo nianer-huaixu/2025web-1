@@ -50,40 +50,41 @@ export default function Process(){
       img2:store.common.url +'process/case1-2.png',
       img3:store.common.url +'process/case1-3.png',
       text1:'医疗设备零部件加工案例 ',
-      text2:'案例描述：扬东产品所用原材料来自品牌供应商，从原材入库到出货都经过层层质检，良品率 高达99.8%；与扬东合作十分放心！'
+      text2:'案例描述：扬东产品所用原材料来自品牌供应商，从原材入库到出货都经过层层质检，良品率高达99.8%；与扬东合作十分放心！'
     },
     {
       img1:store.common.url +'process/case2-1.png',
       img2:store.common.url +'process/case2-2.png',
       img3:store.common.url +'process/case2-3.png',
       text1:'电子电器零部件加工案例 ',
-      text2:'案例描述：扬东产品所用原材料来自品牌供应商，从原材入库到出货都经过层层质检，良品率 高达99.8%；与扬东合作十分放心！'
+      text2:'案例描述：扬东产品所用原材料来自品牌供应商，从原材入库到出货都经过层层质检，良品率高达99.8%；与扬东合作十分放心！'
     },
     {
       img1:store.common.url +'process/case3-1.png',
       img2:store.common.url +'process/case3-2.png',
       img3:store.common.url +'process/case3-3.png',
       text1:'自动化设备零部件加工案例 ',
-      text2:'案例描述：扬东产品所用原材料来自品牌供应商，从原材入库到出货都经过层层质检，良品率 高达99.8%；与扬东合作十分放心！'
+      text2:'案例描述：扬东产品所用原材料来自品牌供应商，从原材入库到出货都经过层层质检，良品率高达99.8%；与扬东合作十分放心！'
     },
     {
       img1:store.common.url +'process/case4-1.png',
       img2:store.common.url +'process/case4-2.png',
       img3:store.common.url +'process/case4-3.png',
       text1:'汽车行业零部件加工案例 ',
-      text2:'案例描述：扬东产品所用原材料来自品牌供应商，从原材入库到出货都经过层层质检，良品率 高达99.8%；与扬东合作十分放心！'
+      text2:'案例描述：扬东产品所用原材料来自品牌供应商，从原材入库到出货都经过层层质检，良品率高达99.8%；与扬东合作十分放心！'
     },
     {
       img1:store.common.url +'process/case5-1.png',
       img2:store.common.url +'process/case5-2.png',
       img3:store.common.url +'process/case5-3.png',
       text1:'石油机械零部件加工案例 ',
-      text2:'案例描述：扬东产品所用原材料来自品牌供应商，从原材入库到出货都经过层层质检，良品率 高达99.8%；与扬东合作十分放心！'
+      text2:'案例描述：扬东产品所用原材料来自品牌供应商，从原材入库到出货都经过层层质检，良品率高达99.8%；与扬东合作十分放心！'
     }
   ]
   return (
     <>
       <Banner suf='process'/>
+      <div className='upwards' id='process1'></div>
       <div className={styles.process1}>
         <div className={[styles.process1Box,'main'].join(' ')}>
           <div className={styles.process1Top}>
@@ -121,6 +122,7 @@ export default function Process(){
           </div>
         </div>
       </div>
+      <div className='upwards' id='process2'></div>
       <div className={styles.process2}>
         <div className={[styles.process2C,'main'].join(' ')}>
           <div className={styles.process2CL}>
@@ -137,7 +139,7 @@ export default function Process(){
             </div>
             <h4>让制造更敏捷</h4>
             <p>来图来样加工，快速核价，给您不一样的零件定制体验</p>
-            <a>立即获取报价</a>
+            <a target="_blank" href="https://html.ecqun.com/kf/sdk/openwin.html?corpid=11627559&cstype=rand&mode=0&cskey=kkd1a23CLKZMWrHPzz&scheme=3&source=100">立即获取报价</a>
             <p>* 网络出现以低价牌号冒充高价牌号，以非标厂标冒充国标的乱象。<br></br>勿贪一时之利，影响产品质量。</p>
           </div>
           <div className={styles.process2CR}>
@@ -164,6 +166,7 @@ export default function Process(){
           </div>
         </div>
       </div>
+      <div className='upwards' id='process3'></div>
       <div className={styles.process3}>
         <Title ch='铝材精密加工案例 用品质赢得众多客户信赖' en='PRECISION MACHINING CASE'/>
         <div className={[styles.process3Top,'main'].join(' ')}>
@@ -188,6 +191,7 @@ export default function Process(){
           </div>
         </div>
       </div>
+      <div className='upwards' id='process4'></div>
       <div className={styles.process4}>
         <Title ch='强大加工实力 产品品质保障' en='FACTOR STRENGTH'/>
         <div className={[styles.process4C,'main'].join(' ')}>

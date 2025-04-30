@@ -1,4 +1,4 @@
-@tailwind utilities;
+@tailwind components;
 
 .detail1{
   height: 100vh;
@@ -10,8 +10,8 @@
     padding-top: 100px;
     justify-content: space-between;
     .productImgWrap {
-      width: 760px;
-      height: 740px;
+      width: 860px;
+      height: 800px;
       position: relative;
       .imgBig{
         width: 100%;
@@ -30,7 +30,7 @@
     /* 参数详情 */
     .produceParamWrap {
       margin-left: 30px;
-      width: 560px;
+      width: 460px;
       position: relative;
       color: #fff;
       h6 {
@@ -38,6 +38,7 @@
         font-size: 36px;
         line-height: 36px;
         color: #FD2621;
+        margin-top: 100px;
         margin-bottom: 40px;
       }
       p {
@@ -96,6 +97,7 @@
 }
 .paramTitle{
   height: 80px;
+  background: #FDFCFC;
   p{
     font-weight: bold;
     font-size: 24px;
@@ -103,6 +105,93 @@
     line-height: 80px;
   }
 }
+
+.introWrap{
+  background: #F1F7FD;
+  .introMain{
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-between;
+    .introL{
+      width: 700px;
+      height: 460px;
+      overflow: hidden;
+      position: relative;
+      video{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      // .videoKZ{
+      //   width: 48px;
+      //   height: 48px;
+      //   position: absolute;
+      //   left: 50%;
+      //   top: 50%;
+      //   transform: translate(-50%,-50%);
+      //   opacity: 0;
+      //   transition: all 0.5s ease;
+      //   img{
+      //     pointer-events: all;
+      //     user-select: all;
+      //   }
+      // }
+      &:hover{
+        .videoKZ{
+          opacity: 1;
+          transition: all 0.5s ease;
+        }
+      }
+    }
+    .introR{
+      margin-left: 40px;
+      width: calc(1400px - 740px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      h5{
+        width: 100%;
+        font-weight: bold;
+        font-size: 24px;
+        height: 64px;
+        line-height: 64px;
+        color: #000000;
+        background: #D9D9D9;
+        border-radius: 8px;
+        text-align: center;
+      }
+      .introRI{
+        width: inherit;
+        display: flex;
+        img{
+          margin-right: 30px;
+          width: 80px;
+          height: auto;
+        }
+        p{
+          font-weight: bold;
+          font-size: 16px;
+          color: #000000;
+        }
+        div{
+          width: 100%;
+          ul{
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            li{
+              font-size: 16px;
+              color: #666666;
+              height: 30px;
+              line-height: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
 // 参数
 .paramM{
   background-color: #F1F7FD;
@@ -176,7 +265,7 @@
     div{
       padding: 40px;
       background: #fff url('https://www.yangdong.co:8443/yangdong-new/product/use_l.png')no-repeat;
-      background-position: left 40px bottom 80px;
+      background-position: left 40px bottom 40px;
       position: relative;
       p{
         font-size: 16px;
@@ -204,6 +293,7 @@
   width: 100%;
   height: 750px;
   background: url('https://www.yangdong.co:8443/yangdong-new/product/bg-1.png')no-repeat;
+  background-size: cover;
   .advantageC{
     h4{
       font-weight: bold;
@@ -332,6 +422,7 @@
   width: 100%;
   height: 720px;
   background: url('https://www.yangdong.co:8443/yangdong-new/product/bg-2.png')no-repeat;
+  background-size: cover;
   p{
     text-align: center;
     color: #333333;
@@ -404,6 +495,7 @@
 .strength{
   width: 100%;
   background: url('https://www.yangdong.co:8443/yangdong-new/product/bg-3.png')no-repeat;
+  background-size: cover;
   p{
     font-size: 24px;
     color: #333333;
@@ -416,7 +508,7 @@
       display: flex;
       .strengthCItemBox{
         padding: 10px;
-        background-position: top 10 right 10;
+        background-position: top 10px right 10px;
         background-repeat: no-repeat;
         .strengthCItemBoxT{
           display: inline-flex;

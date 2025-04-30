@@ -40,7 +40,7 @@ export default function HoverAnimation({ image1, image2, displacementImage }) {
           image1,
           image2,
           displacementImage,
-          intensity: 0.3,
+          intensity: 0.2,
           imagesRatio: 680 / 1400
         });
       } catch (error) {
