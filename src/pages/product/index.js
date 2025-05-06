@@ -77,7 +77,7 @@ function Product(){
           return <div key={i} className={styles.productWrap}>
             <div className={styles.productL}>
               <p>{item.e_t}</p>
-              <img src={store.common.url + 'product/' + item.e_t + '.png'}/>
+              <img src={store.common.url + 'product/' + data.list.type + '/' + item.serise + '.png'}/>
               <b>&times;</b>
               <h4>{item.serise}列{item.texture}</h4>
               {item.product.length>4&& <pre onClick={()=>showItem(i)}>查看更多<img src={store.common.url + 'product/'+(isshow == false ?'down-arrow':'top-arrow')+'.png'}/></pre>}

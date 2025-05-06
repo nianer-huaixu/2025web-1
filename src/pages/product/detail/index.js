@@ -44,7 +44,7 @@ function Detail1(props){
 							<div className='slider-container product-slider'>
 							<Slider {...settings}>
 								{imgListArr.map((item,i)=>{
-									return <div key={i} style={{width:'160.8px'}}
+									return <div key={i} style={{width:160.8}}
                     className={currImg == i? 'active' :'bgF'}
 										onClick={()=>selectImg(i)}
 									>
@@ -285,12 +285,14 @@ function productDetail(){
   return <>
     <Detail1 data={data.productMain} model={model} type={type}/>
 		<div className={styles.anchor}>
-			<a href='#intro'>产品简介</a>
-			<a href='#param'>性能参数</a>
-			<a href='#typical'>典型用途</a>
-			<a href='#advantage'>产品优势</a>
-			<a href='#apply'>应用领域</a>
-			<a href='#strength'>公司实力</a>
+			<div className='main'>
+				<a href='#intro'>产品简介</a>
+				<a href='#param'>性能参数</a>
+				<a href='#typical'>典型用途</a>
+				<a href='#advantage'>产品优势</a>
+				<a href='#apply'>应用领域</a>
+				<a href='#strength'>公司实力</a>
+			</div>
 		</div>
     <div className='upwards' id='intro'></div>
 		<Intro intro={data.intro} model={model} type={type}/>

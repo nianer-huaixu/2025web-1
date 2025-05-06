@@ -38,7 +38,7 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
-h1,h2,h3,h4,h5,h6,p,span,b,i,li,tr,img,video{
+h1,h2,h3,h4,h5,h6,p,span,b,i,li,tr,img,pre,td,tr{
   user-select:none;/*禁止鼠标选中*/
 }
 img{
@@ -203,6 +203,7 @@ header{
     }
     .header-product-main{
       display: flex;
+      background-color: #F3FAFF;
       .header-product-left{
         width: 590px;
         div{
@@ -210,6 +211,8 @@ header{
           border-bottom:1px solid #949494;
           cursor: pointer;
           height: 80px;
+          position: relative;
+          background-color: #fff;
           span{
             display: block;
             text-align: center;
@@ -222,10 +225,24 @@ header{
             right: 50px;
             top: 10;
           }
-          b{
+          &::after{
             position: absolute;
-            right: 20px;
-            top: 4px;
+            content: '';
+            width: 7px;
+            height: 9px;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: url('https://www.yangdong.co:8443/yangdong-new/product/gray.png')no-repeat;
+          }
+        }
+        .activeSerise{
+          background-color: #CD241D;
+          span{
+            color: #fff;
+          }
+          &::after{
+            background: url('https://www.yangdong.co:8443/yangdong-new/product/white.png')no-repeat;
           }
         }
       }
@@ -244,17 +261,30 @@ header{
             line-height: 50px;
             font-size: 24px;
           }
-          b{
-            line-height: 50px;
+          &::after{
             position: absolute;
-            right: 20;
-            top: 0;
+            content: '';
+            width: 7px;
+            height: 9px;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: url('https://www.yangdong.co:8443/yangdong-new/product/gray.png')no-repeat;
+          }
+        }
+        .activeItem{
+          background-color: #CD241D;
+          span{
+            color: #fff;
+          }
+          &::after{
+            background: url('https://www.yangdong.co:8443/yangdong-new/product/white.png')no-repeat;
           }
         }
       }
       .header-product-right{
         background: #F3FAFF url('https://www.yangdong.co:8443/yangdong-new/header/product-bg.png')no-repeat;
-        width: calc(100% - 280px - 590px);
+        width: calc(100% - 280px - 950px);
         cursor: pointer;
         img{
           margin: 40px auto 0;
@@ -265,6 +295,7 @@ header{
           color: #000000;
           text-align: center;
         }
+        
       }
     }
     
@@ -305,9 +336,21 @@ header{
     height: 0px;
     // height: 230px;
     display: flex;
-    img{
-      height: 230px;
+    .header-img-wrap{
+      position: relative;
+      img{
+        height: 230px;
+      }
+      span{
+        position: absolute;
+        top: 20px;
+        right: 130px;
+        font-weight: bold;
+        font-size: 24px;
+        color: #FFFFFF;
+      }
     }
+    
     .right-box{
       display: grid;
       grid-template-columns: repeat(3,2fr);
@@ -544,13 +587,24 @@ footer{
         background:none!important;
       }
     }
+    .active,.bgF{
+      padding: 0 5px;
+      img{
+        height: 110px;
+        height: 110px;
+        margin: auto;
+      }
+    }
     .active{
-      border: 1px solid #FD2621;
-      background-color: #fff;
-      
+      img{
+        background-color: #fff;
+        border: 1px solid #FD2621;
+      }
     }
     .bgF{
-      background-color: #fff;
+      img{
+        background-color: #fff;
+      }
     }
   }
 }

@@ -179,10 +179,10 @@ function About2(){
       </div>
       <div className={styles.btnGroup}>
         <button className="" onClick={()=>sub()} disabled={index == 0?'disabled' :''}>
-          <img src={store.common.url + 'about/'+ (index == 0 ? 'g-l': 'r-l')+'.png'}/>
+          <img src={store.common.url + 'about/w-l.png'}/>
         </button>
         <button onClick={()=>add()}disabled={index == data.length-1?'disabled' :''}>
-          <img  src={store.common.url + 'about/'+ (index == data.length-1 ? 'g-r': 'r-r')+'.png'}/>
+          <img  src={store.common.url + 'about/r-r.png'}/>
         </button>
       </div>
     </div>

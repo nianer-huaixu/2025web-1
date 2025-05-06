@@ -27,62 +27,62 @@ function ProductShow(){
     {
       label:'铝板系列',text:'铝板系列涵盖亮面铝板、贴膜铝板、预拉伸铝板、超宽铝板、特厚铝板、超平铝板、精铸铝板、锻造铝板、花纹铝板等',
       series:[
-        {serie:'七系列',label:'铝板',child:['7050','7075','7A04','7A09']},
-        {serie:'六系列',label:'铝板',child:['6061','6063','6082']},
-        {serie:'五系列',label:'铝板',child:['5052','5083','5754','5A02','5A05','5A06']},
-        {serie:'三系列',label:'铝板',child:['3003','3A21']},
-        {serie:'二系列',label:'铝板',child:['2017','2024','2A12']},
-        {serie:'一系列',label:'铝板',child:['1050','1060']},
+        {serie:'7系',label:'铝板',child:['7050','7075','7A04','7A09']},
+        {serie:'6系',label:'铝板',child:['6061','6063','6082']},
+        {serie:'5系',label:'铝板',child:['5052','5083','5754','5A02','5A05','5A06']},
+        {serie:'3系',label:'铝板',child:['3003','3A21']},
+        {serie:'2系',label:'铝板',child:['2017','2024','2A12']},
+        {serie:'1系',label:'铝板',child:['1050','1060']},
       ]
     },
     {label:'铝棒系列',text:'铝棒系列涵盖纯铝棒、合金铝棒、大直径铝棒、挤压铝棒、光亮铝棒、精拉铝棒、超硬铝棒、铸造铝棒、研磨铝棒等',
       series:[
-        {serie:'七系列',label:'铝棒',child:['7050','7075','7A04','7A09']},
-        {serie:'六系列',label:'铝棒',child:['6061','6063','6082']},
-        {serie:'五系列',label:'铝棒',child:['5052','5083','5754','5A02','5A05','5A06']},
-        {serie:'三系列',label:'铝棒',child:['3003','3A21']},
-        {serie:'二系列',label:'铝棒',child:['2017','2024','2A12']},
-        {serie:'一系列',label:'铝棒',child:['1050','1060']},
+        {serie:'7系',label:'铝棒',child:['7050','7075','7A04','7A09']},
+        {serie:'6系',label:'铝棒',child:['6061','6063','6082']},
+        {serie:'5系',label:'铝棒',child:['5052','5083','5754','5A02','5A05','5A06']},
+        {serie:'3系',label:'铝棒',child:['3003','3A21']},
+        {serie:'2系',label:'铝棒',child:['2017','2024','2A12']},
+        {serie:'1系',label:'铝棒',child:['1050','1060']},
       ]
     },
     {label:'铝卷系列',text:'铝卷系列涵盖纯铝卷、铝带、铝箔、合金铝卷、防锈铝卷、保温铝卷、冲压铝卷、花纹铝卷、超宽铝卷、超宽铝卷等',
       series:[
-        {serie:'七系列',label:'铝卷',child:['7075']},
-        {serie:'六系列',label:'铝卷',child:['6061','6063']},
-        {serie:'五系列',label:'铝卷',child:['5052','5083','5754','5A02']},
-        {serie:'三系列',label:'铝卷',child:['3003','3A21']},
-        {serie:'二系列',label:'铝卷',child:['2024','2A12']},
-        {serie:'一系列',label:'铝卷',child:['1050','1060']},
+        {serie:'7系',label:'铝卷',child:['7075']},
+        {serie:'6系',label:'铝卷',child:['6061','6063']},
+        {serie:'6系',label:'铝卷',child:['5052','5083','5754','5A02']},
+        {serie:'3系',label:'铝卷',child:['3003','3A21']},
+        {serie:'2系',label:'铝卷',child:['2024','2A12']},
+        {serie:'1系',label:'铝卷',child:['1050','1060']},
       ]
     },
     {label:'铝管系列',text:'铝管系列涵盖挤压铝管、无缝铝管、锻造铝管、拉拔铝管、薄壁铝管、厚壁铝管、大口径铝管等',
       series:[
-        {serie:'七系列',label:'铝管',child:['7050','7075','7A04','7A09']},
-        {serie:'六系列',label:'铝管',child:['6061','6063','6082']},
-        {serie:'五系列',label:'铝管',child:['5052','5083','5754','5A02','5A05','5A06']},
-        {serie:'三系列',label:'铝管',child:['3003','3A21']},
-        {serie:'二系列',label:'铝管',child:['2017','2024','2A12']},
-        {serie:'一系列',label:'铝管',child:['1050','1060']},
+        {serie:'7系',label:'铝管',child:['7050','7075','7A04','7A09']},
+        {serie:'6系',label:'铝管',child:['6061','6063','6082']},
+        {serie:'5系',label:'铝管',child:['5052','5083','5754','5A02','5A05','5A06']},
+        {serie:'3系',label:'铝管',child:['3003','3A21']},
+        {serie:'2系',label:'铝管',child:['2017','2024','2A12']},
+        {serie:'1系',label:'铝管',child:['1050','1060']},
       ]
     },
     {label:'铝型材系列',text:'铝型材系列涵盖铝方棒、铝扁棒、铝排、铝方管、矩形管、六角铝棒、等边角铝、不等边角铝、槽铝等',
       series:[
-        {serie:'七系列',label:'铝型材',child:['7050','7075','7A04','7A09']},
-        {serie:'六系列',label:'铝型材',child:['6061','6063','6082']},
-        {serie:'五系列',label:'铝型材',child:['5052','5083','5754','5A02','5A05','5A06']},
-        {serie:'三系列',label:'铝型材',child:['3003','3A21']},
-        {serie:'二系列',label:'铝型材',child:['2017','2024','2A12']},
-        {serie:'一系列',label:'铝型材',child:['1050','1060']},
+        {serie:'7系',label:'铝型材',child:['7050','7075','7A04','7A09']},
+        {serie:'6系',label:'铝型材',child:['6061','6063','6082']},
+        {serie:'5系',label:'铝型材',child:['5052','5083','5754','5A02','5A05','5A06']},
+        {serie:'3系',label:'铝型材',child:['3003','3A21']},
+        {serie:'2系',label:'铝型材',child:['2017','2024','2A12']},
+        {serie:'1系',label:'铝型材',child:['1050','1060']},
       ]
     },
     {label:'铝锻件系列',text:'铝锻件系列涵盖锻板、锻棒、锻管、锻环、锻饼、锻筒、锻锥形等',
       series:[
-        {serie:'七系列',label:'铝锻件',child:['7050','7075','7A04','7A09']},
-        {serie:'六系列',label:'铝锻件',child:['6061','6063','6082']},
-        {serie:'五系列',label:'铝锻件',child:['5052','5083','5754','5A02','5A05','5A06']},
-        {serie:'三系列',label:'铝锻件',child:['3003','3A21']},
-        {serie:'二系列',label:'铝锻件',child:['2017','2024','2A12']},
-        {serie:'一系列',label:'铝锻件',child:['1050','1060']},
+        {serie:'7系',label:'铝锻件',child:['7050','7075','7A04','7A09']},
+        {serie:'6系',label:'铝锻件',child:['6061','6063','6082']},
+        {serie:'5系',label:'铝锻件',child:['5052','5083','5754','5A02','5A05','5A06']},
+        {serie:'3系',label:'铝锻件',child:['3003','3A21']},
+        {serie:'2系',label:'铝锻件',child:['2017','2024','2A12']},
+        {serie:'1系',label:'铝锻件',child:['1050','1060']},
       ]
     }
   ]
@@ -99,7 +99,7 @@ function ProductShow(){
     <div className={styles.productCS}>
       <div className={[styles.productCSM,'main'].join(' ')}>
         {indexArr.map((item,i)=>{
-          return <div key={i} onClick={()=>selectIndex(i)} className={styles.productCSMI}>
+          return <div key={i} onMouseEnter={()=>selectIndex(i)} className={styles.productCSMI}>
             <div className={styles.productIconW}
               style={{
                 height: index == i ? '': '20px',
@@ -211,15 +211,6 @@ function Case(){
 export default function Home() {
   const router = useRouter()
   const store = useStore()
-  const box = {
-    width: 100,
-    height: 100,
-    backgroundColor: "#ff0088",
-    borderRadius: 5,
-  }
-  const imgStyle ={
-    positon:"absulute"
-  }
   const cardVariants = {
     offscreen: {
         y: 300,
@@ -311,7 +302,6 @@ export default function Home() {
           <motion.div className={[styles.aboutMC,'main'].join(' ')}
             initial="offscreen"
             whileInView="onscreen"
-            // viewport={{ amount: 1 }}
             variants={cardVariants}
           >
             <p><i>ABOUT</i>扬东铝业</p>
@@ -419,7 +409,7 @@ export default function Home() {
         <section className={styles.partnerWrap}>
           <div className={[styles.partnerM,'main'].join(' ')}>
             {[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19].map((item,i)=>{
-              return <img key={i} src={URL + 'index/p-'+(i+1)+'.png'}/>
+              return <img key={i} src={URL + 'index/p-'+item+'.png'}/>
             })}
           </div>
         </section>
@@ -456,11 +446,6 @@ export default function Home() {
             <a target="_blank" href="https://html.ecqun.com/kf/sdk/openwin.html?corpid=11627559&cstype=special&mode=0&cskey=kkd1a23CLKZMWrHPzz&scheme=3&source=100&csid=18724918"></a>
           </div>
         </section>
-        {/* <motion.div 
-          style={box}
-          animate={{ rotate: 360 }}
-          transition={{ duration: 3 }}
-        /> */}
     </div>
   ); 
 }

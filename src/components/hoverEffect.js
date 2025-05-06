@@ -50,7 +50,7 @@ export default function HoverAnimation({ image1, image2, displacementImage }) {
 
     return () => {
       if (hoverEffect?.destroy) {
-        hoverEffect.destroy();
+        hoverEffect.destroy()
       }
     };
   }, [isReady]); // 仅在 isReady 时初始化

@@ -87,7 +87,7 @@ export  default function ProductCom(){
             <h5>普通“铝材”</h5>
             {data2.map((item,i)=>{
               return <p key={i} style={{marginLeft:`${i*22}px`}}>
-                <span>✓</span>
+                <span>×</span>
                 {item.text}
               </p>
             })}

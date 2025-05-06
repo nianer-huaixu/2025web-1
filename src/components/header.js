@@ -52,18 +52,16 @@ function ProductMain(){
   <div className='header-product-main'>
     <div className='header-product-left'>
       {data[cate]?.classify.map((item,i)=>{
-        return <div key={i} style={{backgroundColor: serise == i ?"#CD241D":'#FDFCFC'}} onClick={()=>selectSerise(i)}>
+        return <div key={i} className={serise == i ? 'activeSerise' :''} onClick={()=>selectSerise(i)}>
           <span style={{color:serise == i ?"#FDFCFC":'#CD241D'}}>{item.serise}列</span>
           <img src={store.common.url +'header/' + data[cate].type +'/'+ item.serise + '.png'}/>
-          <b style={{color:serise == i ?"#FDFCFC":'#CD241D'}}>&gt;</b>
-        </div>
+          </div>
       })}
     </div>
     <div className='header-product-center'>
       {data[cate]?.classify[serise]?.product.map((item,i)=>{
-        return <div key={i} style={{backgroundColor: productIndex == i ?"#CD241D":'#FDFCFC'}} onClick={()=>selectProductIndex(i)}>
+        return <div key={i} className={productIndex == i ?"activeItem":''} onClick={()=>selectProductIndex(i)}>
           <span style={{color:productIndex==i?'#FDFCFC':'#CD241D'}}>{item.name}{data[cate]?.type}</span>
-          <b style={{color:productIndex == i ?"#FDFCFC":'#CD241D'}}>&gt;</b>
           </div>
       })}
     </div>
@@ -83,7 +81,7 @@ function Process(){
     {text:'加工实力',href:'/process/#process4'}
   ]
   return <div className='header-process'>
-  <img src={store.common.url +'header/process.png'}/>
+  <div className='header-img-wrap'><span>加工中心</span><img src={store.common.url +'header/process.png'}/></div>
   <div className='right-box'>
     {data.map((item,i)=>{
       return <Link key={i} href={item.href}>{item.text}</Link>
@@ -98,7 +96,7 @@ function Apply(){
     setIndex(i)
   }
   const data = [
-    {text:'航天航空铝合金产品应用',href:'#/apply/#apply01',img: store.common.url +'header/apply/1.png'},
+    {text:'航天航空铝合金产品应用',href:'/apply/#apply01',img: store.common.url +'header/apply/1.png'},
     {text:'轨道交通铝合金产品应用',href:'/apply/#apply02',img: store.common.url +'header/apply/2.png'},
     {text:'汽车铝合金产品应用',href:'/apply/#apply03',img: store.common.url +'header/apply/3.png'},
     {text:'船舶用铝合金产品应用',href:'/apply/#apply04',img: store.common.url +'header/apply/4.png'},
@@ -130,7 +128,7 @@ function Case(){
     {text:'新能源'}
   ]
   return <div className='header-case'>
-    <img src={store.common.url +'header/case.png'}/>
+    <div className='header-img-wrap'><span>行业方案</span><img src={store.common.url +'header/case.png'}/></div>
     <div className='right-box'>
       {data.map((item,i)=>{
         return <Link key={i} href='/case' onClick={()=>store.common.changeCaseIndex(i)}>
@@ -151,7 +149,7 @@ function About(){
     {text:'核心价值观',href:'/about/#about6'},
   ]
   return <div className='header-about'>
-    <img src={store.common.url +'header/about.png'}/>
+    <div className='header-img-wrap'><span>走进扬东</span><img src={store.common.url +'header/about.png'}/></div>
     <div className='right-box'>
       {data.map((item,i)=>{
         return <Link key={i} href={item.href}>{item.text}</Link>
@@ -168,7 +166,7 @@ function News(){
     {text:'加工视频'}
   ]
   return <div className='header-news'>
-    <img src={store.common.url +'header/news.png'}/>
+    <div className='header-img-wrap'><span>新闻咨询</span><img src={store.common.url +'header/news.png'}/></div>
     <div className='right-box'>
       {data.map((item,i)=>{
         return <Link key={i} href='news' onClick={()=>store.common.changeNewIndex(i)}>{item.text}</Link>
