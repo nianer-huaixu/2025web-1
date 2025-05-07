@@ -25,10 +25,12 @@ function ProductMain(){
   function changeCate(i){
     setCate(i)
     store.common.changeCate(i)
+    setSerise(0)
   }
   const [serise,setSerise] = useState(0)
   function selectSerise(i){
     setSerise(i)
+    setProductIndex(0)
   }
   const [productIndex,setProductIndex] = useState(0)
   function selectProductIndex(i){
@@ -61,7 +63,7 @@ function ProductMain(){
     <div className='header-product-center'>
       {data[cate]?.classify[serise]?.product.map((item,i)=>{
         return <div key={i} className={productIndex == i ?"activeItem":''} onClick={()=>selectProductIndex(i)}>
-          <span style={{color:productIndex==i?'#FDFCFC':'#CD241D'}}>{item.name}{data[cate]?.type}</span>
+          <span style={{color:productIndex==i?'#FDFCFC':'#CD241D'}}>{item?.name}{data[cate]?.type}</span>
           </div>
       })}
     </div>

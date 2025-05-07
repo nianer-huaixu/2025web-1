@@ -31,7 +31,7 @@ function Product(){
         if(res.ok){return res.json()}
         throw new Error('network response was not ok')
       }).then(res=>{
-        console.log(res);
+        // console.log(res);
         const arr = res.list.classify.reverse()
         setData(res)
       })

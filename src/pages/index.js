@@ -295,7 +295,7 @@ export default function Home() {
   const evaData = ['1V1响应接待','极速发货','贴心售后','实力工厂']
   return (
     <div className={styles.indexWrap}>
-        <video width="100%" controls preload="none" autoPlay muted playsInline loop>
+        <video width="100%" preload="none" autoPlay muted playsInline loop>
           <source src="https://www.yangdong.co:8443/video/%E5%AE%A3%E4%BC%A0%E8%A7%86%E9%A2%91.mp4" type="video/mp4" />
         </video>
         <section className={styles.aboutM}>
