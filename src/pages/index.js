@@ -1,6 +1,7 @@
 'use client'
 import React from "react"
 import { useState } from "react"
+import Slider from "react-slick"
 import CountUp from "react-countup"
 import { AnimatePresence } from "motion/react"
 import * as motion from "motion/react-client"
@@ -8,6 +9,9 @@ import styles from '@/styles/index.module.scss'
 import Link from "next/link"
 import { useRouter } from 'next/navigation'
 import useStore from "@/hook/useStore"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
+
 const URL= 'https://www.yangdong.co:8443/yangdong-new/'
 // product start
 function ProductShow(){
@@ -25,7 +29,7 @@ function ProductShow(){
   }
   const data= [
     {
-      label:'铝板系列',text:'铝板系列涵盖亮面铝板、贴膜铝板、预拉伸铝板、超宽铝板、特厚铝板、超平铝板、精铸铝板、锻造铝板、花纹铝板等',
+      label:'铝板系列',text:'铝板系列涵盖亮面铝板、贴膜铝板、预拉伸铝板、超宽铝板、特厚铝板、超平铝板、精铸铝板、锻造铝板、花纹铝板...',
       series:[
         {serie:'7系',label:'铝板',child:['7050','7075','7A04','7A09']},
         {serie:'6系',label:'铝板',child:['6061','6063','6082']},
@@ -35,7 +39,7 @@ function ProductShow(){
         {serie:'1系',label:'铝板',child:['1050','1060']},
       ]
     },
-    {label:'铝棒系列',text:'铝棒系列涵盖纯铝棒、合金铝棒、大直径铝棒、挤压铝棒、光亮铝棒、精拉铝棒、超硬铝棒、铸造铝棒、研磨铝棒等',
+    {label:'铝棒系列',text:'铝棒系列涵盖纯铝棒、合金铝棒、大直径铝棒、挤压铝棒、光亮铝棒、精拉铝棒、超硬铝棒、铸造铝棒、研磨铝棒...',
       series:[
         {serie:'7系',label:'铝棒',child:['7050','7075','7A04','7A09']},
         {serie:'6系',label:'铝棒',child:['6061','6063','6082']},
@@ -45,7 +49,7 @@ function ProductShow(){
         {serie:'1系',label:'铝棒',child:['1050','1060']},
       ]
     },
-    {label:'铝卷系列',text:'铝卷系列涵盖纯铝卷、铝带、铝箔、合金铝卷、防锈铝卷、保温铝卷、冲压铝卷、花纹铝卷、超宽铝卷、超宽铝卷等',
+    {label:'铝卷系列',text:'铝卷系列涵盖纯铝卷、铝带、铝箔、合金铝卷、防锈铝卷、保温铝卷、冲压铝卷、花纹铝卷、超宽铝卷、超宽铝卷...',
       series:[
         {serie:'7系',label:'铝卷',child:['7075']},
         {serie:'6系',label:'铝卷',child:['6061','6063']},
@@ -55,7 +59,7 @@ function ProductShow(){
         {serie:'1系',label:'铝卷',child:['1050','1060']},
       ]
     },
-    {label:'铝管系列',text:'铝管系列涵盖挤压铝管、无缝铝管、锻造铝管、拉拔铝管、薄壁铝管、厚壁铝管、大口径铝管等',
+    {label:'铝管系列',text:'铝管系列涵盖挤压铝管、无缝铝管、锻造铝管、拉拔铝管、薄壁铝管、厚壁铝管、大口径铝管...',
       series:[
         {serie:'7系',label:'铝管',child:['7050','7075','7A04','7A09']},
         {serie:'6系',label:'铝管',child:['6061','6063','6082']},
@@ -65,7 +69,7 @@ function ProductShow(){
         {serie:'1系',label:'铝管',child:['1050','1060']},
       ]
     },
-    {label:'铝型材系列',text:'铝型材系列涵盖铝方棒、铝扁棒、铝排、铝方管、矩形管、六角铝棒、等边角铝、不等边角铝、槽铝等',
+    {label:'铝型材系列',text:'铝型材系列涵盖铝方棒、铝扁棒、铝排、铝方管、矩形管、六角铝棒、等边角铝、不等边角铝、槽铝...',
       series:[
         {serie:'7系',label:'铝型材',child:['7050','7075','7A04','7A09']},
         {serie:'6系',label:'铝型材',child:['6061','6063','6082']},
@@ -75,7 +79,7 @@ function ProductShow(){
         {serie:'1系',label:'铝型材',child:['1050','1060']},
       ]
     },
-    {label:'铝锻件系列',text:'铝锻件系列涵盖锻板、锻棒、锻管、锻环、锻饼、锻筒、锻锥形等',
+    {label:'铝锻件系列',text:'铝锻件系列涵盖锻板、锻棒、锻管、锻环、锻饼、锻筒、锻锥形...',
       series:[
         {serie:'7系',label:'铝锻件',child:['7050','7075','7A04','7A09']},
         {serie:'6系',label:'铝锻件',child:['6061','6063','6082']},
@@ -161,7 +165,7 @@ function Case(){
     {href:'apply/#apply05',img:URL + 'index/case4.png',text1:'消费电子用铝合金',text2:'扬东铝业集团助力电子电器制造企业在世界范围内占据有利的竞争位置，实现让产品更轻、更薄、更耐用的愿望。铝合金拥有良好的可加工性和导电性，是绝佳的散热材料。能按照客户需求提供各类挤压型材，适用于大功率变电装置、稳压电源、通讯电源、净化电源、广播电视发射装置、逆变电源等各种大型电源产品，也用于自动控制仪表等电力电子产品领域。'},
     {href:'apply/#apply06',img:URL + 'index/case5.png',text1:'医疗设备用铝合金',text2:'扬东铝业集团铝合金在医疗行业应用广泛，早期简单的器械类包括拐杖、轮椅、担架、助力器、油膏缸、消毒盒、病床等等。'},
     {href:'apply/#apply07',img:URL + 'index/case6.png',text1:'化工容器用铝合金',text2:'扬东铝业集团5000系铝合金材料具有良好的抗腐蚀性和可焊接性能，用铝合金制造的体，内部不需要任何防护涂层就可以运输各种液体或者液化气，并且因为没有腐蚀，从而保证油品更清洁，罐体强制报废后回收价值也更高同时，因为铝合金具有良好的导电性能，很少集聚静电在罐体上，所以不会产生火花而导致爆炸，而且铝合金能很好的吸收罐体在碰撞时所产生的照间能力，不会造成罐体开裂而产生泄漏。'},
-    {href:'apply/#apply08',img:URL + 'index/case7.png',text1:'工业模具用铝合金',text2:'扬东铝业集团是国内机械加工铝供应及服务极高的市场声誉，工模具被誉为“现代工业之母”在现代工业被广泛应用。随着市场的发展及铝合金技术的提高，目前欧美市场逐渐呈现铝模替代钢模的现象。制造成本低。铝模具在制造、装置、注塑车间装置调整时间、运输等比钢模具更具优越性成本更低，重量轻。'},
+    {href:'apply/#apply08',img:URL + 'index/case7.png',text1:'工业模具用铝合金',text2:'扬东铝业集团是国内工业模具用铝供应及服务极高的市场声誉，工模具被誉为“现代工业之母”在现代工业被广泛应用。随着市场的发展及铝合金技术的提高，目前欧美市场逐渐呈现铝模替代钢模的现象。制造成本低。铝模具在制造、装置、注塑车间装置调整时间、运输等比钢模具更具优越性成本更低，重量轻。'},
     {href:'apply/#apply09',img:URL + 'index/case8.png',text1:'机器制造用铝合金',text2:'扬东铝业集团是国内机械加工铝供应及服务极高的市场声誉，铝与钢的密度比为1:3，铝模取代钢模在质量方面可节约1/2。采用钢-铝复合模。铝合金模的成本约比钢模低15%以上。铝模制造时间比钢模的短得多，因此占用资金的时间少，优势明显。'},
     {href:'apply/#apply10',img:URL + 'index/case9.png',text1:'建筑工程用铝合金',text2:'扬东铝业集团是国内建筑建材供应及服务极高的市场声誉，随着铝合金隐框幕墙的发展，铝板幕墙也异军突起，配合铝合金玻璃幕墙在幕墙工程中进行使用墙作为一项高技术产品在建筑业发展突飞猛进。'}
   ]
@@ -170,10 +174,10 @@ function Case(){
       <nav>
         <ul>
           {tabs.map((item,i)=>{
-            return <motion.li key={i} onMouseEnter={()=>selectIndex(i)}
-              inherit={false}
-              animate={{backgroundColor: i == index ? '#eee' :'#eee0'}}
-              className={[i==index?styles.liActive:'']}            
+            return <li key={i} onMouseEnter={()=>selectIndex(i)}
+              // inherit={false}
+              // animate={{backgroundColor: i == index ? '#eee' :'#eee0'}}
+              className={i==index?styles.liActive:''}            
               >
               {item.label}
               {/* {i === index ? (
@@ -183,7 +187,7 @@ function Case(){
                     id="underline"
                   />
               ) : null} */}
-            </motion.li>
+            </li>
           })}
         </ul>
       </nav>
@@ -211,6 +215,16 @@ function Case(){
 export default function Home() {
   const router = useRouter()
   const store = useStore()
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows:false,
+    autoplay:true,
+    autoplaySpeed:2000
+  };
   const cardVariants = {
     offscreen: {
         y: 300,
@@ -295,9 +309,15 @@ export default function Home() {
   const evaData = ['1V1响应接待','极速发货','贴心售后','实力工厂']
   return (
     <div className={styles.indexWrap}>
-        <video width="100%" preload="none" autoPlay muted playsInline loop>
+      <div className="slider-container banner-container">
+      <Slider {...settings}>
+        <div><img src={URL + 'index/banner1.png'}/></div>
+        <div><img src={URL + 'index/banner2.png'}/></div>
+      </Slider>
+      </div>
+        {/* <video width="100%" preload="none" autoPlay muted playsInline loop>
           <source src="https://www.yangdong.co:8443/video/%E5%AE%A3%E4%BC%A0%E8%A7%86%E9%A2%91.mp4" type="video/mp4" />
-        </video>
+        </video> */}
         <section className={styles.aboutM}>
           <motion.div className={[styles.aboutMC,'main'].join(' ')}
             initial="offscreen"

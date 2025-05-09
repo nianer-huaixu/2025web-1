@@ -12,9 +12,12 @@ export default function Contact(){
     {icon:store.common.url+'contact/icon5.png',text1:'销售传真',text2:'0512-62388198',text3:'FAX'}
   ]
   const data2 =[
-    {text1:'林经理',text2:'市场总监 /  Marketing Director',text3:'158 5000 6720',img:store.common.url + 'contact/erweima1.png'},
-    {text1:'朱女士',text2:'销售主管 /  Sales Executive',text3:'189 6365 0984',img:store.common.url + 'contact/erweima2.png'},
-    {text1:'黄女士',text2:'销售专员 /  Sales Specialist',text3:'137 7608 0469',img:store.common.url + 'contact/erweima3.png'}
+    {text1:'林经理',text:'Marketing Director',text2:'市场总监',text3:'158 5000 6720',img:store.common.url + 'contact/erweima1.png'},
+    {text1:'朱女士',text:'Sales Executive',text2:'销售主管',text3:'189 6365 0984',img:store.common.url + 'contact/erweima2.png'},
+    {text1:'黄女士',text:'Sales Specialist',text2:'销售专员',text3:'137 7608 0469',img:store.common.url + 'contact/erweima3.png'},
+    {text1:'尹小艳',text:'Sales Specialist',text2:'销售专员',text3:'138 6257 6851',img:store.common.url + 'contact/erweima4.png'},
+    {text1:'黄玲',text:'Sales Specialist',text2:'销售专员',text3:'180 2024 2001',img:store.common.url + 'contact/erweima5.png'},
+    {text1:'徐小玲',text:'Sales Specialist',text2:'销售专员',text3:'180 2024 2063',img:store.common.url + 'contact/erweima6.png'}
   ]
   return (
     <>
@@ -59,6 +62,7 @@ export default function Contact(){
               return <div key={i}>
                 <p>{item.text1}</p>
                 <p>{item.text2}</p>
+                <p>{item.text}</p>
                 <p>{item.text3}</p>
                 <img src={item.img}/>
               </div>

@@ -171,7 +171,7 @@ export default function Process(){
         <Title ch='铝材精密加工案例 用品质赢得众多客户信赖' en='PRECISION MACHINING CASE'/>
         <div className={[styles.process3Top,'main'].join(' ')}>
           {data4.map((item,i)=>{
-            return <div key={i} className={index4 == i ? styles.activeBox :' '} onClick={()=>selectData4(i)}>
+            return <div key={i} className={index4 == i ? styles.activeBox :' '} onMouseEnter={()=>selectData4(i)}>
               <img src={index4 == i ? item.iconS: item.icon}/>
               {item.text}
             </div>

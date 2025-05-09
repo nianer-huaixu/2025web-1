@@ -261,7 +261,7 @@ export default function About(){
         <div className={styles.about5ImgWrap}>
           <div className={styles.about5ImgL}>
             <img src={store.common.url + 'about/img5-1.png'}/>
-            <p>我们的宗旨是做全国最全的铝材现货分销商。<br></br>
+            <p>我们的宗旨是做全国齐全的的铝材现货分销商。<br></br>
             为了降低各个领域新客户的开发成本和四处找货的问题，<br></br>
             节省采购铝材多重环节，<br></br>
             大大提高铝材品种配备、少量生产、<br></br>

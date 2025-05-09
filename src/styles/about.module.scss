@@ -404,6 +404,7 @@
         div{
           padding-top: 40px;
           transition: all 0.4s ease-out;
+          
         }
       }
       &:nth-child(even){
@@ -422,6 +423,7 @@
             padding-top: 120px;
             p{
               height: 360px;
+              -webkit-line-clamp: none;
             }
           }
         }

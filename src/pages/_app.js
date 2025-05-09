@@ -7,13 +7,14 @@ export default function App({ Component, pageProps }) {
   const router = useRouter()
   // 路由发生改变将触发修改
   let curPath = router.asPath
+  // 挂载之后事件监听
   useEffect(() => {
     if(typeof document !== 'undefined'){
       // AIFF()
       BaiduStatistics()
       EC(window, document)
     }
-    // 禁用右键菜单
+    // 禁用右键菜单-防止保存触发
     const handleContextMenu = (e) => {
       e.preventDefault();
     }
@@ -21,7 +22,7 @@ export default function App({ Component, pageProps }) {
     document.addEventListener('contextmenu', handleContextMenu)
     // 组件卸载时移除监听
     return () => {
-      document.removeEventListener('contextmenu', handleContextMenu);
+      document.removeEventListener('contextmenu', handleContextMenu)
     }
   },[curPath])
   // EC

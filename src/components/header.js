@@ -45,7 +45,7 @@ function ProductMain(){
   return <>
   <div className='header-product-top main'>
     {data.map((item,i)=>{
-      return <div key={i} onClick={()=>changeCate(i)}>
+      return <div key={i} onMouseEnter={()=>changeCate(i)}>
         <img src={store.common.url + 'header/'+ item.type + (cate == i?'-r':'-g')+ '.png'}/>
         <span style={{color:cate == i ? '#CD241D':'#333'}}>{item?.type}系列</span>
       </div>
@@ -54,7 +54,7 @@ function ProductMain(){
   <div className='header-product-main'>
     <div className='header-product-left'>
       {data[cate]?.classify.map((item,i)=>{
-        return <div key={i} className={serise == i ? 'activeSerise' :''} onClick={()=>selectSerise(i)}>
+        return <div key={i} className={serise == i ? 'activeSerise' :''} onMouseEnter={()=>selectSerise(i)}>
           <span style={{color:serise == i ?"#FDFCFC":'#CD241D'}}>{item.serise}列</span>
           <img src={store.common.url +'header/' + data[cate].type +'/'+ item.serise + '.png'}/>
           </div>
@@ -62,7 +62,7 @@ function ProductMain(){
     </div>
     <div className='header-product-center'>
       {data[cate]?.classify[serise]?.product.map((item,i)=>{
-        return <div key={i} className={productIndex == i ?"activeItem":''} onClick={()=>selectProductIndex(i)}>
+        return <div key={i} className={productIndex == i ?"activeItem":''} onMouseEnter={()=>selectProductIndex(i)}>
           <span style={{color:productIndex==i?'#FDFCFC':'#CD241D'}}>{item?.name}{data[cate]?.type}</span>
           </div>
       })}
@@ -113,7 +113,7 @@ function Apply(){
     <div className='header-appList-main main'>
       <div className='header-appList-left'>
         {data.map((item,i)=>{
-          return <Link key={i} onClick={()=>selectIndex(i)} href={item.href} style={{color:i ==index ?'#CD241D':'#333',borderColor:i ==index ?'#CD241D':'#eee'}}>{item.text}</Link>
+          return <Link key={i} onMouseEnter={()=>selectIndex(i)} href={item.href} style={{color:i ==index ?'#CD241D':'#333',borderColor:i ==index ?'#CD241D':'#eee'}}>{item.text}</Link>
         })}
       </div>
       <div><img src={data[index].img}/></div>

@@ -141,7 +141,7 @@
         .process1BItemB{
           height: 370px;
           background: #F3F3F3;
-          padding: 100px 10px 40px;
+          padding: 100px 20px 40px;
           border-radius: 30px;
           position: relative;
           z-index: 2;
@@ -385,6 +385,7 @@
   width: 100%;
   padding-bottom: 40px;
   background: url('https://www.yangdong.co:8443/yangdong-new/process/bg-3.png')no-repeat;
+  background-size: cover;
   .process4C{
     margin-top: 40px;
     .process4Cgrid{
@@ -409,7 +410,7 @@
       grid-template-columns: repeat(1, 626px 362px 363px);
     }
     .process4Cgrid2{
-      grid-template-columns: repeat(3, 32.6%);
+      grid-template-columns: repeat(3, 1fr);
       margin: 24px 0;
       .diyBox{
         background: #E30212;
