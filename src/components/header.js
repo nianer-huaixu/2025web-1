@@ -46,7 +46,7 @@ function ProductMain(){
   <div className='header-product-top main'>
     {data.map((item,i)=>{
       return <div key={i} onMouseEnter={()=>changeCate(i)}>
-        <img src={store.common.url + 'header/'+ item.type + (cate == i?'-r':'-g')+ '.png'}/>
+        <img src={store.common.url + 'header/'+ item.type + (cate == i?'-r':'-g')+ '.webp'}/>
         <span style={{color:cate == i ? '#CD241D':'#333'}}>{item?.type}系列</span>
       </div>
     })}
@@ -56,7 +56,7 @@ function ProductMain(){
       {data[cate]?.classify.map((item,i)=>{
         return <div key={i} className={serise == i ? 'activeSerise' :''} onMouseEnter={()=>selectSerise(i)}>
           <span style={{color:serise == i ?"#FDFCFC":'#CD241D'}}>{item.serise}列</span>
-          <img src={store.common.url +'header/' + data[cate].type +'/'+ item.serise + '.png'}/>
+          <img src={store.common.url +'header/' + data[cate].type +'/'+ item.serise + '.webp'}/>
           </div>
       })}
     </div>
@@ -83,7 +83,7 @@ function Process(){
     {text:'加工实力',href:'/process/#process4'}
   ]
   return <div className='header-process'>
-  <div className='header-img-wrap'><span>加工中心</span><img src={store.common.url +'header/process.png'}/></div>
+  <div className='header-img-wrap'><span>加工中心</span><img src={store.common.url +'header/process.webp'}/></div>
   <div className='right-box'>
     {data.map((item,i)=>{
       return <Link key={i} href={item.href}>{item.text}</Link>
@@ -98,16 +98,16 @@ function Apply(){
     setIndex(i)
   }
   const data = [
-    {text:'航天航空铝合金产品应用',href:'/apply/#apply01',img: store.common.url +'header/apply/1.png'},
-    {text:'轨道交通铝合金产品应用',href:'/apply/#apply02',img: store.common.url +'header/apply/2.png'},
-    {text:'汽车铝合金产品应用',href:'/apply/#apply03',img: store.common.url +'header/apply/3.png'},
-    {text:'船舶用铝合金产品应用',href:'/apply/#apply04',img: store.common.url +'header/apply/4.png'},
-    {text:'消费电子铝合金产品应用',href:'/apply/#apply05',img: store.common.url +'header/apply/5.png'},
-    {text:'医疗设备用铝合金产品应用',href:'/apply/#apply06',img: store.common.url +'header/apply/6.png'},
-    {text:'化工容器铝合金产品应用',href:'/apply/#apply07',img: store.common.url +'header/apply/7.png'},
-    {text:'工业模具用铝合金产品应用',href:'/apply/#apply08',img: store.common.url +'header/apply/8.png'},
-    {text:'机械加工铝合金产品应用',href:'/apply/#apply09',img: store.common.url +'header/apply/9.png'},
-    {text:'建筑建材用铝合金产品应用',href:'/apply/#apply10',img: store.common.url +'header/apply/10.png'}
+    {text:'航天航空铝合金产品应用',href:'/apply/#apply01',img: store.common.url +'header/apply/1.webp'},
+    {text:'轨道交通铝合金产品应用',href:'/apply/#apply02',img: store.common.url +'header/apply/2.webp'},
+    {text:'汽车铝合金产品应用',href:'/apply/#apply03',img: store.common.url +'header/apply/3.webp'},
+    {text:'船舶用铝合金产品应用',href:'/apply/#apply04',img: store.common.url +'header/apply/4.webp'},
+    {text:'消费电子铝合金产品应用',href:'/apply/#apply05',img: store.common.url +'header/apply/5.webp'},
+    {text:'医疗设备用铝合金产品应用',href:'/apply/#apply06',img: store.common.url +'header/apply/6.webp'},
+    {text:'化工容器铝合金产品应用',href:'/apply/#apply07',img: store.common.url +'header/apply/7.webp'},
+    {text:'工业模具用铝合金产品应用',href:'/apply/#apply08',img: store.common.url +'header/apply/8.webp'},
+    {text:'机械加工铝合金产品应用',href:'/apply/#apply09',img: store.common.url +'header/apply/9.webp'},
+    {text:'建筑建材用铝合金产品应用',href:'/apply/#apply10',img: store.common.url +'header/apply/10.webp'}
   ]
   return <div className='header-appList'>
     <div className='header-appList-main main'>
@@ -130,7 +130,7 @@ function Case(){
     {text:'新能源'}
   ]
   return <div className='header-case'>
-    <div className='header-img-wrap'><span>行业方案</span><img src={store.common.url +'header/case.png'}/></div>
+    <div className='header-img-wrap'><span>行业方案</span><img src={store.common.url +'header/case.webp'}/></div>
     <div className='right-box'>
       {data.map((item,i)=>{
         return <Link key={i} href='/case' onClick={()=>store.common.changeCaseIndex(i)}>
@@ -151,7 +151,7 @@ function About(){
     {text:'核心价值观',href:'/about/#about6'},
   ]
   return <div className='header-about'>
-    <div className='header-img-wrap'><span>走进扬东</span><img src={store.common.url +'header/about.png'}/></div>
+    <div className='header-img-wrap'><span>走进扬东</span><img src={store.common.url +'header/about.webp'}/></div>
     <div className='right-box'>
       {data.map((item,i)=>{
         return <Link key={i} href={item.href}>{item.text}</Link>
@@ -168,7 +168,7 @@ function News(){
     {text:'加工视频'}
   ]
   return <div className='header-news'>
-    <div className='header-img-wrap'><span>新闻咨询</span><img src={store.common.url +'header/news.png'}/></div>
+    <div className='header-img-wrap'><span>新闻咨询</span><img src={store.common.url +'header/news.webp'}/></div>
     <div className='right-box'>
       {data.map((item,i)=>{
         return <Link key={i} href='news' onClick={()=>store.common.changeNewIndex(i)}>{item.text}</Link>
@@ -226,7 +226,7 @@ export default function Header(){
   return <header>
     <div className="header-warp main">
         <div className='logo-wrap'>
-          <Link href='/'><img src='https://www.yangdong.co:8443/yangdong-new/header/logo-white.png' alt='logo'/></Link>
+          <Link href='/'><img src='https://www.yangdong.co:8443/yangdong-new/header/logo-white.webp' alt='logo'/></Link>
         </div>
         <MuneItem path={pathname}/>
       </div>

@@ -14,7 +14,7 @@ function Detail1(props){
   const {data,model,type} = props
   const store = useStore()
   let imgListArr = []
-  for(let i = 1;i<=data.png;i++){
+  for(let i = 1;i<=data.webp;i++){
     imgListArr.push(`https://www.yangdong.co:8443/${type}/${model}/${i}.png`)
   }
   const [currImg,setImg] = useState(0)
@@ -69,9 +69,9 @@ function Detail1(props){
 				<p>物流: 当天发货，送货上门</p>
 				<p>加工: 按客户需求加工定制</p>
 				<p className={styles.productParamList1}>
-						<a><img src={store.common.url +'product/icon1.png'}/>产品手册</a>
-						<a><img src={store.common.url +'product/icon2.png'}/>视频介绍</a>
-						<a><img src={store.common.url +'product/icon3.png'}/>服务与支持</a>
+						<a><img src={store.common.url +'product/icon1.webp'}/>产品手册</a>
+						<a><img src={store.common.url +'product/icon2.webp'}/>视频介绍</a>
+						<a><img src={store.common.url +'product/icon3.webp'}/>服务与支持</a>
 				</p>
 				<p className={styles.productParamBtnGroup}>
 					<button className='redBtn'><a  target="_blank" href='https://html.ecqun.com/kf/sdk/openwin.html?corpid=11627559&cstype=rand&mode=0&cskey=kkd1a23CLKZMWrHPzz&scheme=3&source=100'>立即询价</a></button>
@@ -99,15 +99,15 @@ function Intro({intro,model,type}){
 	return <div className={styles.introWrap}>
 		<div className={[styles.introMain,'main'].join(' ')}>
 		<div className={styles.introL}>
-			<video width={700} type="video/mp4" onClick={()=>togglePlay()} autoPlay muted playsInline ref={videoRef} src={URL + type +'/'+ model +'.mp4'}/>
+			<video width={700} type="video/mp4" onClick={()=>togglePlay()} autoPlay muted playsInline loop ref={videoRef} src={URL + type +'/'+ model +'.mp4'}/>
 			{/* <div className={styles.videoKZ}>
-				<img onClick={()=>togglePlay()} src={store.common.url + (videoRef.current?.paused ? 'product/pause.png' : 'product/play.png')}/>
+				<img onClick={()=>togglePlay()} src={store.common.url + (videoRef.current?.paused ? 'product/pause.webp' : 'product/play.webp')}/>
 			</div> */}
 		</div>
 		<div className={styles.introR}>
 			<h5>产品简介 product brief introduction</h5>
 			<div className={styles.introRI}>
-				<img src={store.common.url + 'product/intro1.png'}/>
+				<img src={store.common.url + 'product/intro1.webp'}/>
 				<div>
 					<p>{type}种类</p>
 					<ul>
@@ -116,7 +116,7 @@ function Intro({intro,model,type}){
 				</div>
 			</div>
 			<div className={styles.introRI}>
-				<img src={store.common.url + 'product/intro2.png'}/>
+				<img src={store.common.url + 'product/intro2.webp'}/>
 				<div>
 					<p>生产标准</p>
 					<ul>
@@ -125,7 +125,7 @@ function Intro({intro,model,type}){
 				</div>
 			</div>
 			<div className={styles.introRI}>
-				<img src={store.common.url + 'product/intro3.png'}/>
+				<img src={store.common.url + 'product/intro3.webp'}/>
 				<div>
 					<p>供货状态</p>
 					<ul>
@@ -247,14 +247,14 @@ function Typical({use,model,type}){
 		<div className={styles.typical}>
 			<div className={[styles.typicalC,'main'].join(' ')}>
 				<div>
-					<img src={store.common.url +'product/use_t.png'}/>
+					<img src={store.common.url +'product/use_t.webp'}/>
 					<p>
 						<b>{use.title}主要特征及应用范围：</b><br></br>
 						{use.introduce}
 					</p>
 					<p>{use.typeuse}</p>
 				</div>
-				<img src={store.common.url + 'product/' + type + '.png'}/>
+				<img src={store.common.url + 'product/' + type + '.webp'}/>
 			</div>
 		</div>
 	)

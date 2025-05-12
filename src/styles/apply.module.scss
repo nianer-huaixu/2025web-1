@@ -8,11 +8,7 @@
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
-  line-height: 60px;
-  height: 60px;
   a{
-    display: block;
-    height: 60px;
     width:100%;
     text-align:center;
     color:#000;
@@ -20,12 +16,8 @@
     line-height:60px;
     font-weight:bold;
     background: #EEEEEE;
-    -webkit-transition:all 0.1s linear;
-    transition:all 0.1s linear;
     &:hover{
       color:#CD241D;
-      -webkit-transition:all 0.1s linear;
-      transition:all 0.1s linear;
     }
   }
 }

@@ -69,7 +69,7 @@ export default function Footer(){
         <h5><Link href={'/contactus'}>联系我们</Link></h5>
         <div className='erweima-box'>
           <div>
-            <img src={imgURL + 'erweima01.png'}/>
+            <img src={imgURL + 'erweima01.webp'}/>
             <p style={{marginTop:'10px'}}>联系我们</p>
           </div>
         </div>
@@ -79,7 +79,7 @@ export default function Footer(){
       </ul>
     </div>
     <p className="copyright">江苏扬东铝业集团有限公司 版权所有
-      <img src={imgURL + 'gonganbu_logo.png'}/>
+      <img src={imgURL + 'gonganbu_logo.webp'}/>
       <a href='https://beian.mps.gov.cn/#/query/webSearch' target='_blank'>苏公网安备32059002005586号</a> 
       &nbsp;&nbsp;&nbsp;
       <a href='https://beian.miit.gov.cn' target='_blank'>苏ICP备12039314号-7</a></p>

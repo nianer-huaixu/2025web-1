@@ -27,11 +27,11 @@ export  default function ProductCom(){
     {text:'没有图纸无法接单'}
   ]
   const data3 = [
-    {img:store.common.url +'product/img1.png',text1:'航空航天用铝',text2:'扬东铝业集团具有航空领域用高端铝铁材料的提供能力,品种繁多,其中一些军工标准产品等新型发动机涡轮盘、压气盘、强击机等核心部件制作。'},
-    {img:store.common.url +'product/img2.png',text1:'轨道交通用铝',text2:'扬东铝业集团铝制列车重量轻、耐腐蚀、运行性能好。铝板在轨道车上主要用作车体外板、车顶板、地板、车内装饰板等部位。'},
-    {img:store.common.url +'product/img3.png',text1:'汽车制造用铝',text2:'在当今燃料及环境问题日益严峻的时期，铝合金扮演着一个助推汽车轻量化及提升燃油能效的重要角色，从而帮助缓解能源及环境问题。'},
-    {img:store.common.url +'product/img4.png',text1:'精密加工用铝',text2:'采用钢-铝复合模，铝合金模的成本约比钢模低15%以上。铝模制造时间比钢模的短得多，因此占用资金的时间少，优势明显。'},
-    {img:store.common.url +'product/img5.png',text1:'船舶机械用铝',text2:'扬东铝业集团供应的海洋系泊链铝用于船舶和石油工业，强度高，韧性好，具备耐海水腐蚀、抗疲劳、耐磨损等特性。'}
+    {img:store.common.url +'product/img1.webp',text1:'航空航天用铝',text2:'扬东铝业集团具有航空领域用高端铝铁材料的提供能力,品种繁多,其中一些军工标准产品等新型发动机涡轮盘、压气盘、强击机等核心部件制作。'},
+    {img:store.common.url +'product/img2.webp',text1:'轨道交通用铝',text2:'扬东铝业集团铝制列车重量轻、耐腐蚀、运行性能好。铝板在轨道车上主要用作车体外板、车顶板、地板、车内装饰板等部位。'},
+    {img:store.common.url +'product/img3.webp',text1:'汽车制造用铝',text2:'在当今燃料及环境问题日益严峻的时期，铝合金扮演着一个助推汽车轻量化及提升燃油能效的重要角色，从而帮助缓解能源及环境问题。'},
+    {img:store.common.url +'product/img4.webp',text1:'精密加工用铝',text2:'采用钢-铝复合模，铝合金模的成本约比钢模低15%以上。铝模制造时间比钢模的短得多，因此占用资金的时间少，优势明显。'},
+    {img:store.common.url +'product/img5.webp',text1:'船舶机械用铝',text2:'扬东铝业集团供应的海洋系泊链铝用于船舶和石油工业，强度高，韧性好，具备耐海水腐蚀、抗疲劳、耐磨损等特性。'}
   ]
   const data4 = [
     {
@@ -119,8 +119,8 @@ export  default function ProductCom(){
       <div className={[styles.strengthC,'main'].join(' ')}>
         {data4.map((item,i)=>{
           return <div key={i} className={styles.strengthCItem}>
-            <img src={store.common.url + 'product/ad-img'+ (i+1) +'.png'}/>
-            <div className={styles.strengthCItemBox} style={{backgroundImage:`url(${store.common.url}product/ad-bg${i+1}.png)`}}>
+            <img src={store.common.url + 'product/ad-img'+ (i+1) +'.webp'}/>
+            <div className={styles.strengthCItemBox} style={{backgroundImage:`url(${store.common.url}product/ad-bg${i+1}.webp)`}}>
               <div className={styles.strengthCItemBoxT}>
                 <span>{item.text1}</span>
                 <div>

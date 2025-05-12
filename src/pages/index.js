@@ -16,12 +16,12 @@ const URL= 'https://www.yangdong.co:8443/yangdong-new/'
 // product start
 function ProductShow(){
   const indexArr = [
-    {label:'铝板',index:0,icon:URL + 'index/p-icon1.png'},
-    {label:'铝棒',index:1,icon:URL + 'index/p-icon2.png'},
-    {label:'铝管',index:2,icon:URL + 'index/p-icon3.png'},
-    {label:'铝卷',index:3,icon:URL + 'index/p-icon4.png'},
-    {label:'铝型材',index:4,icon:URL + 'index/p-icon5.png'},
-    {label:'铝锻件',index:5,icon:URL + 'index/p-icon6.png'}
+    {label:'铝板',index:0,icon:URL + 'index/p-icon1.webp'},
+    {label:'铝棒',index:1,icon:URL + 'index/p-icon2.webp'},
+    {label:'铝管',index:2,icon:URL + 'index/p-icon3.webp'},
+    {label:'铝卷',index:3,icon:URL + 'index/p-icon4.webp'},
+    {label:'铝型材',index:4,icon:URL + 'index/p-icon5.webp'},
+    {label:'铝锻件',index:5,icon:URL + 'index/p-icon6.webp'}
   ]
   const [index,setIndex] = useState(0)
   function selectIndex(i){
@@ -90,11 +90,11 @@ function ProductShow(){
       ]
     }
   ]
-  return <div className={styles.productC} style={{backgroundImage:`url(${URL}index/p-bg-${(index+1)}.png`}}>
+  return <div className={styles.productC} style={{backgroundImage:`url(${URL}index/p-bg-${(index+1)}.webp`}}>
     <div className={styles.productCH}>
       <h4>
         <span>江苏扬东铝业</span>
-        <img src={URL + 'index/p-icon.png'}/>
+        <img src={URL + 'index/p-icon.webp'}/>
         <span>实力工厂</span>
       </h4>
       <p className={styles.text1}>我们不只是一家<span>铝材工厂</span>，更是你坚如磐石的<span>供应商</span></p>
@@ -119,7 +119,7 @@ function ProductShow(){
       </div>
     </div>
     <div className={[styles.productCM,'main'].join(' ')}>
-      <img src={URL + 'index/p-img-'+ (index+1)+'.png'}/>
+      <img src={URL + 'index/p-img-'+ (index+1)+'.webp'}/>
       <div className={styles.productCMT}>
         <h5>{data[index].label}</h5>
         <p>{data[index].text}</p>
@@ -158,16 +158,16 @@ function Case(){
     setIndex(i)
   }
   const data = [
-    {href:'apply/#apply01',img:URL + 'index/case0.png',text1:'航空航天用铝合金',text2:'具有航空领域用高端铝铁材料的提供能力，其中一些标准产品等新型发动机涡轮盘、压气盘、叶片用铝成功应用于轰炸机、强毒机等核心部件制作。'},
-    {href:'apply/#apply02',img:URL + 'index/case1.png',text1:'轨道交通用铝合金',text2:'供应的铁路用铝主要有铁路弹簧铝、扣件用铝、道岔用铝、钩尾框用铝、铁路轴承铝、欧标合金铝，美标合金铝等产品，全部通过国家铁道部认可并具备了批量供货能力，大量用于指导铁路货车、高速客车、动车组列车的关键部件，成为其铁路优秀供应商。'},
-    {href:'apply/#apply03',img:URL + 'index/case2.png',text1:'汽车智造用铝合金',text2:'更高效，更高的强重比，可满足复杂形状的要求。在当今燃料及环境问题日益严峻的时期，铝合金扮演着一个助推汽车轻量化及提升燃油能效的重要角色，从而帮助缓解能源及环境问题。节能环保已成为当今世界的主旋律，而高昂的能源费用和材料的循环利用已成为汽车制造商正面临的主要难题。当此时机，铝合金凭借其优越的比强度、优良的成型性和高效的循环利用率，逐步成为汽车制造商的宠儿，“铝代钢”已大势所趋。'},
-    {href:'apply/#apply04',img:URL + 'index/case3.png',text1:'船舶运输用铝合金',text2:'扬东铝业集团供应的海洋系泊链铝用于船舶和石油工业，强度高，韧性好，具备耐海水腐蚀、抗疲劳、耐磨损等特性。其中四级系泊链是目前海洋用的最高级别系链，需求量较大，成功通过国际著名船级社品质认证，填补了国内空白，实物质量达到国际水平，已经形成批量化供应铝产品能力，广泛用于勘探平台、浮时采油平台、海上储油转运站和辅助船队等海洋工程及专用船舶领域。'},
-    {href:'apply/#apply05',img:URL + 'index/case4.png',text1:'消费电子用铝合金',text2:'扬东铝业集团助力电子电器制造企业在世界范围内占据有利的竞争位置，实现让产品更轻、更薄、更耐用的愿望。铝合金拥有良好的可加工性和导电性，是绝佳的散热材料。能按照客户需求提供各类挤压型材，适用于大功率变电装置、稳压电源、通讯电源、净化电源、广播电视发射装置、逆变电源等各种大型电源产品，也用于自动控制仪表等电力电子产品领域。'},
-    {href:'apply/#apply06',img:URL + 'index/case5.png',text1:'医疗设备用铝合金',text2:'扬东铝业集团铝合金在医疗行业应用广泛，早期简单的器械类包括拐杖、轮椅、担架、助力器、油膏缸、消毒盒、病床等等。'},
-    {href:'apply/#apply07',img:URL + 'index/case6.png',text1:'化工容器用铝合金',text2:'扬东铝业集团5000系铝合金材料具有良好的抗腐蚀性和可焊接性能，用铝合金制造的体，内部不需要任何防护涂层就可以运输各种液体或者液化气，并且因为没有腐蚀，从而保证油品更清洁，罐体强制报废后回收价值也更高同时，因为铝合金具有良好的导电性能，很少集聚静电在罐体上，所以不会产生火花而导致爆炸，而且铝合金能很好的吸收罐体在碰撞时所产生的照间能力，不会造成罐体开裂而产生泄漏。'},
-    {href:'apply/#apply08',img:URL + 'index/case7.png',text1:'工业模具用铝合金',text2:'扬东铝业集团是国内工业模具用铝供应及服务极高的市场声誉，工模具被誉为“现代工业之母”在现代工业被广泛应用。随着市场的发展及铝合金技术的提高，目前欧美市场逐渐呈现铝模替代钢模的现象。制造成本低。铝模具在制造、装置、注塑车间装置调整时间、运输等比钢模具更具优越性成本更低，重量轻。'},
-    {href:'apply/#apply09',img:URL + 'index/case8.png',text1:'机器制造用铝合金',text2:'扬东铝业集团是国内机械加工铝供应及服务极高的市场声誉，铝与钢的密度比为1:3，铝模取代钢模在质量方面可节约1/2。采用钢-铝复合模。铝合金模的成本约比钢模低15%以上。铝模制造时间比钢模的短得多，因此占用资金的时间少，优势明显。'},
-    {href:'apply/#apply10',img:URL + 'index/case9.png',text1:'建筑工程用铝合金',text2:'扬东铝业集团是国内建筑建材供应及服务极高的市场声誉，随着铝合金隐框幕墙的发展，铝板幕墙也异军突起，配合铝合金玻璃幕墙在幕墙工程中进行使用墙作为一项高技术产品在建筑业发展突飞猛进。'}
+    {href:'apply/#apply01',img:URL + 'index/case0.webp',text1:'航空航天用铝合金',text2:'具有航空领域用高端铝铁材料的提供能力，其中一些标准产品等新型发动机涡轮盘、压气盘、叶片用铝成功应用于轰炸机、强毒机等核心部件制作。'},
+    {href:'apply/#apply02',img:URL + 'index/case1.webp',text1:'轨道交通用铝合金',text2:'供应的铁路用铝主要有铁路弹簧铝、扣件用铝、道岔用铝、钩尾框用铝、铁路轴承铝、欧标合金铝，美标合金铝等产品，全部通过国家铁道部认可并具备了批量供货能力，大量用于指导铁路货车、高速客车、动车组列车的关键部件，成为其铁路优秀供应商。'},
+    {href:'apply/#apply03',img:URL + 'index/case2.webp',text1:'汽车智造用铝合金',text2:'更高效，更高的强重比，可满足复杂形状的要求。在当今燃料及环境问题日益严峻的时期，铝合金扮演着一个助推汽车轻量化及提升燃油能效的重要角色，从而帮助缓解能源及环境问题。节能环保已成为当今世界的主旋律，而高昂的能源费用和材料的循环利用已成为汽车制造商正面临的主要难题。当此时机，铝合金凭借其优越的比强度、优良的成型性和高效的循环利用率，逐步成为汽车制造商的宠儿，“铝代钢”已大势所趋。'},
+    {href:'apply/#apply04',img:URL + 'index/case3.webp',text1:'船舶运输用铝合金',text2:'扬东铝业集团供应的海洋系泊链铝用于船舶和石油工业，强度高，韧性好，具备耐海水腐蚀、抗疲劳、耐磨损等特性。其中四级系泊链是目前海洋用的最高级别系链，需求量较大，成功通过国际著名船级社品质认证，填补了国内空白，实物质量达到国际水平，已经形成批量化供应铝产品能力，广泛用于勘探平台、浮时采油平台、海上储油转运站和辅助船队等海洋工程及专用船舶领域。'},
+    {href:'apply/#apply05',img:URL + 'index/case4.webp',text1:'消费电子用铝合金',text2:'扬东铝业集团助力电子电器制造企业在世界范围内占据有利的竞争位置，实现让产品更轻、更薄、更耐用的愿望。铝合金拥有良好的可加工性和导电性，是绝佳的散热材料。能按照客户需求提供各类挤压型材，适用于大功率变电装置、稳压电源、通讯电源、净化电源、广播电视发射装置、逆变电源等各种大型电源产品，也用于自动控制仪表等电力电子产品领域。'},
+    {href:'apply/#apply06',img:URL + 'index/case5.webp',text1:'医疗设备用铝合金',text2:'扬东铝业集团铝合金在医疗行业应用广泛，早期简单的器械类包括拐杖、轮椅、担架、助力器、油膏缸、消毒盒、病床等等。'},
+    {href:'apply/#apply07',img:URL + 'index/case6.webp',text1:'化工容器用铝合金',text2:'扬东铝业集团5000系铝合金材料具有良好的抗腐蚀性和可焊接性能，用铝合金制造的体，内部不需要任何防护涂层就可以运输各种液体或者液化气，并且因为没有腐蚀，从而保证油品更清洁，罐体强制报废后回收价值也更高同时，因为铝合金具有良好的导电性能，很少集聚静电在罐体上，所以不会产生火花而导致爆炸，而且铝合金能很好的吸收罐体在碰撞时所产生的照间能力，不会造成罐体开裂而产生泄漏。'},
+    {href:'apply/#apply08',img:URL + 'index/case7.webp',text1:'工业模具用铝合金',text2:'扬东铝业集团是国内工业模具用铝供应及服务极高的市场声誉，工模具被誉为“现代工业之母”在现代工业被广泛应用。随着市场的发展及铝合金技术的提高，目前欧美市场逐渐呈现铝模替代钢模的现象。制造成本低。铝模具在制造、装置、注塑车间装置调整时间、运输等比钢模具更具优越性成本更低，重量轻。'},
+    {href:'apply/#apply09',img:URL + 'index/case8.webp',text1:'机器制造用铝合金',text2:'扬东铝业集团是国内机械加工铝供应及服务极高的市场声誉，铝与钢的密度比为1:3，铝模取代钢模在质量方面可节约1/2。采用钢-铝复合模。铝合金模的成本约比钢模低15%以上。铝模制造时间比钢模的短得多，因此占用资金的时间少，优势明显。'},
+    {href:'apply/#apply10',img:URL + 'index/case9.webp',text1:'建筑工程用铝合金',text2:'扬东铝业集团是国内建筑建材供应及服务极高的市场声誉，随着铝合金隐框幕墙的发展，铝板幕墙也异军突起，配合铝合金玻璃幕墙在幕墙工程中进行使用墙作为一项高技术产品在建筑业发展突飞猛进。'}
   ]
   return (
     <div className={[styles.caseWrapM,'main'].join(' ')}>
@@ -223,7 +223,8 @@ export default function Home() {
     slidesToScroll: 1,
     arrows:false,
     autoplay:true,
-    autoplaySpeed:2000
+    autoplaySpeed:2000,
+    pauseOnHover:false,
   };
   const cardVariants = {
     offscreen: {
@@ -280,29 +281,29 @@ export default function Home() {
   const newData =[
     {
       list:[
-        {index:0,img:'news/company1.png',lebel:'“精工品质，真诚合作”扬东集团客户好评不断诚信可靠',date:'null'},
+        {index:0,img:'news/company1.webp',lebel:'“精工品质，真诚合作”扬东集团客户好评不断诚信可靠',date:'null'},
         {index:4,lebel:'扬东集团被中国兵器工业集团纳入优选供应商名录',date:'2023-07-15'},
         {index:3,lebel:'【喜讯】扬东集团荣获3A级企业信用等级证书',date:'2023-07-20'},
-        {index:1,img:'news/company2.png',lebel:'江苏扬东铝业集团公司开展员工拓展活动',date:'2023-10-20'},
-        {index:4,img:'news/company5.png',lebel:'扬东集团被中国兵器工业集团纳入优选供应商名录',date:'2023-07-15'}
+        {index:1,img:'news/company2.webp',lebel:'江苏扬东铝业集团公司开展员工拓展活动',date:'2023-10-20'},
+        {index:4,img:'news/company5.webp',lebel:'扬东集团被中国兵器工业集团纳入优选供应商名录',date:'2023-07-15'}
       ]
     },
     {
       list:[
-        {index:0,img:'news/company1.png',lebel:'西南铝为天舟三号提供多个铝合金关键材料',date:'null'},
+        {index:0,img:'news/company1.webp',lebel:'西南铝为天舟三号提供多个铝合金关键材料',date:'null'},
         {index:1,lebel:'【国企改革三年行动】广西南南铝加工向行业排头兵迈进',date:'2023-09-20'},
         {index:2,lebel:'纳米焊丝解决了7075铝合金焊接难题',date:'2023-08-08'},
-        {index:4,img:'news/industry5.png',lebel:'铝材市场前景分析',date:'2023-06-24'},
-        {index:8,img:'news/industry9.png',lebel:'工业铝型材为什么能逐渐代替钢铁型材',date:'2023-02-19'}
+        {index:4,img:'news/industry5.webp',lebel:'铝材市场前景分析',date:'2023-06-24'},
+        {index:8,img:'news/industry9.webp',lebel:'工业铝型材为什么能逐渐代替钢铁型材',date:'2023-02-19'}
       ]
     },
     {
       list:[
-        {index:0,img:'news/knowledge1.png',lebel:'铝合金和镁合金的区别',date:'null'},
+        {index:0,img:'news/knowledge1.webp',lebel:'铝合金和镁合金的区别',date:'null'},
         {index:1,lebel:'花纹铝板该如何做保养',date:'2019-07-23'},
         {index:2,lebel:'铝板厂家讲解什么是5052合金铝板的点解着色',date:'2020-10-28'},
-        {index:3,img:'news/knowledge3.png',lebel:'铝板的拉丝与喷砂处理',date:'2019-09-11'},
-        {index:4,img:'news/knowledge5.png',lebel:'精密机械零件加工对材质有哪些注意事项',date:'2020-07-06'}
+        {index:3,img:'news/knowledge3.webp',lebel:'铝板的拉丝与喷砂处理',date:'2019-09-11'},
+        {index:4,img:'news/knowledge5.webp',lebel:'精密机械零件加工对材质有哪些注意事项',date:'2020-07-06'}
       ]
     }
   ]
@@ -311,8 +312,8 @@ export default function Home() {
     <div className={styles.indexWrap}>
       <div className="slider-container banner-container">
       <Slider {...settings}>
-        <div><img src={URL + 'index/banner1.png'}/></div>
-        <div><img src={URL + 'index/banner2.png'}/></div>
+        <div><img src={URL + 'index/banner1.webp'}/></div>
+        <div><img src={URL + 'index/banner2.webp'}/></div>
       </Slider>
       </div>
         {/* <video width="100%" preload="none" autoPlay muted playsInline loop>
@@ -357,12 +358,12 @@ export default function Home() {
           <div className={[styles.reasonS,'main'].join(' ')}>
             {reasonData.map((item,i)=>{
               return <div key={i} className={styles.reasonSI} style={{borderBottom:i==reasonIndex?'3px solid #e30212':''}} onMouseEnter={()=>changeReason(i)}>
-                <div className={styles.reasonImgW}><img src={URL + 'index/reason-icon-'+ i +'.png'}/></div>
+                <div className={styles.reasonImgW}><img src={URL + 'index/reason-icon-'+ i +'.webp'}/></div>
                 <span>{item.label}</span>
               </div>
             })}
           </div>
-          <div className={styles.reasonM}  style={{backgroundImage:`url(https://www.yangdong.co:8443/yangdong-new/index/reason-bg-${reasonIndex}.png)`}}>
+          <div className={styles.reasonM}  style={{backgroundImage:`url(https://www.yangdong.co:8443/yangdong-new/index/reason-bg-${reasonIndex}.webp)`}}>
             <div className={[styles.reasonMC,'main'].join(' ')}> 
               <div className={styles.reasonMCB}>
                 <h5>{reasonData[reasonIndex].text1}</h5>
@@ -381,8 +382,8 @@ export default function Home() {
               </div>
               <div className={styles.newWrapMHR}>
                 {newLabel.map((item,i)=>{
-                  return <div key={i} style={{backgroundColor:i==newIndex?'#CD241D':''}} onClick={()=>selectNew(i)}>
-                    <img src={URL + 'index/new-icon-'+ i +'.png'}/>
+                  return <div key={i} style={{backgroundColor:i==newIndex?'#CD241D':'',borderColor:i==newIndex?'#CD241D':'#fff'}} onClick={()=>selectNew(i)}>
+                    <img src={URL + 'index/new-icon-'+ i +'.webp'}/>
                     {item.text}
                   </div>
                 })}
@@ -429,7 +430,7 @@ export default function Home() {
         <section className={styles.partnerWrap}>
           <div className={[styles.partnerM,'main'].join(' ')}>
             {[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19].map((item,i)=>{
-              return <img key={i} src={URL + 'index/p-'+item+'.png'}/>
+              return <img key={i} src={URL + 'index/p-'+item+'.webp'}/>
             })}
           </div>
         </section>
@@ -437,7 +438,7 @@ export default function Home() {
           <div className={[styles.evaM,'main'].join(' ')}>
             <div className={styles.evaMT}>
               <div className={styles.evaMTL}>
-                <img src={URL + 'index/eva-l.png'}/>
+                <img src={URL + 'index/eva-l.webp'}/>
                 <div>
                   <p>他们说 ——</p>
                   <p>THEY SAID</p>
@@ -447,7 +448,7 @@ export default function Home() {
               <div className={styles.evaMTR}>
                 {evaData.map((item,i)=>{
                   return <div key={i}>
-                    <img src={URL +'index/eva-r-'+ (i+1) +".png"}/>
+                    <img src={URL +'index/eva-r-'+ (i+1) +".webp"}/>
                     <p>{item}</p>
                   </div>
                 })}
@@ -455,7 +456,7 @@ export default function Home() {
             </div>
             <div className={styles.evaImgW}>
               {[1,2,3,4,5,6,7,8,9,10].map((item)=>{
-                return <img key={item} src={URL + 'index/eva-'+item+'.png'}/>
+                return <img key={item} src={URL + 'index/eva-'+item+'.webp'}/>
               })}
             </div>
           </div>

@@ -7,69 +7,69 @@ const data =[
       year:'2024',
       month:'04',
       day:'17',
-      img:'news/company1.png',
+      img:'news/company1.webp',
       content1:'“精工品质、价格合理”江苏扬东铝业集团有限公司销售的高精铝材产品客户反馈好评不断、诚信可靠、口碑好，客户给予我们产品很大的肯定，扬东集团会再接再励以更高的品质服务标准来回馈新老客户的信赖。',
       content2:'扬东铝业集团时刻以顾客关注为焦点，以“真诚合作”为经营准则，产品按国际、国家标准和行业标准组织生产;公司已取得ISO9001:2015质量体系认证、企业信用等级证书、质量服务诚信单位、重合同守信用企业、诚信经营示范单位。企业资信等级证书、重质量守信用单位、重服务守信用企业，部分产品取得了的环保检测报告，符合欧盟ROHS标准。'
     },{
       id:1,
       title:'江苏扬东铝业集团公司开展员工拓展活动',
-      img:'news/company2.png',
+      img:'news/company2.webp',
       year:'2023',
       month:'10',
       day:'20'
     },{
       id:2,
       title:'热烈祝贺扬东集团顺利通过ISO9001质量管理体系认证',
-      img:'news/company3.png',
+      img:'news/company3.webp',
       year:'2023',
       month:'08',
       day:'13'
     },{
       id:3,
       title:'【喜讯】扬东集团荣获3A级企业信用等级证书',
-      img:'news/company4.png',
+      img:'news/company4.webp',
       year:'2023',
       month:'07',
       day:'20'
     },{
       id:4,
       title:'扬东集团被中国兵器工业集团纳入优选供应商名录',
-      img:'news/company5.png',
+      img:'news/company5.webp',
       year:'2023',
       month:'07',
       day:'15'
     },{
       id:5,
       title:'扬东集团荣获3A级信用认证“诚信经营示范单位”',
-      img:'news/company6.png',
+      img:'news/company6.webp',
       year:'2022',
       month:'06',
       day:'27'
     },{
       id:6,
       title:'扬东铝板定制生产注意事项',
-      img:'news/company7.png',
+      img:'news/company7.webp',
       year:'2024',
       month:'05',
       day:'11'
     },{
       id:7,
       title:'铝板定制厂家分享表面裂纹消除办法',
-      img:'news/company8.png',
+      img:'news/company8.webp',
       year:'2022',
       month:'04',
       day:'25'
     },{
       id:8,
       title:'干货分享【扬东】--6061铝板品质间有很大区别',
-      img:'news/company9.png',
+      img:'news/company9.webp',
       year:'2022',
       month:'03',
       day:'15'
     },{
       id:9,
       title:'【扬东铝业】铝板铝棒加工注意事项分享',
-      img:'news/company10.png',
+      img:'news/company10.webp',
       year:'2024',
       month:'02',
       day:'11'
@@ -81,98 +81,98 @@ const data =[
     {
       id:0,
       title:'西南铝为天舟三号提供多个铝合金关键材料',
-      img:'news/industry1.png',
+      img:'news/industry1.webp',
       year:'2023',
       month:'09',
       day:'20'
     },{
       id:1,
       title:'【国企改革三年行动】广西南南铝加工向行业排头兵迈进',
-      img:'news/industry2.png',
+      img:'news/industry2.webp',
       year:'2023',
       month:'08',
       day:'10'
     },{
       id:2,
       title:'纳米焊丝解决了7075铝合金焊接难题',
-      img:'news/industry3.png',
+      img:'news/industry3.webp',
       year:'2023',
       month:'08',
       day:'08'
     },{
       id:3,
       title:'空心铝材是如何挤压成型的?',
-      img:'news/industry4.png',
+      img:'news/industry4.webp',
       year:'2023',
       month:'07',
       day:'05'
     },{
       id:4,
       title:'铝材市场前景分析',
-      img:'news/industry5.png',
+      img:'news/industry5.webp',
       year:'2023',
       month:'06',
       day:'24'
     },{
       id:5,
       title:'各规格铝产品分类及用途知识一览 助您快速入门铝产品行业',
-      img:'news/industry6.png',
+      img:'news/industry6.webp',
       year:'2023',
       month:'05',
       day:'13'
     },{
       id:6,
       title:'超平铝板:解决建筑行业难题，助力绿色环保发展',
-      img:'news/industry7.png',
+      img:'news/industry7.webp',
       year:'2023',
       month:'04',
       day:'10'
     },{
       id:7,
       title:'铝板材料:特性、应用与发展',
-      img:'news/industry8.png',
+      img:'news/industry8.webp',
       year:'2023',
       month:'03',
       day:'26'
     },{
       id:8,
       title:'工业铝型材为什么能逐渐代替钢铁型材',
-      img:'news/industry9.png',
+      img:'news/industry9.webp',
       year:'2023',
       month:'02',
       day:'19'
     },{
       id:9,
       title:'国内对铝价的加强调控',
-      img:'news/industry10.png',
+      img:'news/industry10.webp',
       year:'2023',
       month:'01',
       day:'17'
     },{
       id:10,
       title:'汽车车厢用铝板-汽车用铝合金板-铝板生产厂家',
-      img:'news/industry11.png',
+      img:'news/industry11.webp',
       year:'2022',
       month:'11',
       day:'17'
     },{
       id:11,
       title:'想要手机壳五颜六色,怎能少得了5052铝板氧化料',
-      img:'news/industry12.png',
+      img:'news/industry12.webp',
       year:'2022',
       month:'10',
       day:'12'
     },{
       id:12,
       title:'2024铝板-飞机螺旋桨材料',
-      img:'news/industry13.png',
+      img:'news/industry13.webp',
       year:'2022',
       month:'08',
       day:'19'
     },{
       id:13,
       title:'6061铝板在家用电器的应用的优点',
-      img:'news/industry14.png',
+      img:'news/industry14.webp',
       year:'2022',
       month:'06',
       day:'17'
@@ -184,105 +184,105 @@ const data =[
     {
       id:0,
       title:'铝合金和镁合金的区别',
-      img:'news/knowledge1.png',
+      img:'news/knowledge1.webp',
       tag:'精选知识',
       date:'2019-10-12'
     },
     {
       id:1,
       title:'花纹铝板该如何做保养?',
-      img:'news/knowledge2.png',
+      img:'news/knowledge2.webp',
       tag:'精选知识',
       date:'2019-07-23'
     },
     {
       id:2,
       title:'铝板厂家讲解什么是5052合金铝板的点解着色',
-      img:'news/knowledge3.png',
+      img:'news/knowledge3.webp',
       tag:'铝材知识',
       date:'2020-10-28'
     },
     {
       id:3,
       title:'铝板的拉丝与喷砂处理',
-      img:'news/knowledge4.png',
+      img:'news/knowledge4.webp',
       tag:'技术知识',
       date:'2019-09-11'
     },
     {
       id:4,
       title:'精密机械零件加工对材质有哪些注意事项',
-      img:'news/knowledge5.png',
+      img:'news/knowledge5.webp',
       tag:'铝材知识',
       date:'2020-07-06'
     },
     {
       id:5,
       title:'无缝铝管和有缝铝管的区别',
-      img:'news/knowledge6.png',
+      img:'news/knowledge6.webp',
       tag:'技术知识',
       date:'2020-05-05'
     },
     {
       id:6,
       title:'铝合金T6和T651区别',
-      img:'news/knowledge7.png',
+      img:'news/knowledge7.webp',
       tag:'铝材知识',
       date:'2019-02-01'
     },
     {
       id:7,
       title:'铝模具和钢模具区别及优势',
-      img:'news/knowledge8.png',
+      img:'news/knowledge8.webp',
       tag:'精选知识',
       date:'2018-12-19'
     },
     {
       id:8,
       title:'铝板表面出现瑕疵的原因',
-      img:'news/knowledge9.png',
+      img:'news/knowledge9.webp',
       tag:'铝材知识',
       date:'2019-10-12'
     },
     {
       id:9,
       title:'为什么7075铝合金氧化效果不稳定',
-      img:'news/knowledge10.png',
+      img:'news/knowledge10.webp',
       tag:'精选知识',
       date:'2019-09-22'
     },
     {
       id:10,
       title:'工业铝型材采购需注意的几点',
-      img:'news/knowledge11.png',
+      img:'news/knowledge11.webp',
       tag:'技术知识',
       date:'2024-06-20'
     },
     {
       id:11,
       title:'铝型材加工常识',
-      img:'news/knowledge12.png',
+      img:'news/knowledge12.webp',
       tag:'铝材知识',
       date:'2022-04-19'
     },
     {
       id:12,
       title:'您知道工业用铝型材的分类与应用有哪些吗?',
-      img:'news/knowledge13.png',
+      img:'news/knowledge13.webp',
       tag:'技术知识',
       date:'2021-08-19'
     },
     {
       id:13,
       title:'铝型材有哪些分类？',
-      img:'news/knowledge14.png',
+      img:'news/knowledge14.webp',
       tag:'铝材知识',
       date:'2024-03-20'
     },
     {
       id:14,
       title:'影响铝卷铝材质量的几大要素',
-      img:'news/knowledge15.png',
+      img:'news/knowledge15.webp',
       tag:'精选知识',
       date:'2023-06-03'
     }

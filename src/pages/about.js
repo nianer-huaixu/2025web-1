@@ -34,7 +34,7 @@ function About1(){
           </div>
         </div>
       </div>
-      <img width={733} height={733} src={store.common.url + 'about/img1.png'}/>
+      <img width={733} height={733} src={store.common.url + 'about/img1.webp'}/>
     </div>
   </section>
 }
@@ -179,10 +179,10 @@ function About2(){
       </div>
       <div className={styles.btnGroup}>
         <button className="" onClick={()=>sub()} disabled={index == 0?'disabled' :''}>
-          <img src={store.common.url + 'about/w-l.png'}/>
+          <img src={store.common.url + 'about/w-l.webp'}/>
         </button>
         <button onClick={()=>add()}disabled={index == data.length-1?'disabled' :''}>
-          <img  src={store.common.url + 'about/r-r.png'}/>
+          <img  src={store.common.url + 'about/r-r.webp'}/>
         </button>
       </div>
     </div>
@@ -260,7 +260,7 @@ export default function About(){
         <h4 className={styles.titleCom}>公司实力</h4>
         <div className={styles.about5ImgWrap}>
           <div className={styles.about5ImgL}>
-            <img src={store.common.url + 'about/img5-1.png'}/>
+            <img src={store.common.url + 'about/img5-1.webp'}/>
             <p>我们的宗旨是做全国齐全的的铝材现货分销商。<br></br>
             为了降低各个领域新客户的开发成本和四处找货的问题，<br></br>
             节省采购铝材多重环节，<br></br>
@@ -269,13 +269,13 @@ export default function About(){
           </div>
           <div className={styles.about5ImgR}>
             <div className={styles.about5ImgRgrid1}>
-              <div className={styles.imgWrap}><img src={store.common.url + 'about/img5-2.png'}/></div>
-              <div className={styles.imgWrap}><img src={store.common.url + 'about/img5-3.png'}/></div>
+              <div className={styles.imgWrap}><img src={store.common.url + 'about/img5-2.webp'}/></div>
+              <div className={styles.imgWrap}><img src={store.common.url + 'about/img5-3.webp'}/></div>
             </div>
             <div className={styles.about5ImgRgrid2}>
-              <div className={styles.imgWrap}><img src={store.common.url + 'about/img5-4.png'}/></div>
-              <div className={styles.imgWrap}><img src={store.common.url + 'about/img5-5.png'}/></div>
-              <div className={styles.imgWrap}><img src={store.common.url + 'about/img5-6.png'}/></div>
+              <div className={styles.imgWrap}><img src={store.common.url + 'about/img5-4.webp'}/></div>
+              <div className={styles.imgWrap}><img src={store.common.url + 'about/img5-5.webp'}/></div>
+              <div className={styles.imgWrap}><img src={store.common.url + 'about/img5-6.webp'}/></div>
             </div>
           </div>
         </div>
@@ -287,7 +287,7 @@ export default function About(){
       <div className={styles.about6C}>
         {data6.map((item,i)=>{
           return <div key={i} className={styles.about6CItem}>
-            <img src={store.common.url + 'about/img6-'+ (i+1)+'.png'}/>
+            <img src={store.common.url + 'about/img6-'+ (i+1)+'.webp'}/>
             <div>
               <span>{item.text1}</span>
               <p>{item.text2}</p>

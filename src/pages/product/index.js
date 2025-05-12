@@ -64,12 +64,12 @@ function Product(){
               return <div key={i} className={store.common.cate == item.index ? styles.activeDiv : ''}
                 onClick={()=>setCate(item.index)}
               >
-                <img src={store.common.url + 'product/icon-'+(store.common.cate == item.index? 'r' :'w')+'-'+i+'.png'}/>
+                <img src={store.common.url + 'product/icon-'+(store.common.cate == item.index? 'r' :'w')+'-'+i+'.webp'}/>
                 <p>{item.lebel}</p>
               </div>
             })}
           </div>
-          <img src={store.common.url + 'product/label-r.png'}/>
+          <img src={store.common.url + 'product/label-r.webp'}/>
         </div>
       </div>
       <div className={[styles.productBox,'main'].join(' ')}>
@@ -77,10 +77,10 @@ function Product(){
           return <div key={i} className={styles.productWrap}>
             <div className={styles.productL}>
               <p>{item.e_t}</p>
-              <img src={store.common.url + 'product/' + data.list.type + '/' + item.serise + '.png'}/>
+              <img src={store.common.url + 'product/' + data.list.type + '/' + item.serise + '.webp'}/>
               <b>&times;</b>
               <h4>{item.serise}列{item.texture}</h4>
-              {item.product.length>4&& <pre onClick={()=>showItem(i)}>查看更多<img src={store.common.url + 'product/'+(isshow == false ?'down-arrow':'top-arrow')+'.png'}/></pre>}
+              {item.product.length>4&& <pre onClick={()=>showItem(i)}>查看更多<img src={store.common.url + 'product/'+(isshow == false ?'down-arrow':'top-arrow')+'.webp'}/></pre>}
             </div>
             <div className={styles.productR} style={{height:showIndex== i?'859px':'562px'}}>
               {item.product.map((productItem,Pi)=>{
@@ -89,7 +89,7 @@ function Product(){
                   <b>· {productItem.name}-{productItem.ply[0]}{data.list.type}</b>
                   {productItem.ply[1] && <b>· {productItem.name}-{productItem.ply[1]}{data.list.type}</b>}
                   <Link href={{pathname:'/product/detail',query:{model:productItem.name,type:data.list.type}}}>查看更多</Link>
-                  <img src={'https://www.yangdong.co:8443/' + data.list.type +'/'+ productItem.name + '/1.png'}/>
+                  <img src={'https://www.yangdong.co:8443/' + data.list.type +'/'+ productItem.name + '/1.webp'}/>
                 </div>
               })}
           </div>

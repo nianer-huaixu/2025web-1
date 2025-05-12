@@ -45,7 +45,7 @@ function NewDetail(){
       pathname:'/news'
     })
   }
-  const imgUrl = searchArr[0] == 0 ? store.common.url + 'news/company'+ (Number(searchArr[1])+1) + '.png' : (searchArr[0] == 1 ? store.common.url + 'news/industry'+ (Number(searchArr[1])+1) + '.png' : store.common.url + 'news/knowledge'+ (Number(searchArr[1])+1) + '.png')
+  const imgUrl = searchArr[0] == 0 ? store.common.url + 'news/company'+ (Number(searchArr[1])+1) + '.webp' : (searchArr[0] == 1 ? store.common.url + 'news/industry'+ (Number(searchArr[1])+1) + '.webp' : store.common.url + 'news/knowledge'+ (Number(searchArr[1])+1) + '.webp')
   return (
     <>
       <Banner suf='new'/>
@@ -68,7 +68,7 @@ function NewDetail(){
           if(i < data.detail.content.split('。').length-1) return <p key={i}>{item}。</p>
         })}
         {data.detail.imgs && data.detail.imgs.map((item,i)=>{
-          return <img key={i} src={store.common.url +'news/detail/'+ item+'.png'}/>
+          return <img key={i} src={store.common.url +'news/detail/'+ item+'.webp'}/>
         })}
         <hr></hr>
         <div className={styles.linkBox}>

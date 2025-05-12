@@ -15,30 +15,30 @@ function Title({ch,en}){
 export default function Process(){
   const store = useStore()
   const data1 = [
-    {img:store.common.url +'process/1-1.png',bgc:'#2A303C',text1:'现货供应',text2:'SPOT SUPPLY'},
-    {img:store.common.url +'process/1-2.png',bgc:'#494F5B',text1:'种类丰富',text2:'RICH VARIETY'},
-    {img:store.common.url +'process/1-3.png',bgc:'#2A303C',text1:'设备齐全',text2:'FULLY EQUIPPED'},
-    {img:store.common.url +'process/1-4.png',bgc:'#494F5B',text1:'快速发货',text2:'FAST DELIVERY'},
-    {img:store.common.url +'process/1-5.png',bgc:'#2A303C',text1:'切割加工',text2:'CUTTING PROCESS'}
+    {img:store.common.url +'process/1-1.webp',bgc:'#2A303C',text1:'现货供应',text2:'SPOT SUPPLY'},
+    {img:store.common.url +'process/1-2.webp',bgc:'#494F5B',text1:'种类丰富',text2:'RICH VARIETY'},
+    {img:store.common.url +'process/1-3.webp',bgc:'#2A303C',text1:'设备齐全',text2:'FULLY EQUIPPED'},
+    {img:store.common.url +'process/1-4.webp',bgc:'#494F5B',text1:'快速发货',text2:'FAST DELIVERY'},
+    {img:store.common.url +'process/1-5.webp',bgc:'#2A303C',text1:'切割加工',text2:'CUTTING PROCESS'}
   ]
   const data2 = [
-    {img:store.common.url +'process/2-1.png',text1:'原材优',text2:'支持各种类型的铝合金，采用符合国标标准的原材料，不掺杂废铝，',text3:'确保铝型材韧性足'},
-    {img:store.common.url +'process/2-2.png',text1:'厚度足',text2:'采用标准模具成型，厚度充足，保证载重量，',text3:'延长使用寿命'},
-    {img:store.common.url +'process/2-3.png',text1:'精度高',text2:'采用高精度自动化设备，直线度误差低至±0.5mm，',text3:'成型精度高'},
-    {img:store.common.url +'process/2-4.png',text1:'硬度高',text2:'材料进行失效处理后，硬度可高达13度，',text3:'高承重设备不易变形，抗压抗拉性能好'},
-    {img:store.common.url +'process/2-5.png',text1:'膜厚足',text2:'氧化膜厚度符合标准，型材表面',text3:'20年性能稳定'}
+    {img:store.common.url +'process/2-1.webp',text1:'原材优',text2:'支持各种类型的铝合金，采用符合国标标准的原材料，不掺杂废铝，',text3:'确保铝型材韧性足'},
+    {img:store.common.url +'process/2-2.webp',text1:'厚度足',text2:'采用标准模具成型，厚度充足，保证载重量，',text3:'延长使用寿命'},
+    {img:store.common.url +'process/2-3.webp',text1:'精度高',text2:'采用高精度自动化设备，直线度误差低至±0.5mm，',text3:'成型精度高'},
+    {img:store.common.url +'process/2-4.webp',text1:'硬度高',text2:'材料进行失效处理后，硬度可高达13度，',text3:'高承重设备不易变形，抗压抗拉性能好'},
+    {img:store.common.url +'process/2-5.webp',text1:'膜厚足',text2:'氧化膜厚度符合标准，型材表面',text3:'20年性能稳定'}
   ]
   const data3 = [
-    {img:store.common.url +'process/3-1.png',text1:'可开具',text2:'材质质保证明'},
-    {img:store.common.url +'process/3-2.png',text1:'24小时报价',text2:'响应和DFM反馈'},
-    {img:store.common.url +'process/3-3.png',text1:'品质为本 杜绝假冒',text2:'支持验货'}
+    {img:store.common.url +'process/3-1.webp',text1:'可开具',text2:'材质质保证明'},
+    {img:store.common.url +'process/3-2.webp',text1:'24小时报价',text2:'响应和DFM反馈'},
+    {img:store.common.url +'process/3-3.webp',text1:'品质为本 杜绝假冒',text2:'支持验货'}
   ]
   const data4 = [
-    {iconS:store.common.url +'process/4-1-1.png',icon:store.common.url +'process/4-1-0.png',text:'医疗设备'},
-    {iconS:store.common.url +'process/4-2-1.png',icon:store.common.url +'process/4-2-0.png',text:'电子电器'},
-    {iconS:store.common.url +'process/4-3-1.png',icon:store.common.url +'process/4-3-0.png',text:'自动化设备'},
-    {iconS:store.common.url +'process/4-4-1.png',icon:store.common.url +'process/4-4-0.png',text:'汽车行业'},
-    {iconS:store.common.url +'process/4-5-1.png',icon:store.common.url +'process/4-5-0.png',text:'石油机械'},
+    {iconS:store.common.url +'process/4-1-1.webp',icon:store.common.url +'process/4-1-0.webp',text:'医疗设备'},
+    {iconS:store.common.url +'process/4-2-1.webp',icon:store.common.url +'process/4-2-0.webp',text:'电子电器'},
+    {iconS:store.common.url +'process/4-3-1.webp',icon:store.common.url +'process/4-3-0.webp',text:'自动化设备'},
+    {iconS:store.common.url +'process/4-4-1.webp',icon:store.common.url +'process/4-4-0.webp',text:'汽车行业'},
+    {iconS:store.common.url +'process/4-5-1.webp',icon:store.common.url +'process/4-5-0.webp',text:'石油机械'},
   ]
   const [index4,setIndex4] = useState(0)
   function selectData4(index){
@@ -46,37 +46,37 @@ export default function Process(){
   }
   const data4C = [
     {
-      img1:store.common.url +'process/case1-1.png',
-      img2:store.common.url +'process/case1-2.png',
-      img3:store.common.url +'process/case1-3.png',
+      img1:store.common.url +'process/case1-1.webp',
+      img2:store.common.url +'process/case1-2.webp',
+      img3:store.common.url +'process/case1-3.webp',
       text1:'医疗设备零部件加工案例 ',
       text2:'案例描述：扬东产品所用原材料来自品牌供应商，从原材入库到出货都经过层层质检，良品率高达99.8%；与扬东合作十分放心！'
     },
     {
-      img1:store.common.url +'process/case2-1.png',
-      img2:store.common.url +'process/case2-2.png',
-      img3:store.common.url +'process/case2-3.png',
+      img1:store.common.url +'process/case2-1.webp',
+      img2:store.common.url +'process/case2-2.webp',
+      img3:store.common.url +'process/case2-3.webp',
       text1:'电子电器零部件加工案例 ',
       text2:'案例描述：扬东产品所用原材料来自品牌供应商，从原材入库到出货都经过层层质检，良品率高达99.8%；与扬东合作十分放心！'
     },
     {
-      img1:store.common.url +'process/case3-1.png',
-      img2:store.common.url +'process/case3-2.png',
-      img3:store.common.url +'process/case3-3.png',
+      img1:store.common.url +'process/case3-1.webp',
+      img2:store.common.url +'process/case3-2.webp',
+      img3:store.common.url +'process/case3-3.webp',
       text1:'自动化设备零部件加工案例 ',
       text2:'案例描述：扬东产品所用原材料来自品牌供应商，从原材入库到出货都经过层层质检，良品率高达99.8%；与扬东合作十分放心！'
     },
     {
-      img1:store.common.url +'process/case4-1.png',
-      img2:store.common.url +'process/case4-2.png',
-      img3:store.common.url +'process/case4-3.png',
+      img1:store.common.url +'process/case4-1.webp',
+      img2:store.common.url +'process/case4-2.webp',
+      img3:store.common.url +'process/case4-3.webp',
       text1:'汽车行业零部件加工案例 ',
       text2:'案例描述：扬东产品所用原材料来自品牌供应商，从原材入库到出货都经过层层质检，良品率高达99.8%；与扬东合作十分放心！'
     },
     {
-      img1:store.common.url +'process/case5-1.png',
-      img2:store.common.url +'process/case5-2.png',
-      img3:store.common.url +'process/case5-3.png',
+      img1:store.common.url +'process/case5-1.webp',
+      img2:store.common.url +'process/case5-2.webp',
+      img3:store.common.url +'process/case5-3.webp',
       text1:'石油机械零部件加工案例 ',
       text2:'案例描述：扬东产品所用原材料来自品牌供应商，从原材入库到出货都经过层层质检，良品率高达99.8%；与扬东合作十分放心！'
     }
@@ -93,7 +93,7 @@ export default function Process(){
               <p>成熟的生产技术 多年的加工经验</p>
               </div>
               <div className={styles.process1TopR}>
-                <img src={store.common.url +'process/1-0.png'}/>
+                <img src={store.common.url +'process/1-0.webp'}/>
               </div>
           </div>
           <div className={styles.process1Cen}>
@@ -196,19 +196,19 @@ export default function Process(){
         <Title ch='强大加工实力 产品品质保障' en='FACTOR STRENGTH'/>
         <div className={[styles.process4C,'main'].join(' ')}>
           <div className={`${styles.process4Cgrid} ${styles.process4Cgrid1}`}>
-            <div><img src={store.common.url + 'process/5-1.png'}/><span>挤压铝型材</span></div>
-            <div><img src={store.common.url + 'process/5-2.png'}/><span>激光切割</span></div>
-            <div><img src={store.common.url + 'process/5-3.png'}/><span>三丰三次元检测</span></div>
+            <div><img src={store.common.url + 'process/5-1.webp'}/><span>挤压铝型材</span></div>
+            <div><img src={store.common.url + 'process/5-2.webp'}/><span>激光切割</span></div>
+            <div><img src={store.common.url + 'process/5-3.webp'}/><span>三丰三次元检测</span></div>
           </div>
           <div className={`${styles.process4Cgrid} ${styles.process4Cgrid2}`}>
-            <div><img src={store.common.url + 'process/5-4.png'}/><span>铝材开模定制</span></div>
+            <div><img src={store.common.url + 'process/5-4.webp'}/><span>铝材开模定制</span></div>
             <div className={styles.diyBox}><p>专业设备</p><span>PROFESSIONAL EQUIPMENT</span></div>
-            <div><img src={store.common.url + 'process/5-5.png'}/><span>铝材氧化</span></div>
+            <div><img src={store.common.url + 'process/5-5.webp'}/><span>铝材氧化</span></div>
           </div>
           <div className={`${styles.process4Cgrid} ${styles.process4Cgrid1}`}>
-            <div><img src={store.common.url + 'process/5-6.png'}/><span>铝材调直</span></div>
-            <div><img src={store.common.url + 'process/5-7.png'}/><span>激光打标</span></div>
-            <div><img src={store.common.url + 'process/5-8.png'}/><span>光洁度检测</span></div>
+            <div><img src={store.common.url + 'process/5-6.webp'}/><span>铝材调直</span></div>
+            <div><img src={store.common.url + 'process/5-7.webp'}/><span>激光打标</span></div>
+            <div><img src={store.common.url + 'process/5-8.webp'}/><span>光洁度检测</span></div>
           </div>
           
         </div>

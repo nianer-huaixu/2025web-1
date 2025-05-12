@@ -35,7 +35,7 @@ export default function Application(){
       ],
       trait:'高强、高韧、高抗损伤容限',
       href:'apply01',
-      img:'imgs/1.png'
+      img:'imgs/1.webp'
     },
     {
       alt:'轨道交通铝合金应用',
@@ -53,7 +53,7 @@ export default function Application(){
       ],
       trait:'高强、耐应力腐蚀性能及焊接性能优异',
       href:'apply02',
-      img:'imgs/2.png'
+      img:'imgs/2.webp'
     },
     {
       alt:'汽车铝合金应用',
@@ -71,7 +71,7 @@ export default function Application(){
       ],
       trait:'成型性能好、烤漆硬化、氧化处理效果显著',
       href:'apply03',
-      img:'imgs/3.png'
+      img:'imgs/3.webp'
     },
     {
       alt:'船舶用铝合金应用',
@@ -88,7 +88,7 @@ export default function Application(){
       ],
       trait:'耐腐蚀及焊接性能好',
       href:'apply04',
-      img:'imgs/4.png'
+      img:'imgs/4.webp'
     },
     {
       alt:'消费电子铝合金应用',
@@ -106,7 +106,7 @@ export default function Application(){
       ],
       trait:'强度高、机加工性能优良，散热性能良好',
       href:'apply05',
-      img:'imgs/5.png'
+      img:'imgs/5.webp'
     },
     {
       alt:'医疗设备用铝合金应用',
@@ -124,7 +124,7 @@ export default function Application(){
       ],
       trait:'耐腐蚀及焊接性能好、疲劳强度高',
       href:'apply06',
-      img:'imgs/6.png'
+      img:'imgs/6.webp'
     },
     {
       alt:'化工容器铝合金应用',
@@ -140,7 +140,7 @@ export default function Application(){
       ],
       trait:'强度高、机加工性能优良，抗腐蚀性强、可回收，力学性能、抗剥落腐蚀及晶间蚀性能优',
       href:'apply07',
-      img:'imgs/7.png'
+      img:'imgs/7.webp'
     },
     {
       alt:'工业模具用铝合金应用',
@@ -156,7 +156,7 @@ export default function Application(){
       ],
       trait:'强度高、切削性好，机加工性能优良',
       href:'apply08',
-      img:'imgs/8.png'
+      img:'imgs/8.webp'
     },
     {
       alt:'机械加工铝合金应用',
@@ -175,7 +175,7 @@ export default function Application(){
       ],
       trait:'强度高、机加工性能优良',
       href:'apply09',
-      img:'imgs/9.png'
+      img:'imgs/9.webp'
     },
     {
       alt:'建筑建材用铝合金应用',
@@ -194,7 +194,7 @@ export default function Application(){
       ],
       trait:'精度高,产品尺寸公差可符合中国国标、美标、日标、欧标等标准SGS认证等',
       href:'apply10',
-      img:'imgs/10.png'
+      img:'imgs/10.webp'
     }
   ]
   return(

@@ -21,7 +21,7 @@ function MapComponent() {
         const marker = new AMap.Marker({
           position: new AMap.LngLat(120.74260, 31.352890),
           offset: new AMap.Pixel(-10, -10),
-          icon: "//a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-red.png", //添加 icon 图标 URL
+          icon: "//a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-red.webp", //添加 icon 图标 URL
         });
         var text = new AMap.Text({
           text: "江苏扬东铝业集团有限公司", //标记显示的文本内容
