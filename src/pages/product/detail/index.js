@@ -14,7 +14,7 @@ function Detail1(props){
   const {data,model,type} = props
   const store = useStore()
   let imgListArr = []
-  for(let i = 1;i<=data.webp;i++){
+  for(let i = 1;i<=data.png;i++){
     imgListArr.push(`https://www.yangdong.co:8443/${type}/${model}/${i}.png`)
   }
   const [currImg,setImg] = useState(0)
@@ -57,7 +57,7 @@ function Detail1(props){
 					</div>
 			</div>
 			<div className={styles.produceParamWrap}>
-				<h6>{data?.name + " " + data?.classes}</h6>
+				<h6>{model + type + " " + data?.classes}</h6>
 				{data?.old_name!=='null' && <h6 style={{lineHeight:'36px',margin:0}}>{data?.old_name}</h6>}
 				<p style={{marginTop:'10px'}}>铝材类别：{data?.classes}</p>
 				<p>{data?.refer1}</p>

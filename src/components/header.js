@@ -26,6 +26,7 @@ function ProductMain(){
     setCate(i)
     store.common.changeCate(i)
     setSerise(0)
+    setProductIndex(0)
   }
   const [serise,setSerise] = useState(0)
   function selectSerise(i){
@@ -67,8 +68,8 @@ function ProductMain(){
           </div>
       })}
     </div>
-    <div className='header-product-right' onClick={()=>selectProduct(data[cate].classify[serise].product[productIndex].name,data[cate].type)}>
-      <img src={'https://www.yangdong.co:8443/' + data[cate]?.type + '/' +data[cate]?.classify[serise].product[productIndex].name + '/1.png'}/>
+    <div className='header-product-right' onClick={()=>selectProduct(data[cate].classify[serise].product[productIndex]?.name,data[cate].type)}>
+      <img src={'https://www.yangdong.co:8443/' + data[cate]?.type + '/' +data[cate]?.classify[serise].product[productIndex]?.name + '/1.png'}/>
       <p>{data[cate]?.classify[serise].product[productIndex]?.name}{data[cate]?.type}&nbsp;&nbsp;{data[cate]?.classify[serise].texture}</p>
     </div>
   </div>
