@@ -4,6 +4,7 @@ import { useState } from "react"
 import Slider from "react-slick"
 import CountUp from "react-countup"
 import { AnimatePresence } from "motion/react"
+import VideoPlayerTest from "@/components/testViedo"
 import * as motion from "motion/react-client"
 import styles from '@/styles/index.module.scss'
 import Link from "next/link"
@@ -252,7 +253,7 @@ export default function Home() {
     {index:2,label:'精湛技术',text1:'现货供应  发货及时',text2:'我们承诺客户下单后，现货产品当天发货，加工，切割，产品根据产品特性3-5天发货，定制特种产品，根据实际情况7-30天出厂并安排发货，解决客户急需要求。'},
     {index:3,label:'售后服务',text1:'品质服务  全程追踪',text2:'我们做到每个订单，都及时跟踪。保障客户能及时安全收货；并不断听取客户的意见与建议，反思我们自身存在的问题，让客户用的舒心放心。'}
   ]
-  const [reasonIndex,setIndex] = useState(0);
+  const [reasonIndex,setIndex] = useState(0)
   function changeReason(i){
     setIndex(i)
   }
@@ -310,12 +311,13 @@ export default function Home() {
   const evaData = ['1V1响应接待','极速发货','贴心售后','实力工厂']
   return (
     <div className={styles.indexWrap}>
-      <div className="slider-container banner-container">
-      <Slider {...settings}>
-        <div><img src={URL + 'index/banner1.webp'}/></div>
-        <div><img src={URL + 'index/banner2.webp'}/></div>
-      </Slider>
-      </div>
+      {/* <div className="slider-container banner-container">
+          <Slider {...settings}>
+            <div><img src={URL + 'index/banner2.webp'}/></div>
+            <div><img src={URL + 'index/banner1.webp'}/></div>
+          </Slider>
+      </div> */}
+      <VideoPlayerTest/>
         {/* <video width="100%" preload="none" autoPlay muted playsInline loop>
           <source src="https://www.yangdong.co:8443/video/%E5%AE%A3%E4%BC%A0%E8%A7%86%E9%A2%91.mp4" type="video/mp4" />
         </video> */}

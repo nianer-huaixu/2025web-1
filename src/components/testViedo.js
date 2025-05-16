@@ -32,6 +32,8 @@ export default function VideoPlayerTest() {
   return (
     <div>
       <video
+        width='100%'
+        // poster='https://www.yangdong.co:8443/yangdong-new/index/banner1.webp'
         ref={videoRef}
         src={videoSources[currentVideoIndex]}
         muted

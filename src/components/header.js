@@ -43,7 +43,7 @@ function ProductMain(){
       query:{model:name,type:type}
     })
   }
-  return <>
+  return <div className='header-product'>
   <div className='header-product-top main'>
     {data.map((item,i)=>{
       return <div key={i} onMouseEnter={()=>changeCate(i)}>
@@ -73,7 +73,7 @@ function ProductMain(){
       <p>{data[cate]?.classify[serise].product[productIndex]?.name}{data[cate]?.type}&nbsp;&nbsp;{data[cate]?.classify[serise].texture}</p>
     </div>
   </div>
-  </>
+  </div>
 }
 function Process(){
   const store = useStore()
@@ -194,12 +194,12 @@ function MuneItem(props){
     // 
     return <li key={item.label} className={[('/'+path.split('/')[1]) == item.route?'menu-ul-li selectAcitve':'menu-ul-li'].join('')}>
       <Link href={{pathname:item.route}} className='menu-route-a'>{item.label}</Link>
-      {item.isChildren && (<div className='header-product'><ProductMain /></div>)}
-      {item.isProcess && <Process />}
-      {item.isApp && <Apply />}
-      {item.isCase && <Case />}
-      {item.isAbout && <About />}
-      {item.isNews && <News />}
+      {item.isChildren && <ProductMain/>}
+      {item.isProcess && <Process/>}
+      {item.isApp && <Apply/>}
+      {item.isCase && <Case/>}
+      {item.isAbout && <About/>}
+      {item.isNews && <News/>}
     </li>
   });
   return (<ul className='menu-ul'>{muneItem}</ul>)
@@ -224,13 +224,13 @@ export default function Header(){
       clearTimeout(throttleTimeout)
     }
   },[scrollHeight])
-  return <header>
+  return <header style={{backgroundColor:scrollHeight>980?'#000':''}}>
     <div className="header-warp main">
-        <div className='logo-wrap'>
-          <Link href='/'><img src='https://www.yangdong.co:8443/yangdong-new/header/logo-white.webp' alt='logo'/></Link>
-        </div>
-        <MuneItem path={pathname}/>
+      <div className='logo-wrap'>
+        <Link href='/'><img src='https://www.yangdong.co:8443/yangdong-new/header/logo-white.webp' alt='logo'/></Link>
       </div>
+      <MuneItem path={pathname}/>
+    </div>
     <div className='up' style={{opacity:scrollHeight>1000?'1':'0'}} onClick={()=>window.scrollTo(0,0)}></div>
   </header>
 }

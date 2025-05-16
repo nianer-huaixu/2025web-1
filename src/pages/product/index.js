@@ -89,7 +89,7 @@ function Product(){
                   <b>· {productItem.name}-{productItem.ply[0]}{data.list.type}</b>
                   {productItem.ply[1] && <b>· {productItem.name}-{productItem.ply[1]}{data.list.type}</b>}
                   <Link href={{pathname:'/product/detail',query:{model:productItem.name,type:data.list.type}}}>查看更多</Link>
-                  <img src={'https://www.yangdong.co:8443/' + data.list.type +'/'+ productItem.name + '/1.webp'}/>
+                  <img src={'https://www.yangdong.co:8443/' + data.list.type +'/'+ productItem.name + '/1.png'}/>
                 </div>
               })}
           </div>
