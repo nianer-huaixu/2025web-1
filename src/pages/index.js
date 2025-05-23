@@ -129,7 +129,7 @@ function ProductShow(){
             return <ul key={i}>
               {item.serie + item.label}
               {item.child.map((li,l)=>{
-                return <li key={l}><Link href={{pathname:'/product/detail',query:{model:li,type:item.label}}}>{li + item.label}</Link></li>
+                return <li key={l}><Link href={{pathname:'/product/detail/',query:{detail:li+item.label}}}>{li + item.label}</Link></li>
               })}
             </ul>
           })}

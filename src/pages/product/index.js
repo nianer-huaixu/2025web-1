@@ -1,5 +1,7 @@
 "use client" 
 import { useState,useEffect } from "react"
+import { useSearchParams } from 'next/navigation'
+import Router from 'next/router'
 import Link from "next/link"
 import Banner from "@/components/banner"
 import styles from "@/styles/product.module.scss"
@@ -7,6 +9,10 @@ import styles from "@/styles/product.module.scss"
 import { observer } from 'mobx-react'
 import useStore from '@/hook/useStore'
 function Product(){
+  const searchParams = useSearchParams()
+  const cate = searchParams.get('cate')
+  console.log(typeof cate,'cate');
+  
   const store = useStore()
   const labelData = [
     {index:0,lebel:'铝板'},
@@ -41,6 +47,12 @@ function Product(){
   function setCate(i){
     setCateIndex(i)
     store.common.changeCate(i)
+    Router.push({
+      pathname:'/product',
+      query:{
+        cate:store.common.cate
+      }
+    })
   }
   function showItem(index){
     if(isshow){
@@ -88,7 +100,7 @@ function Product(){
                   <h5>{productItem.name}{item.texture}</h5>
                   <b>· {productItem.name}-{productItem.ply[0]}{data.list.type}</b>
                   {productItem.ply[1] && <b>· {productItem.name}-{productItem.ply[1]}{data.list.type}</b>}
-                  <Link href={{pathname:'/product/detail',query:{model:productItem.name,type:data.list.type}}}>查看更多</Link>
+                  <Link href={{pathname:'/product/detail/',query:{detail:productItem.name+data.list.type}}}>查看更多</Link>
                   <img src={'https://www.yangdong.co:8443/' + data.list.type +'/'+ productItem.name + '/1.png'}/>
                 </div>
               })}

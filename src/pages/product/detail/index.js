@@ -84,7 +84,6 @@ function Detail1(props){
 
 function Intro({intro,model,type}){
 	const {kinds,criterion,status} = intro
-	
 	const store = useStore()
 	const URL = 'https://www.yangdong.co:8443/video/'
 	const videoRef = useRef(null);
@@ -262,19 +261,25 @@ function Typical({use,model,type}){
 
 function productDetail(){
   const searchParams = useSearchParams()
-  const model = searchParams.get('model')
-  const type = searchParams.get('type')
+  // const model = searchParams.get('model')
+  // const type = searchParams.get('type')
+	const detail = searchParams.get('detail')
+	console.log(detail.search(/\d(?=\D*$)/),'detail')
+	const lastDigitIndex = detail.search(/\d(?=\D*$)/)
+	const model = detail.slice(0, lastDigitIndex + 1)
+	const type = detail.slice(lastDigitIndex + 1)
+	console.log(type,model)
 	
   const [data,setData] = useState({productMain:{},intro:{},chemical:{},physics:{},mechanical:{},use:{}})
-	useEffect(() => {
+	useEffect(() => { 
 		if(model != null)fetchData()
-	}, [model,type])
+	}, [detail])
 	const fetchData = async () => {
 		try {
 			const response = await fetch('/api/productAPI',{
 				method:'POST',
 				headers:{'Content-Type':'application/json'},
-				body:JSON.stringify({name:model+type})
+				body:JSON.stringify({name:detail})
 			})
 			const res = await response.json()
 			setData(res)

@@ -2,22 +2,20 @@
 import { useEffect,useRef  } from 'react'
 import Banner from "@/components/banner"
 import styles from '@/styles/apply.module.scss'
-import useStore from '@/hook/useStore'
 import HoverAnimation from '@/components/hoverEffect'
 import Link from 'next/link'
 export default function Application(){
-  const store = useStore()
   const linkData =[
-    {link:'apply01',text:'航天航空'},
-    {link:'apply02',text:'轨道交通'},
-    {link:'apply03',text:'汽车制造'},
-    {link:'apply04',text:'船舶运输'},
-    {link:'apply05',text:'消费电子'},
-    {link:'apply06',text:'医疗设备'},
-    {link:'apply07',text:'化工容器'},
-    {link:'apply08',text:'工业模具'},
-    {link:'apply09',text:'机械制造'},
-    {link:'apply10',text:'建筑建材'}
+    {link:'application01',text:'航天航空'},
+    {link:'application02',text:'轨道交通'},
+    {link:'application03',text:'汽车制造'},
+    {link:'application04',text:'船舶运输'},
+    {link:'application05',text:'消费电子'},
+    {link:'application06',text:'医疗设备'},
+    {link:'application07',text:'化工容器'},
+    {link:'application08',text:'工业模具'},
+    {link:'application09',text:'机械制造'},
+    {link:'application10',text:'建筑建材'}
   ]
   const data =[
     {
@@ -34,7 +32,7 @@ export default function Application(){
         {lebel:'7A09',text:'铝型材'}
       ],
       trait:'高强、高韧、高抗损伤容限',
-      href:'apply01',
+      href:'application01',
       img:'imgs/1.webp'
     },
     {
@@ -52,7 +50,7 @@ export default function Application(){
         {lebel:'6082',text:'铝型材'}
       ],
       trait:'高强、耐应力腐蚀性能及焊接性能优异',
-      href:'apply02',
+      href:'application02',
       img:'imgs/2.webp'
     },
     {
@@ -70,7 +68,7 @@ export default function Application(){
         {lebel:'6082',text:'铝型材'}
       ],
       trait:'成型性能好、烤漆硬化、氧化处理效果显著',
-      href:'apply03',
+      href:'application03',
       img:'imgs/3.webp'
     },
     {
@@ -87,7 +85,7 @@ export default function Application(){
         {lebel:'6082',text:'铝型材'}
       ],
       trait:'耐腐蚀及焊接性能好',
-      href:'apply04',
+      href:'application04',
       img:'imgs/4.webp'
     },
     {
@@ -105,7 +103,7 @@ export default function Application(){
         {lebel:'7075',text:'铝型材'}
       ],
       trait:'强度高、机加工性能优良，散热性能良好',
-      href:'apply05',
+      href:'application05',
       img:'imgs/5.webp'
     },
     {
@@ -123,7 +121,7 @@ export default function Application(){
         {lebel:'6082',text:'铝型材'}
       ],
       trait:'耐腐蚀及焊接性能好、疲劳强度高',
-      href:'apply06',
+      href:'application06',
       img:'imgs/6.webp'
     },
     {
@@ -139,7 +137,7 @@ export default function Application(){
         {lebel:'5A06',text:'铝棒'},
       ],
       trait:'强度高、机加工性能优良，抗腐蚀性强、可回收，力学性能、抗剥落腐蚀及晶间蚀性能优',
-      href:'apply07',
+      href:'application07',
       img:'imgs/7.webp'
     },
     {
@@ -155,7 +153,7 @@ export default function Application(){
         {lebel:'7075',text:'铝棒'},
       ],
       trait:'强度高、切削性好，机加工性能优良',
-      href:'apply08',
+      href:'application08',
       img:'imgs/8.webp'
     },
     {
@@ -174,7 +172,7 @@ export default function Application(){
         {lebel:'7075',text:'铝板'},
       ],
       trait:'强度高、机加工性能优良',
-      href:'apply09',
+      href:'application09',
       img:'imgs/9.webp'
     },
     {
@@ -193,17 +191,17 @@ export default function Application(){
         {lebel:'6061',text:'铝锻件'}
       ],
       trait:'精度高,产品尺寸公差可符合中国国标、美标、日标、欧标等标准SGS认证等',
-      href:'apply10',
+      href:'application10',
       img:'imgs/10.webp'
     }
   ]
   return(
     <>
       <Banner suf='application'/>
-      <section className={styles.apply0}>
+      <section className={styles.application0}>
         <div className="main">
           <p className={styles.anchorBox}>{linkData.map((item,i)=>{
-            return <Link key={i} href={'/apply/#'+ item.link}>{item.text}</Link>
+            return <Link key={i} href={'/applicationfields#'+ item.link}>{item.text}</Link>
           })}</p>
         </div>
       </section>
@@ -220,15 +218,16 @@ export default function Application(){
               <p style={{fontSize:'24px',marginBottom:'20px'}}>典型合金如：</p>
               <div className={styles.linkgroup}>
                 {item.model.map((btn,b)=>{
-                  return <Link key={b} href={{pathname:'/product/detail',query:{model:btn.lebel,type:btn.text}}}>{btn.lebel}</Link>
+                  return <Link key={b} href={{pathname:'/product/detail/',query:{detail:btn.lebel+btn.text}}}>{btn.lebel}</Link>
                 })}
               </div>
             </div>
             <div>
               <HoverAnimation
-              image1={item.img}
-              image2={item.img}
-              displacementImage={item.img}/>
+                image1={item.img}
+                image2={item.img}
+                displacementImage={item.img}
+              />
             </div>
           </div>
         })}

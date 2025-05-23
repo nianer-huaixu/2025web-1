@@ -24,7 +24,7 @@ function ProductMain(){
   const [cate,setCate] = useState(store.common.cate)
   function changeCate(i){
     setCate(i)
-    store.common.changeCate(i)
+    // store.common.changeCate(i)
     setSerise(0)
     setProductIndex(0)
   }
@@ -39,8 +39,8 @@ function ProductMain(){
   }
   function selectProduct(name,type){
     router.push({
-      pathname:'/product/detail',
-      query:{model:name,type:type}
+      pathname:'/product/detail/',
+      query:{detail:name+type}
     })
   }
   return <div className='header-product'>
@@ -99,16 +99,16 @@ function Apply(){
     setIndex(i)
   }
   const data = [
-    {text:'航天航空铝合金产品应用',href:'/apply/#apply01',img: store.common.url +'header/apply/1.webp'},
-    {text:'轨道交通铝合金产品应用',href:'/apply/#apply02',img: store.common.url +'header/apply/2.webp'},
-    {text:'汽车铝合金产品应用',href:'/apply/#apply03',img: store.common.url +'header/apply/3.webp'},
-    {text:'船舶用铝合金产品应用',href:'/apply/#apply04',img: store.common.url +'header/apply/4.webp'},
-    {text:'消费电子铝合金产品应用',href:'/apply/#apply05',img: store.common.url +'header/apply/5.webp'},
-    {text:'医疗设备用铝合金产品应用',href:'/apply/#apply06',img: store.common.url +'header/apply/6.webp'},
-    {text:'化工容器铝合金产品应用',href:'/apply/#apply07',img: store.common.url +'header/apply/7.webp'},
-    {text:'工业模具用铝合金产品应用',href:'/apply/#apply08',img: store.common.url +'header/apply/8.webp'},
-    {text:'机械加工铝合金产品应用',href:'/apply/#apply09',img: store.common.url +'header/apply/9.webp'},
-    {text:'建筑建材用铝合金产品应用',href:'/apply/#apply10',img: store.common.url +'header/apply/10.webp'}
+    {text:'航天航空铝合金产品应用',href:'/applicationfields#application01',img: store.common.url +'header/apply/1.webp'},
+    {text:'轨道交通铝合金产品应用',href:'/applicationfields#application02',img: store.common.url +'header/apply/2.webp'},
+    {text:'汽车铝合金产品应用',href:'/applicationfields#application03',img: store.common.url +'header/apply/3.webp'},
+    {text:'船舶用铝合金产品应用',href:'/applicationfields#application04',img: store.common.url +'header/apply/4.webp'},
+    {text:'消费电子铝合金产品应用',href:'/applicationfields#application05',img: store.common.url +'header/apply/5.webp'},
+    {text:'医疗设备用铝合金产品应用',href:'/applicationfields#application06',img: store.common.url +'header/apply/6.webp'},
+    {text:'化工容器铝合金产品应用',href:'/applicationfields#application07',img: store.common.url +'header/apply/7.webp'},
+    {text:'工业模具用铝合金产品应用',href:'/applicationfields#application08',img: store.common.url +'header/apply/8.webp'},
+    {text:'机械加工铝合金产品应用',href:'/applicationfields#application09',img: store.common.url +'header/apply/9.webp'},
+    {text:'建筑建材用铝合金产品应用',href:'/applicationfields#application10',img: store.common.url +'header/apply/10.webp'}
   ]
   return <div className='header-appList'>
     <div className='header-appList-main main'>
@@ -180,20 +180,34 @@ function News(){
 // 导航栏一级菜单 start
 function MuneItem(props){
   let { path } = props
+  const router = useRouter()
+  const store = useStore()
   const headData = [
     {label:'首页',route:'/'},
     {label:'产品中心',route:'/product',isChildren:true},
     {label:'加工中心',route:'/process',isProcess:true},
-    {label:'应用领域',route:'/apply',isApp:true},
+    {label:'应用领域',route:'/applicationfields',isApp:true},
     {label:'行业方案',route:'/case',isCase:true},
     {label:'走进扬东',route:'/about',isAbout:true},
     {label:'新闻资讯',route:'/news',isNews:true},
     {label:'联系我们',route:'/contact'}
   ]
+  function clickLink(text,link){
+    if(text=='产品中心'){
+      router.push({
+        pathname:link,
+        query:{
+          cate:store.common.cate
+        }
+      })
+    }else{
+      router.push(link)
+    }
+  }
   const muneItem = headData.map(item =>{
     // 
     return <li key={item.label} className={[('/'+path.split('/')[1]) == item.route?'menu-ul-li selectAcitve':'menu-ul-li'].join('')}>
-      <Link href={{pathname:item.route}} className='menu-route-a'>{item.label}</Link>
+      <a onClick={()=>clickLink(item.label,item.route)} className='menu-route-a'>{item.label}</a>
       {item.isChildren && <ProductMain/>}
       {item.isProcess && <Process/>}
       {item.isApp && <Apply/>}
@@ -207,7 +221,8 @@ function MuneItem(props){
 
 export default function Header(){
   const [scrollHeight,setScrollHeight] = useState(0)
-  const pathname = usePathname();
+  const pathname = usePathname()
+
   useEffect(()=>{
     let throttleTimeout = null;
     const handleScroll =()=>{

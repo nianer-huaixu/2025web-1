@@ -12,24 +12,24 @@ export default function Footer(){
       {text:'公司实力',link:'/about#about5'}
     ]},
     {title:'产品中心',link:'/product',list:[
-      {text:'铝板',link:'/product'},
-      {text:'铝棒',link:'/product'},
-      {text:'铝卷',link:'/product'},
-      {text:'铝管',link:'/product'},
-      {text:'铝型材',link:'/product'},
-      {text:'铝锻件',link:'/product'},
+      {text:'铝板',link:'/product?cate=0'},
+      {text:'铝棒',link:'/product?cate=1'},
+      {text:'铝卷',link:'/product?cate=2'},
+      {text:'铝管',link:'/product?cate=3'},
+      {text:'铝型材',link:'/product?cate=4'},
+      {text:'铝锻件',link:'/product?cate=5'},
     ]},
-    {title:'应用领域',link:'/apply',list:[
-      {text:'航空航天',link:'/apply#apply01'},
-      {text:'高铁轨交',link:'/apply#apply02'},
-      {text:'汽车制造',link:'/apply#apply03'},
-      {text:'船舶运输',link:'/apply#apply04'},
-      {text:'消费电子',link:'/apply#apply05'},
-      {text:'医疗设备',link:'/apply#apply06'},
-      {text:'化工容器',link:'/apply#apply07'},
-      {text:'工业模具',link:'/apply#apply08'},
-      {text:'机械加工',link:'/apply#apply09'},
-      {text:'建筑建材',link:'/apply#apply10'}
+    {title:'应用领域',link:'/applicationfields',list:[
+      {text:'航空航天',link:'/applicationfields#application01'},
+      {text:'高铁轨交',link:'/applicationfields#application02'},
+      {text:'汽车制造',link:'/applicationfields#application03'},
+      {text:'船舶运输',link:'/applicationfields#application04'},
+      {text:'消费电子',link:'/applicationfields#application05'},
+      {text:'医疗设备',link:'/applicationfields#application06'},
+      {text:'化工容器',link:'/applicationfields#application07'},
+      {text:'工业模具',link:'/applicationfields#application08'},
+      {text:'机械加工',link:'/applicationfields#application09'},
+      {text:'建筑建材',link:'/applicationfields#application10'}
     ]},
     {title:'加工中心',link:'/process',list:[
       {text:'加工服务',link:'/process#process1'},
