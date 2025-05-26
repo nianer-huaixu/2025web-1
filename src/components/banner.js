@@ -1,6 +1,5 @@
 "use client"
 import React from "react"
-import { useState,useEffect } from "react"
 
 export default function Banner(props){
   const remoteURL = 'https://www.yangdong.co:8443/yangdong-new/'

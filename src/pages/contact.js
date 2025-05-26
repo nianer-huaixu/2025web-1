@@ -62,7 +62,7 @@ export default function Contact(){
             {data2.map((item,i)=>{
               return <div key={i}>
                 <p>{item.text1}</p>
-                <p>{item.text2} {item.text}</p>
+                <p>{item.text2} / {item.text}</p>
                 <p>{item.text3}</p>
                 <img src={item.img}/>
               </div>
