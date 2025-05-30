@@ -305,7 +305,8 @@ header{
       }
       .header-product-right{
         background:  url('https://www.yangdong.co:8443/yangdong-new/header/product-bg.webp')no-repeat right;
-        width: calc(100% - 280px - 950px);
+        width: calc(100% - 170px - 950px);
+        min-width: 785px;
         cursor: pointer;
         img{
           margin: 40px auto 0;

@@ -1,6 +1,7 @@
 "use client"
 import { useState,useEffect,useRef } from 'react'
 import { useSearchParams } from 'next/navigation'
+import Router from 'next/router'
 import Link from 'next/link'
 import Slider from "react-slick"
 import ProductCom from '@/components/productCom'
@@ -259,16 +260,90 @@ function Typical({use,model,type}){
 	)
 }
 
+function Reco({type}){
+	const store = useStore()
+	const cate = ['铝板','铝棒','铝卷','铝管','铝型材','铝锻件']
+	const index = cate.indexOf(type)
+	const data = [
+		[
+			{title:'2A12',type:'军工硬铝',ply:['T3','T4']},
+			{title:'6063',type:'工业硬铝',ply:['T6','T651']},
+			{title:'6082',type:'工业硬铝',ply:['T6','T651']},
+			{title:'5052',type:'耐腐蚀铝镁合金',ply:['H32','H112']},
+			{title:'5083',type:'耐腐蚀铝镁合金',ply:['O','H112']},
+			{title:'7050',type:'航空超硬铝',ply:['T7451']}
+		],
+		[
+			{title:'2A12',type:'军工硬铝',ply:['T3','T4']},
+			{title:'2024',type:'军工硬铝',ply:['T3','T4']},
+			{title:'5083',type:'耐腐蚀铝镁合金',ply:['O','H112']},
+			{title:'6061',type:'工业硬铝',ply:['T6','T651']},
+			{title:'6082',type:'工业硬铝',ply:['T6','T651']},
+			{title:'7075',type:'航空超硬铝',ply:['T6','T651']}
+		],
+		[
+			{title:'2A12',type:'军工硬铝',ply:['O','T4']},
+			{title:'5052',type:'耐腐蚀铝镁合金',ply:['O','H32']},
+			{title:'5083',type:'耐腐蚀铝镁合金',ply:['O','H111']},
+			{title:'6061',type:'工业硬铝',ply:['O','T6']},
+			{title:'6063',type:'工业硬铝',ply:['O','T6']},
+			{title:'7050',type:'航空超硬铝',ply:['O','T6']}
+		],
+		[
+			{title:'2A12',type:'军工硬铝',ply:['T4','T112']},
+			{title:'2024',type:'军工硬铝',ply:['T3','T4']},
+			{title:'6061',type:'军工硬铝',ply:['T5','T6']},
+			{title:'6082',type:'军工硬铝',ply:['T6','T651']},
+			{title:'6063',type:'军工硬铝',ply:['T5','T6']},
+			{title:'7075',type:'航空超硬铝',ply:['T6','T651']}
+		],
+		[
+			{title:'2024',type:'军工硬铝',ply:['T4','T112']},
+			{title:'2A12',type:'军工硬铝',ply:['T3','T4']},
+			{title:'6061',type:'工业硬铝',ply:['T5','T652']},
+			{title:'6063',type:'工业硬铝',ply:['T5','T6']},
+			{title:'6082',type:'工业硬铝',ply:['T6','T651']},
+			{title:'7075',type:'航空超硬铝',ply:['T6','T651']}
+		],
+		[
+			{title:'2024',type:'军工硬铝',ply:['T3','T4']},
+			{title:'2A12',type:'军工硬铝',ply:['T4','T112']},
+			{title:'5083',type:'耐腐蚀铝镁合金',ply:['H26','H112']},
+			{title:'6061',type:'工业硬铝',ply:['T5','T652']},
+			{title:'6082',type:'工业硬铝',ply:['T6','T651']},
+			{title:'7075',type:'航空超硬铝',ply:['T6','T651']}
+		]
+	]
+	function selectProduct(model){
+		Router.push({
+			pathname:'/product/detail',
+      query:{
+        detail:model+type
+      }
+		})
+	}
+	return <div className={styles.recoWrap}>
+		<h4>相关推荐</h4>
+		<div className={['main',styles.recoWrapBox].join(' ')}>
+			{data[1].map((item,i)=>{
+				return <div key={i} onClick={()=>{selectProduct(item.title)}}>
+					<span>{item.title + item.type}</span>
+					{item.ply.map((pl,l)=>{
+						return <p key={l}>· {item.title}-{pl}{type}</p>
+					})}
+					<Link href={{pathname:'/product/detail/',query:{detail:item.title+type}}}>查看更多</Link>
+					<img src={'https://www.yangdong.co:8443/'+ type + '/' + item.title + '/1.png'}/>
+				</div>
+			})}
+		</div>
+	</div>
+}
 function productDetail(){
   const searchParams = useSearchParams()
-  // const model = searchParams.get('model')
-  // const type = searchParams.get('type')
 	const detail = searchParams.get('detail')
-	console.log(detail.search(/\d(?=\D*$)/),'detail')
 	const lastDigitIndex = detail.search(/\d(?=\D*$)/)
 	const model = detail.slice(0, lastDigitIndex + 1)
 	const type = detail.slice(lastDigitIndex + 1)
-	console.log(type,model)
 	
   const [data,setData] = useState({productMain:{},intro:{},chemical:{},physics:{},mechanical:{},use:{}})
 	useEffect(() => { 
@@ -309,6 +384,7 @@ function productDetail(){
     <div className='upwards' id='typical'></div>
 		<Typical use={data.use} model={model} type={type}/>
 		<ProductCom/>
+		<Reco type={type}/>
   </>
 }
 
