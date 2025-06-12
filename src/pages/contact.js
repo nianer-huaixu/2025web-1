@@ -15,7 +15,7 @@ export default function Contact(){
     {text1:'林经理',text:'Sales Executive',text2:'销售主管',text3:'158 5000 6720',img:store.common.url + 'contact/erweima7.webp'},
     {text1:'朱女士',text:'Sales Executive',text2:'销售主管',text3:'189 6365 0984',img:store.common.url + 'contact/erweima2.webp'},
     {text1:'黄女士',text:'Sales Specialist',text2:'销售专员',text3:'137 7608 0469',img:store.common.url + 'contact/erweima3.webp'},
-    {text1:'尹小艳',text:'Sales Specialist',text2:'销售专员',text3:'138 6257 6851',img:store.common.url + 'contact/erweima4.webp'},
+    // {text1:'尹小艳',text:'Sales Specialist',text2:'销售专员',text3:'138 6257 6851',img:store.common.url + 'contact/erweima4.webp'},
     {text1:'黄玲',text:'Sales Specialist',text2:'销售专员',text3:'180 2024 2001',img:store.common.url + 'contact/erweima5.webp'},
     {text1:'徐小玲',text:'Sales Specialist',text2:'销售专员',text3:'180 2024 2063',img:store.common.url + 'contact/erweima6.webp'},
     {text1:'李彬英',text:'Sales Specialist',text2:'销售专员',text3:'180 2024 2069',img:store.common.url + 'contact/erweima8.webp'},
