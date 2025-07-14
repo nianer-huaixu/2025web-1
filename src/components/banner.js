@@ -7,7 +7,7 @@ export default function Banner(props){
   return <div className="bannerWrap">
     {/* {windowSize.innerWidth > 680 && <img src={remoteURL + 'banner/pc/' + suf+ '.webp'}/>}
     {windowSize.innerWidth < 680 && <img src={remoteURL + 'banner/m/' + suf + '.webp'}/>} */}
-    <img src={remoteURL + 'banner/pc/' + suf+ '.webp'}/>
+    <img src={remoteURL + 'banner/pc/' + suf + '.webp'}/>
     {suf =='contact' && <div className="contactDown" onClick={()=>window.scrollTo(0,890)}></div>}
   </div>
 }

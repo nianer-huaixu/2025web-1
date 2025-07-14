@@ -651,5 +651,12 @@ footer{
 .my-div{
   width: 1400px;
   height: 680px;
-
+}
+.slick-dots{
+  margin-top: 20px;
+  .slick-active{
+      div{
+        background: #CD241D!important;
+      }
+    }
 }
