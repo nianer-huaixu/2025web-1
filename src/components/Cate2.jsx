@@ -45,19 +45,24 @@ export default function Cate2(props){
       list:['常见的钝化处理方法包括铬酸盐钝化、硝酸盐钝化、磷酸盐钝化等。']
     }
   ]
-  return <div className="main grid grid-cols-2 gap-y-[60px] pb-[80px]">
-    {data.map((item,i)=>{
-      return <div key={i} className="flex">
-        <div className="w-[115px] h-[115px] bg-[#fff] rounded-[8px] relative mr-[20px]">
-          <img src={item?.img} className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"/>
+  return <>
+    <p className="text-center mt-[40px] text-[24px]">MULTIPLE SURFACE TREATMENTS</p>
+    <p className="text-center text-[#CD241D] mb-[30px]"><b className="text-[48px]">多种表面处理</b></p>
+    <p className="text-center text-[30px] mb-[30px]">阳极氧化、喷涂、喷砂、电泳等工艺，满足定制需求</p>
+    <div className="main grid grid-cols-2 gap-y-[60px] pb-[80px]">
+      {data.map((item,i)=>{
+        return <div key={i} className="flex">
+          <div className="w-[115px] h-[115px] bg-[#fff] rounded-[8px] relative mr-[20px]">
+            <img src={item?.img} className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]"/>
+          </div>
+          <div>
+            <p className="text-[36px] font-[700]">{item?.text1}</p>
+            {item?.list.map((li,l)=>{
+              return <p key={l} className="w-[440px] text-[20px]">{li}</p>
+            })}
+          </div>
         </div>
-        <div>
-          <p className="text-[36px] font-[700]">{item?.text1}</p>
-          {item?.list.map((li,l)=>{
-            return <p key={l} className="w-[440px] text-[20px]">{li}</p>
-          })}
-        </div>
-      </div>
-    })}
-  </div>
+      })}
+    </div>
+  </>
 }

@@ -31,37 +31,37 @@ export default function({title,sup}){
   };
   const data = [
     {
-      img:store.common.url +'',
+      img:store.common.url +'product/icon-c-1.png',
       text1:'甄选材料',
       text2:'PRECISION HIGH'
     },
     {
-      img:store.common.url +'',
+      img:store.common.url +'product/icon-c-2.png',
       text1:'精益求精',
       text2:'END UPGRADE'
     },
     {
-      img:store.common.url +'',
+      img:store.common.url +'product/icon-c-3.png',
       text1:'用心服务',
       text2:'PRECISIN HIGH'
     },
     {
-      img:store.common.url +'',
+      img:store.common.url +'product/icon-c-4.png',
       text1:'质量保证',
       text2:'SALECTED HIGH'
     },
     {
-      img:store.common.url +'',
+      img:store.common.url +'product/icon-c-5.png',
       text1:'性能稳定',
       text2:'PRECISIOW HIGH'
     },
     {
-      img:store.common.url +'',
+      img:store.common.url +'product/icon-c-6.png',
       text1:'售后保障',
       text2:'FNO UPGRADE'
     }
   ]
-  return <section style={{background:`url('${store.common.url}product/case-bg.webp')no-repeat`}}>
+  return <section style={{background:`url('${store.common.url}product/case-bg.webp')no-repeat`,backgroundSize:'cover'}}>
     <h4 className={styles.title2}>{title}案例&nbsp;&nbsp;&nbsp;&nbsp;<span>来图来样定制</span></h4>
     <div className="slider-container main pb-[48px]">
       <Slider {...settings}>
@@ -88,7 +88,7 @@ export default function({title,sup}){
       <div className="main flex justify-between py-[40px]">
         {data.map((item,i)=>{
           return <div key={i} className="text-center">
-            <img/>
+            <img className="m-auto pb-[20px]" src={item.img}/>
             <p className="text-[25px] tracking-[4]">{item.text1}</p>
             <p className="text-[14px]">{item.text2}</p>
           </div>

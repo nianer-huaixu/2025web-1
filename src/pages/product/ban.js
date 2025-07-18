@@ -7,7 +7,7 @@ import Cate4 from "@/components/Cate4"
 import Cate5 from "@/components/Cate5"
 import useStore from "@/hook/useStore"
 import styles from '@/styles/cate.module.scss'
-export default function Board(){
+export default function Ban(){
   const store = useStore()
   const data1 = [
     {
@@ -68,7 +68,6 @@ export default function Board(){
     text1:'产品厚度',
     text2:'0.2-500mm',
     text3:'剪板零切、激光切割、CNC加工、车床、铣床、锯床等',
-    text4:'广泛应用于自动化机械零切、精密加工、模具制造、家居使用、电子及精密仪器等。'
   }
   const table2 =[
     '0.2','0.3','0.4','0.5','0.6','0.8',
@@ -100,7 +99,7 @@ export default function Board(){
     <Banner suf='board'/>
     <Cate1 data={data1}/>
     <section className="bg-[#00020F]">
-      <h4 className={styles.title}>精工之作 品质保障</h4>
+      <h4 className={styles.title}>多种材质 支持定制</h4>
       <div className={["main",styles.textureMain].join(' ')}>
         {data2.map((list,l)=>{
           return <ul key={l} className="grid grid-cols-6">
@@ -122,9 +121,6 @@ export default function Board(){
         })}
         <span className="col-span-4 border text-[24px] pl-[70px]">如需其他规格请咨询销售客服专员！</span>
       </div>
-      <p className="text-center mt-[40px] text-[24px]">MULTIPLE SURFACE TREATMENTS</p>
-      <p className="text-center text-[#CD241D] mb-[30px]"><b className="text-[48px]">多种表面处理</b></p>
-      <p className="text-center text-[30px]">阳极氧化、喷涂、喷砂、电泳等工艺，满足定制需求</p>
       <Cate2 content={cate2data}/>
     </section>
     <Cate3 title='铝材铝板' sup='板'/>
