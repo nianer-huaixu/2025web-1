@@ -94,19 +94,20 @@
   }
 }
 .productWrap{
-  height: 100vh;
-  max-height: 1000px;
+  // height: 100vh;
+  // max-height: 1300px;
   .productC{
     width: 100%;
-    height: inherit;
+    // height: inherit;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-color: #020000;
     transition: all 0.3s ease;
+    padding-bottom: 40px;
     .productCH{
       text-align: center;
-      padding-top: 80px;
+      padding-top: 60px;
       h4{
         line-height: 40px;
         span{
@@ -195,9 +196,12 @@
       .productCMT{
         width: 100%;
         h5{
-          font-weight: bold;
-          font-size: 48px;
-          color: #CD241D;
+          a{
+            font-weight: bold;
+            font-size: 48px;
+            color: #CD241D;
+          }
+          
         }
         p{
           font-size: 24px;

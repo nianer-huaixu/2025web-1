@@ -1,5 +1,6 @@
 import Banner from "@/components/banner"
 import Cate1 from "@/components/Cate1"
+import Mark from "@/components/mark"
 import Table1 from "@/components/Table1"
 import Cate2 from "@/components/Cate2"
 import Cate3 from "@/components/Cate3"
@@ -72,7 +73,8 @@ export default function Juan(){
   return <>
     <Banner suf='juan'/>
     <Cate1 data={data1}/>
-    <section className="bg-[#00020F]">
+    <Mark/>
+    {/* <section className="bg-[#00020F]">
       <h4 className={styles.title}>多种材质 支持定制</h4>
       <div className={["main",styles.textureMain].join(' ')}>
         {data2.map((list,l)=>{
@@ -84,7 +86,7 @@ export default function Juan(){
         })}
         <p>* 仅展示部分型号以供参考，具体事宜请与销售人员确认</p>
       </div>
-    </section>
+    </section> */}
     <section className="bg-[#17161B]">
       <h4 className={styles.title2}>产品规格&nbsp;&nbsp;&nbsp;&nbsp;<span>一站式采购</span></h4>
       <Table1 data={table1}/>

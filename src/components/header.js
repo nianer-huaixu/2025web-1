@@ -5,6 +5,47 @@ import { useState, useEffect } from 'react'
 import { useRouter,usePathname } from 'next/navigation'
 import useStore from '@/hook/useStore'
 
+function Product1(){
+  const data = [
+    {
+      series:'7',
+      child:['7003','7020','7050','7075','7A04','7A09','LC4','LC9']
+    },
+    {
+      series:'6',
+      child:['6060','6061','6063','6082','6101','6005A','LD2','LD5','LD7','LD10','LY12']
+    },
+    {
+      series:'5',
+      child:['5049','5052','5083','5754','5A02','5A03','5A05','5A06','LF5','LF6']
+    },
+    {
+      series:'3',
+      child:['3003','3004','3103','3A21']
+    },
+    {
+      series:'2',
+      child:['2011','2014','2017','2024','2219','2618','2A12','2A14','2A50','2A70']
+    },
+    {
+      series:'1',
+      child:['1050','1060']
+    }
+  ]
+  return <div className='header-product'>
+    <div className='header-product-new main'>
+      {data.map((item,i)=>{
+        return <ul key={i}>
+          <span>{item.series}系铝合金</span>
+          {item.child.map((chi,l)=>{
+            return <li key={l}><Link href={{pathname:'/product/'+chi}}>{chi}铝合金</Link></li>
+          })}
+        </ul>
+      })}
+    </div>
+  </div>
+}
+
 function ProductMain(){
   const router = useRouter()
   const store = useStore()
@@ -184,7 +225,7 @@ function MuneItem(props){
   const store = useStore()
   const headData = [
     {label:'首页',route:'/'},
-    {label:'产品中心',route:'/product',isChildren:true},
+    {label:'产品中心',route:'/',isChildren:true},
     {label:'加工中心',route:'/process',isProcess:true},
     {label:'应用领域',route:'/applicationfields',isApp:true},
     {label:'行业方案',route:'/case',isCase:true},
@@ -208,7 +249,8 @@ function MuneItem(props){
     // 
     return <li key={item.label} className={[('/'+path.split('/')[1]) == item.route?'menu-ul-li selectAcitve':'menu-ul-li'].join('')}>
       <a onClick={()=>clickLink(item.label,item.route)} className='menu-route-a'>{item.label}</a>
-      {item.isChildren && <ProductMain/>}
+      {/* {item.isChildren && <ProductMain/>} */}
+      {item.isChildren && <Product1/>}
       {item.isProcess && <Process/>}
       {item.isApp && <Apply/>}
       {item.isCase && <Case/>}

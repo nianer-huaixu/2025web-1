@@ -30,64 +30,64 @@ function ProductShow(){
   }
   const data= [
     {
-      label:'铝板系列',text:'铝板系列涵盖亮面铝板、贴膜铝板、预拉伸铝板、超宽铝板、特厚铝板、超平铝板、精铸铝板、锻造铝板、花纹铝板...',
+      label:'铝板系列',href:'product/lvban',text:'铝板系列涵盖亮面铝板、贴膜铝板、预拉伸铝板、超宽铝板、特厚铝板、超平铝板、精铸铝板、锻造铝板、花纹铝板...',
       series:[
-        {serie:'7系',label:'铝板',child:['7050','7075','7A04','7A09']},
-        {serie:'6系',label:'铝板',child:['6061','6063','6082']},
-        {serie:'5系',label:'铝板',child:['5052','5083','5754','5A02','5A05','5A06']},
-        {serie:'3系',label:'铝板',child:['3003','3A21']},
-        {serie:'2系',label:'铝板',child:['2017','2024','2A12']},
-        {serie:'1系',label:'铝板',child:['1050','1060']},
+        {serie:'7系',label:'铝板',child:['7003','7020','7050','7075','7A04','7A09','LC4','LC9']},
+        {serie:'6系',label:'铝板',child:['6060','6061','6063','6082','6101','6005A','LD2','LD5','LD7','LD10','LY12']},
+        {serie:'5系',label:'铝板',child:['5049','5052','5083','5754','5A02','5A03','5A05','5A06','LF5','LF6']},
+        {serie:'3系',label:'铝板',child:['3003','3004','3103','3A21']},
+        {serie:'2系',label:'铝板',child:['2011','2014','2017','2024','2219','2618','2A12','2A14','2A50','2A70']},
+        {serie:'1系',label:'铝板',child:['1050','1060']}
       ]
     },
-    {label:'铝棒系列',text:'铝棒系列涵盖纯铝棒、合金铝棒、大直径铝棒、挤压铝棒、光亮铝棒、精拉铝棒、超硬铝棒、铸造铝棒、研磨铝棒...',
+    {label:'铝棒系列',href:'product/lvbang',text:'铝棒系列涵盖纯铝棒、合金铝棒、大直径铝棒、挤压铝棒、光亮铝棒、精拉铝棒、超硬铝棒、铸造铝棒、研磨铝棒...',
       series:[
-        {serie:'7系',label:'铝棒',child:['7050','7075','7A04','7A09']},
-        {serie:'6系',label:'铝棒',child:['6061','6063','6082']},
-        {serie:'5系',label:'铝棒',child:['5052','5083','5754','5A02','5A05','5A06']},
-        {serie:'3系',label:'铝棒',child:['3003','3A21']},
-        {serie:'2系',label:'铝棒',child:['2017','2024','2A12']},
-        {serie:'1系',label:'铝棒',child:['1050','1060']},
+        {serie:'7系',label:'铝棒',child:['7003','7020','7050','7075','7A04','7A09','LC4','LC9']},
+        {serie:'6系',label:'铝棒',child:['6060','6061','6063','6082','6101','6005A','LD2','LD5','LD7','LD10','LY12']},
+        {serie:'5系',label:'铝棒',child:['5049','5052','5083','5754','5A02','5A03','5A05','5A06','LF5','LF6']},
+        {serie:'3系',label:'铝棒',child:['3003','3004','3103','3A21']},
+        {serie:'2系',label:'铝棒',child:['2011','2014','2017','2024','2219','2618','2A12','2A14','2A50','2A70']},
+        {serie:'1系',label:'铝棒',child:['1050','1060']}
       ]
     },
-    {label:'铝卷系列',text:'铝卷系列涵盖纯铝卷、铝带、铝箔、合金铝卷、防锈铝卷、保温铝卷、冲压铝卷、花纹铝卷、超宽铝卷、超宽铝卷...',
+    {label:'铝卷系列',href:'product/lvjuan',text:'铝卷系列涵盖纯铝卷、铝带、铝箔、合金铝卷、防锈铝卷、保温铝卷、冲压铝卷、花纹铝卷、超宽铝卷、超宽铝卷...',
       series:[
-        {serie:'7系',label:'铝卷',child:['7075']},
-        {serie:'6系',label:'铝卷',child:['6061','6063']},
-        {serie:'6系',label:'铝卷',child:['5052','5083','5754','5A02']},
-        {serie:'3系',label:'铝卷',child:['3003','3A21']},
-        {serie:'2系',label:'铝卷',child:['2024','2A12']},
-        {serie:'1系',label:'铝卷',child:['1050','1060']},
+        {serie:'7系',label:'铝卷',child:['7003','7020','7050','7075','7A04','7A09','LC4','LC9']},
+        {serie:'6系',label:'铝卷',child:['6060','6061','6063','6082','6101','6005A','LD2','LD5','LD7','LD10','LY12']},
+        {serie:'6系',label:'铝卷',child:['5049','5052','5083','5754','5A02','5A03','5A05','5A06','LF5','LF6']},
+        {serie:'3系',label:'铝卷',child:['3003','3004','3103','3A21']},
+        {serie:'2系',label:'铝卷',child:['2011','2014','2017','2024','2219','2618','2A12','2A14','2A50','2A70']},
+        {serie:'1系',label:'铝卷',child:['1050','1060']}
       ]
     },
-    {label:'铝管系列',text:'铝管系列涵盖挤压铝管、无缝铝管、锻造铝管、拉拔铝管、薄壁铝管、厚壁铝管、大口径铝管...',
+    {label:'铝管系列',href:'product/lvguan',text:'铝管系列涵盖挤压铝管、无缝铝管、锻造铝管、拉拔铝管、薄壁铝管、厚壁铝管、大口径铝管...',
       series:[
-        {serie:'7系',label:'铝管',child:['7050','7075','7A04','7A09']},
-        {serie:'6系',label:'铝管',child:['6061','6063','6082']},
-        {serie:'5系',label:'铝管',child:['5052','5083','5754','5A02','5A05','5A06']},
-        {serie:'3系',label:'铝管',child:['3003','3A21']},
-        {serie:'2系',label:'铝管',child:['2017','2024','2A12']},
-        {serie:'1系',label:'铝管',child:['1050','1060']},
+        {serie:'7系',label:'铝管',child:['7003','7020','7050','7075','7A04','7A09','LC4','LC9']},
+        {serie:'6系',label:'铝管',child:['6060','6061','6063','6082','6101','6005A','LD2','LD5','LD7','LD10','LY12']},
+        {serie:'5系',label:'铝管',child:['5049','5052','5083','5754','5A02','5A03','5A05','5A06','LF5','LF6']},
+        {serie:'3系',label:'铝管',child:['3003','3004','3103','3A21']},
+        {serie:'2系',label:'铝管',child:['2011','2014','2017','2024','2219','2618','2A12','2A14','2A50','2A70']},
+        {serie:'1系',label:'铝管',child:['1050','1060']}
       ]
     },
-    {label:'铝型材系列',text:'铝型材系列涵盖铝方棒、铝扁棒、铝排、铝方管、矩形管、六角铝棒、等边角铝、不等边角铝、槽铝...',
+    {label:'铝型材系列',href:'product/lvxingcai',text:'铝型材系列涵盖铝方棒、铝扁棒、铝排、铝方管、矩形管、六角铝棒、等边角铝、不等边角铝、槽铝...',
       series:[
-        {serie:'7系',label:'铝型材',child:['7050','7075','7A04','7A09']},
-        {serie:'6系',label:'铝型材',child:['6061','6063','6082']},
-        {serie:'5系',label:'铝型材',child:['5052','5083','5754','5A02','5A05','5A06']},
-        {serie:'3系',label:'铝型材',child:['3003','3A21']},
-        {serie:'2系',label:'铝型材',child:['2017','2024','2A12']},
-        {serie:'1系',label:'铝型材',child:['1050','1060']},
+        {serie:'7系',label:'铝型材',child:['7003','7020','7050','7075','7A04','7A09','LC4','LC9']},
+        {serie:'6系',label:'铝型材',child:['6060','6061','6063','6082','6101','6005A','LD2','LD5','LD7','LD10','LY12']},
+        {serie:'5系',label:'铝型材',child:['5049','5052','5083','5754','5A02','5A03','5A05','5A06','LF5','LF6']},
+        {serie:'3系',label:'铝型材',child:['3003','3004','3103','3A21']},
+        {serie:'2系',label:'铝型材',child:['2011','2014','2017','2024','2219','2618','2A12','2A14','2A50','2A70']},
+        {serie:'1系',label:'铝型材',child:['1050','1060']}
       ]
     },
-    {label:'铝锻件系列',text:'铝锻件系列涵盖锻板、锻棒、锻管、锻环、锻饼、锻筒、锻锥形...',
+    {label:'铝锻件系列',href:'product/lvduanjian',text:'铝锻件系列涵盖锻板、锻棒、锻管、锻环、锻饼、锻筒、锻锥形...',
       series:[
-        {serie:'7系',label:'铝锻件',child:['7050','7075','7A04','7A09']},
-        {serie:'6系',label:'铝锻件',child:['6061','6063','6082']},
-        {serie:'5系',label:'铝锻件',child:['5052','5083','5754','5A02','5A05','5A06']},
-        {serie:'3系',label:'铝锻件',child:['3003','3A21']},
-        {serie:'2系',label:'铝锻件',child:['2017','2024','2A12']},
-        {serie:'1系',label:'铝锻件',child:['1050','1060']},
+        {serie:'7系',label:'铝锻件',child:['7003','7020','7050','7075','7A04','7A09','LC4','LC9']},
+        {serie:'6系',label:'铝锻件',child:['6060','6061','6063','6082','6101','6005A','LD2','LD5','LD7','LD10','LY12']},
+        {serie:'5系',label:'铝锻件',child:['5049','5052','5083','5754','5A02','5A03','5A05','5A06','LF5','LF6']},
+        {serie:'3系',label:'铝锻件',child:['3003','3004','3103','3A21']},
+        {serie:'2系',label:'铝锻件',child:['2011','2014','2017','2024','2219','2618','2A12','2A14','2A50','2A70']},
+        {serie:'1系',label:'铝锻件',child:['1050','1060']}
       ]
     }
   ]
@@ -122,14 +122,15 @@ function ProductShow(){
     <div className={[styles.productCM,'main'].join(' ')}>
       <img src={URL + 'index/p-img-'+ (index+1)+'.webp'}/>
       <div className={styles.productCMT}>
-        <h5>{data[index].label}</h5>
+        <h5><Link href={data[index].href}>{data[index].label}</Link></h5>
         <p>{data[index].text}</p>
         <div className={styles.productCMTUL}>
           {data[index].series.map((item,i)=>{
             return <ul key={i}>
               {item.serie + item.label}
               {item.child.map((li,l)=>{
-                return <li key={l}><Link href={{pathname:'/product/detail/',query:{detail:li+item.label}}}>{li + item.label}</Link></li>
+                // return <li key={l}><Link href={{pathname:'/product/detail/',query:{detail:li+item.label}}}>{li + item.label}</Link></li>
+                return <li key={l}><Link href={{pathname:'/product/'+li}}>{li + item.label}</Link></li>
               })}
             </ul>
           })}
