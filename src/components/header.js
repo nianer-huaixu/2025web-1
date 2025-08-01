@@ -13,7 +13,7 @@ function Product1(){
     },
     {
       series:'6',
-      child:['6060','6061','6063','6082','6101','6005A','LD2','LD5','LD7','LD10','LY12']
+      child:['6060','6061','6063','6082','6101','6A02','6005A','LD2','LD5','LD7','LD10','LY12']
     },
     {
       series:'5',
@@ -225,7 +225,7 @@ function MuneItem(props){
   const store = useStore()
   const headData = [
     {label:'首页',route:'/'},
-    {label:'产品中心',route:'/',isChildren:true},
+    {label:'产品中心',route:'/product',isChildren:true},
     {label:'加工中心',route:'/process',isProcess:true},
     {label:'应用领域',route:'/applicationfields',isApp:true},
     {label:'行业方案',route:'/case',isCase:true},

@@ -7,24 +7,24 @@ export default function Mark6060(){
 
   const suf = '6060'
   const data = {
-    ghzt:'O,H112',
-    scbz:'GB国标,GJB国军标,GBN军标',
+    ghzt:'T4,T5,T6',
+    scbz:'GB国标,EN欧标,ASTM美标',
     ban:[
-      '厚度:1-400mm',
+      '厚度:0.5-600mm',
       '宽度:≤2500mm',
       '长度:≤10000mm'
     ],
     bang:[
-      '直径:5-500mm',
+      '直径:3-600mm',
       '长度:≤6000mm'
     ],
     juan:[
-      '厚度:',
-      '宽度:',
+      '厚度:0.5-3mm',
+      '宽度:≤1500mm',
     ],
     guan:[
       '厚度:1-100mm',
-      '外径:5-680mm',
+      '外径:5-850mm',
       '长度:≤6000mm'
     ],
     xc:[

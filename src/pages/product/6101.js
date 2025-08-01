@@ -7,19 +7,19 @@ export default function Mark6101(){
 
   const suf = '6101'
   const data = {
-    ghzt:'T6,T651,T6511,T652,H112,O',
+    ghzt:'T6',
     scbz:'GB国标,EN欧标,ASTM美标',
     ban:[
-      '厚度:1-450mm',
+      '厚度:0.5-600mm',
       '宽度:≤2500mm',
       '长度:≤10000mm'
     ],
     bang:[
-      '直径:5-600mm',
+      '直径:3-600mm',
       '长度:≤6000mm'
     ],
     juan:[
-      '厚度:1-3mm',
+      '厚度:0.5-3mm',
       '宽度:≤1500mm',
     ],
     guan:[

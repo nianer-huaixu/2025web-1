@@ -7,24 +7,24 @@ export default function Mark3103(){
 
   const suf = '3103'
   const data = {
-    ghzt:'O,H112,H14,H24,H18',
-    scbz:'GB国标,GJB国军标,GBN军标,EN欧标,ASTM美标,AMS航空标准',
+    ghzt:'O,H14,H24,H16,H18',
+    scbz:'GB国标,EN欧标,ASTM美标',
     ban:[
-      '厚度:0.2-200mm',
+      '厚度:0.5-600mm',
       '宽度:≤2500mm',
       '长度:≤10000mm'
     ],
     bang:[
-      '直径:5-500mm',
+      '直径:3-600mm',
       '长度:≤6000mm'
     ],
     juan:[
-      '厚度:0.2-3mm',
-      '宽度:≤2000mm',
+      '厚度:0.5-3mm',
+      '宽度:≤1500mm',
     ],
     guan:[
       '厚度:1-100mm',
-      '外径:1-100mm',
+      '外径:5-850mm',
       '长度:≤6000mm'
     ],
     xc:[

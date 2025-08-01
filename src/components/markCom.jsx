@@ -79,28 +79,28 @@ export default function MarkCom({suf}){
   const data3 = [
     {
       text:'航空航天行业',
-      text1:'适用于油罐车和其他化工运输车罐体所需的5083、5052等铝合金板材产品，具有大规格、高质量表面、高成形性的特点，具有良好的抗腐蚀性能和焊接性能，以及可回收性。'
+      text1:'航空航天飞行器上的外壳材料能够降低5%-7%的密度,材料刚度提高7%，降低10%的重量,以此提高燃料效率,同时因为铝合金材料的耐腐蚀性和良好的抗疲劳性及抗损伤容限性。'
     },{
       text:'轨道交通行业',
-      text1:'适用于油罐车和其他化工运输车罐体所需的5083、5052等铝合金板材产品，具有大规格、高质量表面、高成形性的特点，具有良好的抗腐蚀性能和焊接性能，以及可回收性。'
+      text1:'供应的铁路用铝主要有铁路弹簧铝、扣件用铝、道岔用铝、钩尾框用铝、铁路轴承铝、欧标合金铝，美标合金铝等产品，大量用于指导铁路货车、高速客车、动车组列车的关键部件。'
     },{
       text:'船舶制造行业',
-      text1:'适用于油罐车和其他化工运输车罐体所需的5083、5052等铝合金板材产品，具有大规格、高质量表面、高成形性的特点，具有良好的抗腐蚀性能和焊接性能，以及可回收性。'
+      text1:'主要用在船体结构及隔舱等上层建筑上，同时通常用小直径铝合金管材做管道，大直径管材和棒材则用作船体架构、杆构件、梁等，为了使船体轻量化，有时会在船亮结构上使用一些薄壁型材。'
     },{
       text:'汽车智造行业',
-      text1:'适用于油罐车和其他化工运输车罐体所需的5083、5052等铝合金板材产品，具有大规格、高质量表面、高成形性的特点，具有良好的抗腐蚀性能和焊接性能，以及可回收性。'
+      text1:'部分牌号铝合金的强度和硬度已经达到或超越钢的指标，而其重量比钢大大地降低了。随着我国EA(新能源汽车)的高速发展，铝合金作为汽车轻量化方向的主力，全铝车身也成为重要卖点。'
     },{
       text:'化学能源行业',
       text1:'适用于油罐车和其他化工运输车罐体所需的5083、5052等铝合金板材产品，具有大规格、高质量表面、高成形性的特点，具有良好的抗腐蚀性能和焊接性能，以及可回收性。'
     },{
       text:'医疗设备行业',
-      text1:'适用于油罐车和其他化工运输车罐体所需的5083、5052等铝合金板材产品，具有大规格、高质量表面、高成形性的特点，具有良好的抗腐蚀性能和焊接性能，以及可回收性。'
+      text1:'铝合金由于其良好的塑性和加工性能，以及轻量化，耐腐蚀等优点，因此在各种大型医疗设备上越来越多使用，比如超声波设备，CT设备，激光治疗设备等。'
     },{
       text:'消费电子行业',
-      text1:'适用于油罐车和其他化工运输车罐体所需的5083、5052等铝合金板材产品，具有大规格、高质量表面、高成形性的特点，具有良好的抗腐蚀性能和焊接性能，以及可回收性。'
+      text1:'铝合金板材也用于制造各种电子面板、电器柜体箱体。此外，在家具电器、无人机、AI机器人、电脑、移动电子设备等方面，均可根据不同需求，提供高性能的铝合金。'
     },{
       text:'工业模具行业',
-      text1:'适用于油罐车和其他化工运输车罐体所需的5083、5052等铝合金板材产品，具有大规格、高质量表面、高成形性的特点，具有良好的抗腐蚀性能和焊接性能，以及可回收性。'
+      text1:'制造时间短，机械加工较易，其切削速度比一般模具钢快6倍以上，令模具可更快进行生产。其热传导率比一般模具钢高，故可节省模具在生产时的冷切时间50%，从而提高模具的生产效率。'
     }
   ]
   const data4 =[
@@ -135,7 +135,7 @@ export default function MarkCom({suf}){
     setIndex(i)
   }
   return <>
-    <section className="pb-[60px]" style={{background:`url('${store.common.url}product/牌号/bg-1.webp')no-repeat`}}>
+    <section className="pb-[60px]" style={{background:`url('${store.common.url}product/牌号/bg-1.webp')no-repeat`,backgroundSize:'cover'}}>
       <div className="main">
         <h4 className={styles.graTitle}>万吨库存 规格齐全<span>我们提供半成品和加工零件，包括板材、管材、棒材、卷材、铝型材和锻件的期货及现货。</span></h4>
         <div className="grid grid-cols-3 gap-[60px]">
@@ -182,7 +182,7 @@ export default function MarkCom({suf}){
         </div>
       </section>
     })}
-    <section style={{background:`url('${store.common.url}product/牌号/bg-2.webp')no-repeat`}}>
+    <section style={{background:`url('${store.common.url}product/牌号/bg-2.webp')no-repeat`,backgroundSize:'cover'}}>
       <div className="main" style={{background:`url('${store.common.url}product/牌号/pai.webp')no-repeat top right`}}>
         <h4 className={styles.title2}><span>出库流程</span>定制产品·一站式采购</h4>
         <div className="grid grid-cols-3 gap-[20px] w-fit">
@@ -209,7 +209,7 @@ export default function MarkCom({suf}){
         </div>
       </div>
     </section>
-    <section style={{background:`url('${store.common.url}product/牌号/a-bg.webp')no-repeat`}}>
+    <section style={{background:`url('${store.common.url}product/牌号/a-bg.webp')no-repeat`,backgroundSize:'cover'}}>
       <div className="main pb-[60px]">
         <h4 className={styles.title2}><span>应用领域·工程案例</span>产品广泛应用于汽车、机械制造、船舶、模具等工厂</h4>
         <div className="main flex justify-between">
