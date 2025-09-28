@@ -1,4 +1,5 @@
 import styles from '@/styles/cate.module.scss'
+import Link from 'next/link'
 export default function Mark(){
   const data = [
     ['7003','7020','7050','7075','7A04','7A09'],
@@ -19,7 +20,7 @@ export default function Mark(){
     {data.map((list,l)=>{
       return <ul key={l} className="grid grid-cols-6">
         {list.map((item,i)=>{
-          return <li key={i}><span>{item}</span></li>
+          return <li key={i}><Link href={'/product/'+ item}><span>{item}</span></Link></li>
         })}
       </ul>
     })}

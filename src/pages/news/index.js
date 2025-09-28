@@ -34,7 +34,7 @@ function CompanyNews(props){
         if(i>0) return <div key={i} className={styles.itemNew} onClick={()=> chooseLink(i)}>
           <div className={styles.imgBox}><img src={store.common.url + item.img}/></div>
           <div className={styles.itemNewC}>
-            <span>{item.date}-{item.month}-{item.day}</span>
+            <span>{item.year}-{item.month}-{item.day}</span>
             <p>{item.title}</p>
             <i>More+</i>
           </div>

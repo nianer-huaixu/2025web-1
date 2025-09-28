@@ -79,6 +79,7 @@ export default function Footer(){
             <p style={{marginTop:'10px'}}>联系我们</p>
           </div>
         </div>
+        <li><img src={imgURL + 'phone.png'}/>电话: <b style={{fontSize:'40px'}}>18852996299</b></li>
         <li><img src={imgURL + 'phone.svg'}/>电话: <b style={{fontSize:'40px'}}>0512-62388268</b></li>
         <li><img src={imgURL + 'location.svg'}/>地址: 江苏省苏州市工业园区唯亭镇双灯路2号</li>
         <li><img src={imgURL + 'email.svg'}/>邮箱: 2521813109@qq.com</li>

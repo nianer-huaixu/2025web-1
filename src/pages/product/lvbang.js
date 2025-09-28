@@ -78,19 +78,6 @@ export default function Bang(){
     <Banner suf='bang'/>
     <Cate1 data={data1}/>
     <Mark/>
-    {/* <section className="bg-[#00020F]">
-      <h4 className={styles.title}>多种材质 支持定制</h4>
-      <div className={["main",styles.textureMain].join(' ')}>
-        {data2.map((list,l)=>{
-          return <ul key={l} className="grid grid-cols-6">
-            {list.map((item,i)=>{
-              return <li key={i} className={item=='2A12'?"col-start-5":""}><span>{item}</span></li>
-            })}
-          </ul>
-        })}
-        <p>* 仅展示部分型号以供参考，具体事宜请与销售人员确认</p>
-      </div>
-    </section> */}
     <section className="bg-[#17161B]">
       <h4 className={styles.title2}>产品规格&nbsp;&nbsp;&nbsp;&nbsp;<span>一站式采购</span></h4>
       <Table1 data={table1}/>
@@ -118,6 +105,5 @@ export default function Bang(){
     <Cate3 title='铝材铝棒' sup='棒'/>
     <Cate4 cate4Text={cate4Text} sup='棒'/>
     <Cate5 sup='棒'/>
-    
   </>
 }

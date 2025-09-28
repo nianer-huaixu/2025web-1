@@ -1,51 +1,174 @@
 "use client"
 import React from 'react'
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
+import { useState, useEffect,useRef } from 'react'
 import { useRouter,usePathname } from 'next/navigation'
+import Sidebar from '@/components/Sidebar'
 import useStore from '@/hook/useStore'
 
 function Product1(){
+  const store = useStore()
+  const router = useRouter()
   const data = [
     {
       series:'7',
-      child:['7003','7020','7050','7075','7A04','7A09','LC4','LC9']
+      lists:[
+        {label:'7003',img:false},
+        {label:'7020',img:false},
+        {label:'7050',img:false},
+        {label:'7075',img:store.common.url +'header/hot1.png'},
+        {label:'7A04',img:store.common.url +'header/hot2.png'},
+        {label:'7A09',img:false},
+        {label:'LC4',img:store.common.url +'header/hot2.png'},
+        {label:'LC9',img:false}
+      ],
+      cate:{
+        img:store.common.url +'header/ban.webp',
+        text:'板材/Plate',
+        href:'/product/lvban'
+      }
     },
     {
       series:'6',
-      child:['6060','6061','6063','6082','6101','6A02','6005A','LD2','LD5','LD7','LD10','LY12']
+      lists:[
+        {label:'6060',img:false},
+        {label:'6061',img:store.common.url +'header/hot1.png'},
+
+        {label:'6063',img:store.common.url +'header/hot1.png'},
+        {label:'6082',img:store.common.url +'header/hot2.png'},
+        {label:'6101',img:false},
+        {label:'6A02',img:false},
+        {label:'6005A',img:false},
+        {label:'LD2',img:false}
+      ],
+      cate:{
+        img:store.common.url +'header/bang.webp',
+        text:'棒材/Bar',
+        href:'/product/lvbang'
+      }
     },
     {
       series:'5',
-      child:['5049','5052','5083','5754','5A02','5A03','5A05','5A06','LF5','LF6']
+      lists:[
+        {label:'5049',img:false},
+        {label:'5052',img:store.common.url +'header/hot1.png'},
+        {label:'5083',img:store.common.url +'header/hot1.png'},
+        {label:'5754',img:store.common.url +'header/hot2.png'},
+        {label:'5A02',img:false},
+        {label:'5A03',img:false},
+        {label:'5A05',img:false},
+        {label:'5A06',img:store.common.url +'header/hot2.png'},
+        {label:'LF5',img:false},
+        {label:'LF6',img:false}
+      ],
+      cate:{
+        img:store.common.url +'header/guan.webp',
+        text:'管材/PIPE',
+        href:'/product/lvguan'
+      }
     },
     {
       series:'3',
-      child:['3003','3004','3103','3A21']
+      lists:[
+        {label:'3003',img:store.common.url +'header/hot1.png'},
+        {label:'3004',img:false},
+        {label:'3103',img:false},
+        {label:'3A21',img:store.common.url +'header/hot2.png'}
+      ],
+      cate:{
+        img:store.common.url +'header/juan.webp',
+        text:'卷材/Coil',
+        href:'/product/lvjuan'
+      }
     },
     {
       series:'2',
-      child:['2011','2014','2017','2024','2219','2618','2A12','2A14','2A50','2A70']
+      lists:[
+        {label:'2011',img:false},
+        {label:'2014',img:false},
+        {label:'2017',img:false},
+        {label:'2024',img:store.common.url +'header/hot1.png'},
+        {label:'2219',img:false},
+        {label:'2618',img:false},
+        {label:'2A12',img:store.common.url +'header/hot1.png'},
+        {label:'2A14',img:store.common.url +'header/hot2.png'},
+        {label:'2A50',img:store.common.url +'header/hot2.png'},
+        {label:'2A70',img:false},
+        {label:'LD5',img:false},
+        {label:'LD7',img:false},
+        {label:'LD10',img:false},
+        {label:'LY12',img:store.common.url +'header/hot2.png'}
+      ],
+      cate:{
+        img:store.common.url +'header/xingcai.webp',
+        text:'型材/Profile',
+        href:'/product/lvxingcai'
+      }
     },
     {
       series:'1',
-      child:['1050','1060']
+      lists:[
+        {label:'1050',img:false},
+        {label:'1060',img:store.common.url +'header/hot1.png'},
+        {label:'1070',img:false},
+        {label:'1100',img:false}
+      ],
+      cate:{
+        img:store.common.url +'header/duanjian.webp',
+        text:'锻件/Forging',
+        href:'/product/lvduanjian'
+      }
     }
   ]
-  return <div className='header-product'>
+  const headerRef = useRef(null)
+  function clickCate(href){
+    // 1. 强制设置内联样式覆盖高度
+    if (headerRef.current) {
+      headerRef.current.style.height = '0px'; // 使用你的初始高度
+      // headerRef.current.style.overflow = 'hidden'
+      headerRef.current.style.transition = 'height 0.5s ease' // 保持动画效果
+      
+      // 2. 等待样式应用后再跳转
+      requestAnimationFrame(() => {
+        router.push(href)
+        // 不需要then回调，直接跳转
+      })
+    } else {
+      router.push(href)
+    }
+  }
+  return <div className='header-product' ref={headerRef}
+    // 保留原有的鼠标事件
+    onMouseLeave={() => {
+      if (headerRef.current) {
+        // 恢复CSS类控制的高度
+        headerRef.current.style.height = '';
+        headerRef.current.style.overflow = 'hidden';
+        headerRef.current.style.transition = 'height 0.5s ease'; // 保持动画效果
+      }
+    }}
+  >
     <div className='header-product-new main'>
       {data.map((item,i)=>{
         return <ul key={i}>
-          <span>{item.series}系铝合金</span>
-          {item.child.map((chi,l)=>{
-            return <li key={l}><Link href={{pathname:'/product/'+chi}}>{chi}铝合金</Link></li>
-          })}
+          <div>
+            <span>{item.series}系铝合金</span>
+            {item.lists?.map((chi,l)=>{
+              return <li key={l}
+                style={{background:chi.img ? `url('${chi.img}')no-repeat right`:''}}>
+                <a onClick={()=>clickCate('/product/'+chi.label)}>{chi.label}铝合金</a>
+                </li>
+            })}
+          </div>
+          <div onClick={()=>{clickCate(item.cate.href)}}>
+            <img src={item.cate.img}/>
+            <p className='text-center'>{item.cate.text}</p>
+          </div>
         </ul>
       })}
     </div>
   </div>
 }
-
 function ProductMain(){
   const router = useRouter()
   const store = useStore()
@@ -218,7 +341,6 @@ function News(){
     </div>
   </div>
 }
-// 导航栏一级菜单 start
 function MuneItem(props){
   let { path } = props
   const router = useRouter()
@@ -246,7 +368,6 @@ function MuneItem(props){
     }
   }
   const muneItem = headData.map(item =>{
-    // 
     return <li key={item.label} className={[('/'+path.split('/')[1]) == item.route?'menu-ul-li selectAcitve':'menu-ul-li'].join('')}>
       <a onClick={()=>clickLink(item.label,item.route)} className='menu-route-a'>{item.label}</a>
       {/* {item.isChildren && <ProductMain/>} */}
@@ -260,10 +381,11 @@ function MuneItem(props){
   });
   return (<ul className='menu-ul'>{muneItem}</ul>)
 }
-
 export default function Header(){
   const [scrollHeight,setScrollHeight] = useState(0)
   const pathname = usePathname()
+  const store = useStore()
+  const router = useRouter()
 
   useEffect(()=>{
     let throttleTimeout = null;
@@ -281,13 +403,78 @@ export default function Header(){
       clearTimeout(throttleTimeout)
     }
   },[scrollHeight])
-  return <header style={{backgroundColor:scrollHeight>980?'#000':''}}>
-    <div className="header-warp main">
+  // 复制功能
+  // const [email, setEmail] = useState('18852996299');
+  // const [isCopied, setIsCopied] = useState(false);
+
+  // const copyEmail = async () => {
+  //   try {
+  //     await navigator.clipboard.writeText(email);
+  //     setIsCopied(true);
+  //     setTimeout(() => setIsCopied(false), 2000);
+  //   } catch (err) {
+  //     console.error('复制失败:', err);
+  //   }
+  // }
+  function copyText(text){
+    // 检查是否支持现代API
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text)
+        .then(() => alert('微信号复制成功!'))
+        .catch(() => fallbackCopy(text)); // 失败时使用降级方案
+    } else {
+      // 直接使用降级方案
+      fallbackCopy('18852996299');
+    }
+  }
+  function fallbackCopy(text) {
+    const textArea = document.createElement('textarea');
+    textArea.value = text;
+    textArea.style.position = 'fixed';
+    textArea.style.opacity = '0';
+    document.body.appendChild(textArea);
+    textArea.select();
+    
+    try {
+      document.execCommand('copy');
+      alert('微信号复制成功!');
+    } catch (err) {
+      alert('复制失败，请手动选择文本复制');
+    } finally {
+      document.body.removeChild(textArea);
+    }
+  }
+  return <header style={{backgroundColor:scrollHeight>280?'#000':''}}>
+    <div className="header-warp main pc-header">
       <div className='logo-wrap'>
         <Link href='/'><img src='https://www.yangdong.co:8443/yangdong-new/header/logo-white.webp' alt='logo'/></Link>
       </div>
       <MuneItem path={pathname}/>
     </div>
     <div className='up' style={{opacity:scrollHeight>1000?'1':'0'}} onClick={()=>window.scrollTo(0,0)}></div>
+    {/* <div className='m-header'>
+      <div className='logo-wrap'>
+        <Link href='/'><img src='https://www.yangdong.co:8443/yangdong-new/header/logo-white.webp' alt='logo'/></Link>
+      </div>
+    </div> */}
+      <Sidebar/>
+      <div className='footer-bottom'>
+        <div onClick={()=>router.push('/')}>
+          <img src={store.common.url + '/index/footer-icon-1.png'}/>
+          <Link href='/'>首页</Link>
+        </div>
+        <div onClick={()=>router.push('/product')}>
+          <img src={store.common.url + '/index/footer-icon-2.png'}/>
+          <Link href='/product'>产品</Link>
+        </div>
+        <div>
+          <img src={store.common.url + '/index/footer-icon-3.png'}/>
+          <a href={`tel:18852996299}`}>电话</a>
+        </div>
+        <div id="copyText" onClick={()=>copyText('18852996299')}>
+          <img src={store.common.url + '/index/footer-icon-4.png'}/>
+          <span>微信</span>
+        </div>
+      </div>
   </header>
 }

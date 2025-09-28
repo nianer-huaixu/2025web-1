@@ -90,8 +90,8 @@ export default function Ban(){
     img:store.common.url +'product/icon-3-b.png',
     text1:'覆膜',
     list:[
-      '1.采用聚氯乙烯高光膜制成，易清洗。',
-      '2.独特的PET层，坚固耐用，耐久性强。'
+      '1. 采用聚氯乙烯高光膜制成，易清洗。',
+      '2. 独特的PET层，坚固耐用，耐久性强。'
     ]
   }
   const cate4Text = '各行业铝材加工，铝板加工，大型CNC铝板加工，新能源铝材加工，全自动印花台板，金属整平加工，电热铝板加工，铝面板切割加工。'
@@ -115,10 +115,10 @@ export default function Ban(){
     <section className="bg-[#17161B]">
       <h4 className={styles.title2}>产品规格&nbsp;&nbsp;&nbsp;&nbsp;<span>一站式采购</span></h4>
       <Table1 data={table1}/>
-      <div className="main text-center border text-[24px] py-[4px] tracking-[2px]">铝板厚度一览表( 长宽可任意零切 )</div>
-      <div className="main grid grid-cols-6">
+      <div className={["main text-center border text-[24px] py-[4px] tracking-[2px]",styles.table2Title].join(' ')}>铝板厚度一览表( 长宽可任意零切 )</div>
+      <div className={["main grid grid-cols-6 border-l",styles.table2].join(' ')}>
         {table2.map((item,i)=>{
-          return <span key={i} className="border text-[24px] text-[#fff] pl-[70px]">{item}mm</span>
+          return <span key={i} className="border-r border-b text-[24px] text-[#fff] pl-[70px]">{item}mm</span>
         })}
         <span className="col-span-4 border text-[24px] pl-[70px]">如需其他规格请咨询销售客服专员！</span>
       </div>

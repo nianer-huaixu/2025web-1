@@ -7,6 +7,7 @@ import Cate3 from "@/components/Cate3"
 import Cate4 from "@/components/Cate4"
 import Cate5 from "@/components/Cate5"
 import useStore from "@/hook/useStore"
+import Link from "next/link"
 import styles from '@/styles/cate.module.scss'
 
 export default function Juan(){
@@ -54,10 +55,14 @@ export default function Juan(){
     }
   ]
   const data2 = [
-    ['7075','6061','5083','3A21','2017','1050'],
-    ['7050','6063','5052','3003','2024','1060'],
-    ['7A04','6082','5754','2A12'],
-    ['7A09','5A06','5A05']
+    ['7003','7020','7075'],
+    ['6061','6063','6101','6A02','6005A'],
+    ['5049','5052','5083','5754','5A02','5A03'],
+    ['3003','3004','3103','3A21'],
+    ['2011','2024','2219','2618','2A12','2A14'],
+    ['2A50','2A70','1050','1060'],
+    ['LC4','LC9','LD2','LD5','LD7','LD10'],
+    ['LF5','LF6','LY12']
   ]
   const table1 = {
     text1:'产品宽度',
@@ -73,20 +78,20 @@ export default function Juan(){
   return <>
     <Banner suf='juan'/>
     <Cate1 data={data1}/>
-    <Mark/>
-    {/* <section className="bg-[#00020F]">
+    {/* <Mark/> */}
+    <section className="bg-[#00020F]">
       <h4 className={styles.title}>多种材质 支持定制</h4>
       <div className={["main",styles.textureMain].join(' ')}>
         {data2.map((list,l)=>{
           return <ul key={l} className="grid grid-cols-6">
             {list.map((item,i)=>{
-              return <li key={i} className={item=='2A12'?"col-start-5":""}><span>{item}</span></li>
+              return <li key={i} className={item=='2A12'?"col-start-5":""}><Link href={'/product/'+item}><span>{item}</span></Link></li>
             })}
           </ul>
         })}
         <p>* 仅展示部分型号以供参考，具体事宜请与销售人员确认</p>
       </div>
-    </section> */}
+    </section>
     <section className="bg-[#17161B]">
       <h4 className={styles.title2}>产品规格&nbsp;&nbsp;&nbsp;&nbsp;<span>一站式采购</span></h4>
       <Table1 data={table1}/>

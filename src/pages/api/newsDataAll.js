@@ -4,8 +4,8 @@ const data =[
     {
       id:0,
       title:'“精工品质，真诚合作”扬东集团客户好评不断诚信可靠',
-      year:'2024',
-      month:'04',
+      year:'2023',
+      month:'10',
       day:'17',
       img:'news/company1.webp',
       content1:'“精工品质、价格合理”江苏扬东铝业集团有限公司销售的高精铝材产品客户反馈好评不断、诚信可靠、口碑好，客户给予我们产品很大的肯定，扬东集团会再接再励以更高的品质服务标准来回馈新老客户的信赖。',
@@ -14,49 +14,49 @@ const data =[
       id:1,
       title:'江苏扬东铝业集团公司开展员工拓展活动',
       img:'news/company2.webp',
-      year:'2023',
+      year:'2015',
       month:'10',
       day:'20'
     },{
       id:2,
       title:'热烈祝贺扬东集团顺利通过ISO9001质量管理体系认证',
       img:'news/company3.webp',
-      year:'2023',
+      year:'2018',
       month:'08',
       day:'13'
     },{
       id:3,
       title:'【喜讯】扬东集团荣获3A级企业信用等级证书',
       img:'news/company4.webp',
-      year:'2023',
+      year:'2017',
       month:'07',
       day:'20'
     },{
       id:4,
       title:'扬东集团被中国兵器工业集团纳入优选供应商名录',
       img:'news/company5.webp',
-      year:'2023',
+      year:'2015',
       month:'07',
       day:'15'
     },{
       id:5,
       title:'扬东集团荣获3A级信用认证“诚信经营示范单位”',
       img:'news/company6.webp',
-      year:'2022',
+      year:'2020',
       month:'06',
       day:'27'
     },{
       id:6,
       title:'扬东铝板定制生产注意事项',
       img:'news/company7.webp',
-      year:'2024',
+      year:'2021',
       month:'05',
       day:'11'
     },{
       id:7,
       title:'铝板定制厂家分享表面裂纹消除办法',
       img:'news/company8.webp',
-      year:'2022',
+      year:'2020',
       month:'04',
       day:'25'
     },{
@@ -70,7 +70,7 @@ const data =[
       id:9,
       title:'【扬东铝业】铝板铝棒加工注意事项分享',
       img:'news/company10.webp',
-      year:'2024',
+      year:'2019',
       month:'02',
       day:'11'
     }

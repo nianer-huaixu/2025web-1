@@ -55,5 +55,5 @@ export default function HoverAnimation({ image1, image2, displacementImage }) {
     };
   }, [isReady]); // 仅在 isReady 时初始化
 
-  return <div ref={containerRef} className="my-div" />;
+  return <div ref={containerRef} className="myDiv" />;
 }

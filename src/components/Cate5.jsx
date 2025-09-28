@@ -26,18 +26,18 @@ export default function({sup}){
     <h4 className={styles.title2}><span>自有仓库·</span>实力解决您的需求</h4>
     <div className="main grid grid-cols-4">
       {[1,2,3,4,5,6,7,8].map(((item)=>{
-        return <img key={item} src={store.common.url + 'product/' +sup +'/' + item + '.webp'}/>
+        return <div key={item} className={styles.imgWrap}><img src={store.common.url + 'product/' +sup +'/' + item + '.webp'}/></div>
       }))}
     </div>
     <div className="main bg-[#CD241D] rounded-b-[80px] grid grid-cols-4">
       {data.map((item,i)=>{
-        return <div key={i} className="p-[20px]"
+        return <div key={i} className={["p-[20px]",styles.cate5].join(' ')}
           style={{
-            background:`url('${store.common.url}product/0${i+1}.png')no-repeat 20px 20px`,
+            backgroundImage:`url('${store.common.url}product/0${i+1}.png')`,
             borderRight:i!=3?'1px solid #222' : ''
           }}
         >
-          <p className="pl-[90px] pt-[10px]"><b className="text-[36px]">{item.text1}</b></p>
+          <p className="pt-[10px]"><b className="text-[36px]">{item.text1}</b></p>
           <p className="mt-[30px] text-[24px] text-justify pb-[20px]">{item.text2}</p>
         </div>
       })}

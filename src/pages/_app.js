@@ -27,29 +27,10 @@ export default function App({ Component, pageProps }) {
   },[curPath])
   // al
   // EC
-  // function EC(W, D){
-  //   W.ec_corpid = '11627559';
-  //   W.ec_cskey = 'kkd1a23CLKZMWrHPzz'; 
-  //   W.ec_scheme = '3';
-  //   var s = D.createElement('script');
-  //   s.charset = 'utf-8';
-  //   s.src = '//1.staticec.com/kf/sdk/js/ec_cs.js';
-  //   s.setAttribute('defer', 'defer');
-  //   D.getElementsByTagName('head')[0].appendChild(s);
-  // }
-	// // 百度统计
-  // var _hmt = _hmt || [];
-  // function BaiduStatistics(){
-  //   var hm = document.createElement("script");
-  //   hm.src = "https://hm.baidu.com/hm.js?bc8ee0d38b789a33a2b7f4f92603603e";
-  //   var s = document.getElementsByTagName("script")[0];
-  //   s.parentNode.insertBefore(hm, s);
-  // }
-  // group
   function EC(W, D){
     W.ec_corpid = '11627559';
-    W.ec_cskey = 'kkd1a23CLKZMWrHPzz';
-    W.ec_scheme = '2';
+    W.ec_cskey = 'kkd1a23CLKZMWrHPzz'; 
+    W.ec_scheme = '3';
     var s = D.createElement('script');
     s.charset = 'utf-8';
     s.src = '//1.staticec.com/kf/sdk/js/ec_cs.js';
@@ -60,7 +41,7 @@ export default function App({ Component, pageProps }) {
   var _hmt = _hmt || [];
   function BaiduStatistics(){
     var hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?674ae08ea6f04dd646321fd0db7ec6af";
+    hm.src = "https://hm.baidu.com/hm.js?bc8ee0d38b789a33a2b7f4f92603603e";
     var s = document.getElementsByTagName("script")[0];
     s.parentNode.insertBefore(hm, s);
   }

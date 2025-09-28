@@ -50,7 +50,7 @@
       }
       .firstNewRC{
         position: absolute;
-        right: 0;
+        right: 0px;
         top: 120px;
         width: 734px;
         height: 406px;
@@ -122,7 +122,8 @@
         font-weight: bold;
         font-size: 24px;
         color: #000000;
-        height: 80px;
+        height: 74px;
+        overflow: hidden;
         position: relative;
         margin: 20px 0 40px;
         &::after{
@@ -161,13 +162,9 @@
       }
     }
   }
-  
-}
-.industryNew{
-
 }
 .videoBox{
-  margin: 40px auto ;
+  margin: 40px auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 40px;
@@ -216,6 +213,246 @@
       }
       &:last-child{
         float:right;
+      }
+    }
+  }
+}
+@media (max-width:1440px){
+  .companyWrap,.industryWrap,.videoBox,.newDetail,.aluK{
+    width: 90%;
+  }
+  .newsWrap,.videoBox{
+    gap: 30px;
+  }
+  .newsWrap{
+    width: 100%;
+  }
+  .firstNew{
+    width: 100%;
+    .isP{
+      display: none;
+    }
+  }
+  .aluK{
+    p{
+      width: 50%;
+    }
+  }
+}
+@media (max-width:1080px){
+  .companyWrap,.industryWrap,.videoBox,.newDetail,.aluK{
+    width: 96%;
+  }
+  .firstNew{
+    width: 100%;
+    img{
+      height:260px;
+    }
+    h5{
+      font-size: 24px;
+    }
+    p{
+      line-height: 20px;
+    }
+    .isP{
+      display: none;
+    }
+  }
+  .newsWrap{
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .videoBox{
+    margin-top: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .aluK{
+    p{
+      width: 100%;
+    }
+  }
+}
+@media (max-width:980px){
+  .newTop{
+    div{
+      span{
+        margin-right: 20px;
+        padding-right: 20px;
+      }
+    }
+  }
+  .companyWrap,.industryWrap,.newDetail,.aluK{
+    width: 90%;
+  }
+  .firstNew{
+    width: 100%;
+    img{
+      height:200px;
+    }
+    h5{
+      font-size: 18px;
+      line-height: 20px;
+    }
+    p{
+      line-height: 18px;
+      margin-top: 5px;
+    }
+    .firstNewR{
+      width: 100%;
+      padding-left: 10px;
+      .firstNewRC{
+        padding-left: 20px!important;
+        padding-top: 20px!important;
+        width: 90%!important;
+        background-color: rgba(255,255,255,0.9)!important;
+        right: -1px!important;
+        p{
+          margin-top: 15px!important;
+        }
+        span{
+          margin-top: 0px!important;
+        }
+      }
+    }
+    .firstNewDate{
+      display: none;
+      
+    }
+    .isP{
+      display: none;
+    }
+  }
+  .newsWrap{
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .videoBox{
+    margin-top: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width:750px){
+  .newTop{
+    div{
+      margin: auto;
+      justify-content: space-around;
+      span{
+        margin-right: 0px;
+        padding-right: 0px;
+        border: none;
+        font-size: 20px;
+      }
+    }
+  }
+  .companyWrap,.industryWrap,.resourceWrap,.newDetail,.aluK{
+    width: 90%;
+  }
+  .firstNew{
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 20px;
+    img{
+      height:200px;
+    }
+    h5{
+      font-size: 18px;
+      line-height: 24px;
+    }
+    p{
+      line-height: 20px;
+    }
+    .firstNewR{
+      padding-left: 0px;
+    }
+    .firstNewDate{
+      display: none;
+      
+    }
+    .isP{
+      display: none;
+    }
+  }
+  .newsWrap{
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    .newTextBox{
+      h5{
+        font-size: 20px;
+        height: 72px;
+      }
+    }
+  }
+  .videoBox{
+    margin-top: 30px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .newDetail{
+    padding-top: 0px;
+    img{
+      margin: 10px auto;
+    }
+    .linkBox{
+      a{
+        display: block;
+        &:first-child{
+          float:none;
+        }
+        &:last-child{
+          float:none;
+        }
+      }
+    }
+  }
+}
+@media (max-width:550px){
+  .newTop{
+    height: 60px;
+    div{
+      span{
+        font-size: 14px;
+        margin-top: 18px;
+      }
+    }
+  }
+  .companyNew{
+    .firstNew{
+      .firstNewR{
+        h4{
+          font-size: 30px;
+        }
+        .firstNewRC{
+          top: 80px;
+          padding: 10px;
+          h6{
+            font-size: 20px;
+          }
+          p{
+            font-size: 12px;
+          }
+          span{
+            font-size: 12px;
+          }
+          i{
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  .newsWrap{
+    .itemNew{
+      .imgBox{
+        height: 150px;
+      }
+      .itemNewC{
+        padding: 10px;
+        span{
+          font-size: 16px;
+        }
+        p{
+          font-size: 20px;
+          margin: 10px 0 20px;
+        }
       }
     }
   }

@@ -1,12 +1,14 @@
 // @tailwind components;
 
 .indexWrap{
+  margin-top: 78px;
   .aboutM{
     height: 100vh;
     background: #fff url('https://www.yangdong.co:8443/yangdong-new/index/bg-1.webp')no-repeat;
     background-size: 100%;
     background-position-y: 40px;
     box-sizing: content-box;
+    overflow: hidden;
     .aboutMC{
       height: 60%;
       padding-top: 100px;
@@ -63,12 +65,12 @@
         justify-content: space-between;
         div{
           pre{
-          position: relative;
-          font-family: Roboto;
-          font-weight: 500;
-          font-size: 60px;
-          height: 60px;
-          line-height: 60px;
+            position: relative;
+            font-family: Roboto;
+            font-weight: 500;
+            font-size: 60px;
+            height: 60px;
+            line-height: 60px;
             i{
               position: absolute;
               top: 0;
@@ -94,11 +96,8 @@
   }
 }
 .productWrap{
-  // height: 100vh;
-  // max-height: 1300px;
   .productC{
     width: 100%;
-    // height: inherit;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -134,7 +133,6 @@
       .text1{
         font-size: 30px;
         font-weight: 500;
-        margin: 20px 0;
         span{
           color: #FE0C02;
         }
@@ -189,38 +187,40 @@
     }
     .productCM{
       display: flex;
-      margin-top: 30px;
+      margin-top: 10px;
       img{
         margin-right: 20px;
+        height: 600px;
       }
       .productCMT{
         width: 100%;
         h5{
           a{
             font-weight: bold;
-            font-size: 48px;
+            font-size: 40px;
             color: #CD241D;
           }
           
         }
         p{
-          font-size: 24px;
+          font-size: 22px;
+          margin-bottom: 10px;
         }
         .productCMTUL{
-          margin-top: 20px;
           display: flex;
           justify-content: space-between;
           ul{
-            font-size: 30px;
-            font-weight: bold;
+            font-size: 24px;
+            font-weight: 500;
             li{
               margin: 4px 0;
               a{
                 display: block;
-                font-size: 24px;
+                font-size: 18px;
                 font-weight: normal;
-                line-height: 40px;
-                height: 40px;
+                line-height: 30px;
+                height: 30px;
+                width: max-content;
                 &:hover{
                   border-bottom: 1px solid #CD241D;
                   color: #CD241D;
@@ -301,7 +301,6 @@
       .caseMain{
         display: flex;
       }
-      // border-top: 1px solid #666;
       border-bottom-left-radius: 28px;
       border-bottom-right-radius: 28px;
       h5{
@@ -321,7 +320,6 @@
       button{
         display: block;
         width: 180px;
-        height: 56px;
         font-size: 24px;
         color: #FFFFFF;
         background: #CD241D;
@@ -358,10 +356,12 @@
       color: #333333;
     }
     .reasonSI{
+      flex: 1;
       background: linear-gradient(0deg, #FDF7F7 0%, #FFFFFF 100%);
       box-shadow: 0px 0px 14px 5px rgba(236,234,234,0.8);
       border-radius: 8px;
-      padding: 8px 40px;
+      padding: 8px 0px;
+      margin: 0 5px;
       cursor: pointer;
       -webkit-transition:var(--webkit-transition);
       transition:var(--transition);
@@ -488,22 +488,19 @@
       margin-top: 60px;
       display: flex;
       justify-content: space-between;
+      gap:15px;
       i{
         font-style: normal;
       }
       .newWrapMCL{
+        width: 75%;
         .newWrapMCLT{
           position: relative;
           margin-bottom: 15px;
           cursor: pointer;
-          .imgWrapL{
-            width: 915px;
-            height: 420px;
-            overflow: hidden;
-          }
           img{
             width: 100%;
-            height: auto;
+            height: 425px;
           }
           p{
             position: absolute;
@@ -520,8 +517,9 @@
         .newWrapMCLB{
           display: flex;
           justify-content: space-between;
+          gap: 15px;
           div{
-            width: 450px;
+            flex: 1;
             background: #fff;
             color: #000;
             padding: 40px 20px;
@@ -548,7 +546,6 @@
                 }
               }
             }
-            
             &:hover{
               background-color: #CD241D;
               color: #fff;
@@ -571,11 +568,17 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        gap:15px;
         div{
+          flex: 1;
           background-color: #fff;
           cursor: pointer;
           -webkit-transition:var(--webkit-transition);
           transition:var(--transition);
+          img{
+            width: 100%;
+            min-height: 200px;
+          }
           p{
             color: #000;
             padding: 13px 10px;
@@ -607,6 +610,7 @@
   background: url('https://www.yangdong.co:8443/yangdong-new/index/bg-5.webp')no-repeat center;
   background-size: cover;
   .partnerM{
+    overflow: hidden;
     position: relative;
     height: inherit;
     img{
@@ -729,6 +733,7 @@
   background: url('https://www.yangdong.co:8443/yangdong-new/index/bg-6.webp')no-repeat center;
   background-size: cover;
   .evaM{
+    height: inherit;
     padding-top: 100px;
     .evaMT{
       display: flex;
@@ -761,6 +766,7 @@
       }
     }
     .evaImgW{
+      height: 80%;
       position: relative;
       img{
         position: absolute;
@@ -781,49 +787,49 @@
         }
         &:nth-child(1){
           width: 32%;
-          top: 120px;
+          top: 15%;
         }
         &:nth-child(2){
           width: 30%;
-          top: 290px;
+          top: 36%;
         }
         &:nth-child(3){
           width: 35%;
-          top: 420px;
+          top:56%;
         }
         &:nth-child(4){
           width: 26%;
-          top: 10px;
+          top: 1%;
           left: 30%;
         }
         &:nth-child(5){
           width: 20%;
-          top: 140px;
+          top: 19%;
           left: 36%;
         }
         &:nth-child(6){
           width: 30%;
-          top: 310px;
+          top: 42%;
           left: 34%;
         }
         &:nth-child(7){
           width: 40%;
-          top: 20px;
+          top: 3%;
           right: 0;
         }
         &:nth-child(8){
           width: 36%;
-          top: 190px;
+          top: 22%;
           right: 1%;
         }
         &:nth-child(9){
           width: 32%;
-          top: 320px;
+          top: 41%;
           right: 0;
         }
         &:nth-child(10){
           width: 34%;
-          top: 470px;
+          top: 61%;
           right: 30%;
         }
       }
@@ -848,6 +854,767 @@
       width: 718px;
       height: 122px;
       background: url('https://www.yangdong.co:8443/yangdong-new/index/b-img.webp')no-repeat;
+    }
+  }
+}
+// 响应式
+@media screen and (max-width:1440px) {
+  .caseWrap{
+    height: 400px;
+    .caseWrapM{
+      margin-top: 100px;
+      nav{
+        ul{
+          li{
+            font-size: 16px;
+          }
+          .liActive{
+            font-size: 20px;
+          }
+        }
+      }
+      main{
+        .caseMain{
+          div{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            h5{
+              font-size: 24px;
+              margin-bottom: 20px;
+            }
+            p{
+              font-size: 18px;
+              max-height: 200px;
+            }
+          }
+        }
+        img{
+          width: 50%;
+        }
+      }
+    }
+  }
+  .newWrap{
+    height: 1340px;
+    background-size: cover;
+    .newWrapM{
+      .newWrapMC{
+        flex-direction: column;
+        gap: 15px;
+        .newWrapMCL{
+          width: 100%;
+        }
+        .newWrapMCR{
+          flex-direction: row;
+        }
+      }
+    }
+  }
+  .partnerWrap{
+    height: 640px;
+  }
+  .evaWrap{
+    height: 800px;
+    background-size: cover;
+  }
+}
+@media screen and (max-width:1080px){
+  .productWrap{
+    .productC{
+      .productCM{
+        img{
+          display: none;
+        }
+      }
+    }
+  }
+  .caseWrap{
+    p{
+      font-size: 22px;
+    }
+    .caseWrapM{
+      nav{
+        ul{
+          padding: 0 20px;
+        }
+      }
+      main{
+        padding: 20px;
+      }
+    }
+  }
+  .newWrap{
+    .newWrapM{
+      .newWrapMH{
+        .newWrapMHL{
+          p{
+            font-size: 20px;
+          }
+          &::after{
+            top: -160px;
+          }
+        }
+        .newWrapMHR{
+          div{
+            padding: 10px 10px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:960px){
+  .indexWrap{
+    .aboutM{
+      .aboutMC{
+        b{
+          width: 100%;
+        }
+      }
+      .aboutIntro{
+        .aboutIntroC{
+          div{
+            pre{
+              font-size: 40px;
+            }
+            p{
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .caseWrap{
+    height: 400px;
+    h4{
+      font-size: 40px;
+    }
+    p{
+      font-size: 20px;
+    }
+    .caseWrapM{
+      nav{
+        ul{
+          flex-wrap: wrap;
+          flex: 1;
+          li{
+            width: 20%;
+            line-height: 50px;
+          }
+        }
+      }
+      main{
+        .caseMain{
+          div{
+            p{
+              font-size: 16px;
+            }
+          }
+        }
+        button{
+          width: 140px;
+          height: 40px;
+        }
+      }
+    }
+  }
+  .reasonWrap{
+    p{
+      font-size: 20px;
+    }
+    .reasonS{
+      span{
+        font-size: 18px;
+      }
+    }
+    .reasonM{
+      .reasonMC{
+        .reasonMCB{
+          width: 100%;
+          h5{
+            font-size: 40px;
+          }
+          p{
+            text-align: justify;
+            font-size: 26px;
+          }
+        }
+      }
+    }
+  }
+  .newWrap{
+    .newWrapM{
+      .newWrapMH{
+        flex-wrap: wrap;
+        padding-top: 40px;
+        flex: 1;
+        gap:20px;
+        .newWrapMHL{
+          width: 100%;
+          &::after{
+            right: 0px;
+            top: -100px;
+          }
+        }
+        .newWrapMHR{
+          width: 100%;
+          div{
+            padding: 10px 20px;
+          }
+        }
+      }
+      .newWrapMC{
+        .newWrapMCL{
+          .newWrapMCLT{
+            p{
+              font-size: 20px;
+            }
+          }
+          .newWrapMCLB{
+            div{
+              padding: 20px;
+              p{
+                font-size: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .partnerWrap{
+    height: 500px;
+  }
+  .evaWrap{
+    height: 600px;
+    .evaM{
+      padding-top: 60px;
+      .evaMT{
+        .evaMTL{
+          p{
+            font-size: 30px;
+            &:nth-child(3){
+              font-size: 20px;
+            }
+          }
+        }
+        .evaMTR{
+          div{
+            img{
+              width: 40px;
+            }
+            p{
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .indexBW{
+    div{
+      text-align: center;
+      p{
+        font-size: 22px;
+      }
+      a{
+        margin: auto;
+        width: 100%;
+        background-size: contain;
+      }
+    }
+  }
+}
+@media screen and (max-width:750px){
+  .indexWrap{
+    .aboutM{
+      height: initial;
+      .aboutMC{
+        height: initial;
+        margin-bottom: 60px;
+        b{
+          font-size: 30px;
+        }
+      }
+      .aboutIntro{
+        height: 280px;
+        .aboutIntroC{
+          flex-wrap: wrap;
+          padding-top: 60px;
+          justify-content: flex-start;
+          div{
+            width: 33%;
+            margin-top: 40px;
+            padding-left: 20px;
+          }
+        }
+      }
+    }
+  }
+  .productWrap{
+    .productC{
+      .productCH{
+        h4{
+          span{
+            font-size: 36px;
+          }
+        }
+        .text1{
+          font-size: 26px;
+        }
+        .text2{
+          font-size: 16px;
+        }
+      }
+      .productCS{
+        .productCSM{
+          .productCSMI{
+            .productIconW{
+              // padding: 8px;
+              // max-width: 46px;
+              // max-height: 46px;
+              img{
+                width: 20px;
+                margin: auto;
+              }
+            //   &::before{
+            //     width: 130%;
+            //     height: 130%;
+            //     top: -15%;
+            //     left: -15%;
+            //   }
+            }
+          }
+        }
+      }
+      .productCM{
+        .productCMT{
+          .productCMTUL{
+            ul{
+              li{
+                a{
+                  span{
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .caseWrap{
+    h4{
+      font-size: 32px;
+    }
+    p{
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    .caseWrapM{
+      margin-top: 20px;
+      main{
+        .caseMain{
+          flex-direction: column;
+          flex-direction: column-reverse;
+          gap:10px;
+          div{
+            p{
+              max-height: 150px;
+            }
+          }
+        }
+        button{
+          margin-left: auto;
+        }
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+  .reasonWrap{
+    height: initial;
+    min-height: auto;
+    h4{
+      font-size: 36px;
+    }
+    p{
+      font-size: 16px;
+    }
+    .reasonM{
+      height: 540px;
+      .reasonMC{
+        .reasonMCB{
+          
+          padding: 40px;
+        }
+      }
+    }
+  }
+  .newWrap{
+    .newWrapM{
+      .newWrapMH{
+        .newWrapMHL{
+          h4{
+            font-size: 36px;
+          }
+          &::after{
+            background-size: 300px;
+            background-position: right;
+          }
+        }
+      }
+      .newWrapMC{
+        .newWrapMCL{
+          .newWrapMCLT{
+            p{
+              font-size: 16px;
+            }
+          }
+          .newWrapMCLB{
+            div{
+              p{
+                font-size: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .partnerWrap{
+    height: 400px;
+  }
+  .evaWrap{
+    height: 500px;
+    .evaM{
+      .evaMT{
+        .evaMTL{
+          img{
+            width: 80px;
+            margin-right: 10px;
+          }
+          p{
+            font-size: 20px;
+            &:nth-child(3){
+              font-size: 16px;
+            }
+          }
+        }
+        .evaMTR{
+          display: none;
+        }
+      }
+    }
+  }
+  .indexBW{
+    div{
+      p{
+        font-size: 18px;
+      }
+    }
+  }
+}
+@media screen and (max-width:550px){
+  .indexWrap{
+    .aboutM{
+      .aboutMC{
+        padding-top: 40px;
+        b{
+          font-size: 22px;
+          margin: 40px 0;
+        }
+      }
+      .aboutIntro{
+        .aboutIntroC{
+          padding-top: 0px;
+          div{
+            pre{
+              font-size: 24px;
+              height: 50px;
+              line-height: 50px;
+              i{
+                font-size: 14px;
+                width: 26px;
+                height: 26px;
+                line-height: 26px;
+              }
+            }
+            p{
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .productWrap{
+    .productC{
+      .productCH{
+        h4{
+          span{
+            font-size: 22px;
+          }
+          img{
+            margin: 0 10px;
+          }
+          margin-bottom: 10px;
+        }
+        .text1{
+          font-size: 16px;
+          span{
+            font-size: 18px;
+          }
+        }
+      }
+      .productCS{
+        font-size: 14px;
+      }
+      .productCM{
+        .productCMT{
+          h5{
+            a{
+              font-size: 26px;
+            }
+          }
+          p{
+            font-size: 14px;
+          }
+          .productCMTUL{
+            ul{
+              font-size: 16px;
+              p{
+                margin-bottom: 0;
+                span{
+                  display: none;
+                }
+              }
+              li{
+                height: 20px;
+                a{
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .caseWrap{
+    height: initial;
+    min-height: initial;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    h4{
+      font-size: 26px;
+    }
+    .caseWrapM{
+      nav{
+        padding-top: 10px;
+        ul{
+          padding: 0 10px;
+          li{
+            font-size: 14px;
+            line-height: 30px;
+          }
+          .liActive{
+            font-size: 14px;
+            border-bottom:1px solid #CD241D;
+          }
+        }
+      }
+      main{
+        padding: 10px;
+        h5{
+          margin-top: 20px;
+          font-size: 20px!important;
+          margin-bottom: 10px;
+        }
+        p{
+          font-size: 14px!important;
+        }
+        button{
+          width: 100px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .reasonWrap{
+    padding-top: 40px;
+    h4{
+      font-size: 26px;
+    }
+    p{
+      font-size: 14px;
+    }
+    .reasonS{
+      .reasonSI{
+        .reasonImgW{
+          width: 36px;
+          height: 36px;
+          img{
+            width: 30px;
+            padding-top: 6px;
+          }
+        }
+        span{
+          margin-top: 4px;
+          font-size: 14px;
+        }
+      }
+    }
+    .reasonM{
+      height: 400px;
+      .reasonMC{
+        .reasonMCB{
+          h5{
+            font-size: 26px;
+          }
+          p{
+            font-size: 16px;
+            line-height: 30px;
+          }
+        }
+      }
+    }
+  }
+  .newWrap{
+    height: initial;
+    padding-bottom: 40px;
+    .newWrapM{
+      .newWrapMH{
+        .newWrapMHL{
+          h4{
+            font-size: 26px;
+          }
+          p{
+            font-size: 14px;
+          }
+          &::after{
+            background-size: 180px;
+            top: -122px;
+          }
+        }
+        .newWrapMHR{
+          div{
+            padding: 5px 8px;
+            font-size: 14px;
+            img{
+              width: 36px;
+              margin-top: 5px;
+            }
+          }
+        }
+      }
+      .newWrapMC{
+        margin-top: 30px;
+        gap:5px;
+        .newWrapMCL{
+          .newWrapMCLT{
+            margin-bottom: 10px;
+            img{ 
+              height: 200px;
+            }
+            p{
+              font-size: 14px;
+              line-height: 22px;
+              padding: 5px;
+            }
+          }
+          .newWrapMCLB{
+            gap:10px;
+            div{
+              padding: 5px;
+              p{
+                font-size: 14px;
+                &:last-child{
+                  i{
+                    font-size: 12px;
+                    &:first-child{
+                      padding-left: 0;
+                      background-image: none;
+                    }
+                  }
+                }
+              }
+              &:hover{
+                p{
+                  &:last-child{
+                    i{
+                      &:first-child{
+                        background-image: none;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .newWrapMCR{
+          margin-top: 5px;
+          gap: 10px;
+          div{
+            .newImgWrap{
+              height: 120px!important;
+            }
+            img{
+              min-height: 120px;
+            }
+            p{
+              padding: 5px 5px;
+              font-size: 14px;
+              i{
+                font-size: 12px;
+                padding-left: 20px;
+                background-size: 14px;
+              }
+            }
+            .newPHeight{
+              height: 72px;
+            }
+            &:hover{
+              p{
+                i{
+                  background-size: 14px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .partnerWrap{
+    height: 260px;
+  }
+  .evaWrap{
+    height: 400px;
+    .evaM{
+      padding-top: 40px;
+      .evaImgW{
+        img{
+          width: 80%;
+        }
+      }
+    }
+  }
+  .indexBW{
+    height: initial;
+    div{
+      padding-top: 40px;
+      p{
+        font-size: 14px;
+      }
+      a{
+        height: 80px;
+      }
     }
   }
 }

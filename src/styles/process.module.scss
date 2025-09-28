@@ -28,7 +28,6 @@
     top: -20px;
     left: 50%;
     transform: translateX(-50%);
-    // z-index: 1;
     font-weight: bold;
     font-size: 50px;
     color: #DDDDDD;
@@ -269,6 +268,7 @@
       width: 50%;
       display: flex;
       justify-content: space-between;
+      gap: 20px;
       .process2CR1,.process2CR2{
         h4{
           font-weight: 500;
@@ -279,7 +279,6 @@
         div{
           width: 322px;
           height: 308px;
-          margin-left: 20px;
           background: #FFFFFF;
           border-radius: 10px;
           position: relative;
@@ -309,7 +308,6 @@
             margin-top: 100px;
           }
       }
-      
       }
     }
   }
@@ -355,8 +353,8 @@
     margin-top: 40px;
     display: flex;
     justify-content: space-between;
+    gap: 20px;
     .process3CR{
-      margin-left: 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -407,10 +405,20 @@
       }
     }
     .process4Cgrid1{
-      grid-template-columns: repeat(1, 626px 362px 363px);
+      grid-template-columns: 2fr 1fr 1fr;
+      img{
+        height: 100%;
+        width: 100%;
+      }
     }
     .process4Cgrid2{
       grid-template-columns: repeat(3, 1fr);
+      div{
+        img{
+          height: 100%;
+          width: 100%;
+        }
+      }
       margin: 24px 0;
       .diyBox{
         background: #E30212;
@@ -448,7 +456,452 @@
             transition:all 0.5s linear;
           }
         }
-        
+      }
+    }
+  }
+}
+@media screen and (max-width:1440px) {
+  .processTitle{
+    h4{
+      font-size: 40px;
+    }
+    span{
+      font-size: 25px;
+    }
+  }
+  .process1{
+    background-image: none;
+    .process1Box{
+      .process1Cen{
+        div{
+          p{
+            font-size: 16px;
+          }
+        }
+      }
+      .process1BH{
+        h4{
+          font-size: 36px;
+        }
+      }
+      .process1B{
+        .process1BItem{
+          .process1BItemB{
+            height: 320px;
+            span{
+              font-size: 24px;
+            }
+            p{
+              font-size: 14px;
+              line-height: 22px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .process2{
+    .process2C{
+      .process2CL{
+        width: initial;
+        h4{
+          font-size: 36px;
+        }
+        p{
+          font-size: 16px;
+        }
+        .process2CList{
+          margin: 30px 0;
+          gap: 20px;
+          .process2CListI{
+            width: initial;
+            p{
+              font-size: 16px;
+            }
+          }
+        }
+      }
+      .process2CR{
+        width: 70%;
+        .process2CR1,.process2CR2{
+          width: 50%;
+          h4{
+            // font-size: 30px;
+            margin-left: 0px!important;
+            margin-right: 0px!important;
+          }
+          div{
+            width: 100%;
+            span{
+              font-size: 26px;
+            }
+            p{
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .process3{
+    .process3Top{
+      div{
+        font-size: 20px;
+      }
+    }
+    .process3C{
+      .process3CL{
+        width: 50%;
+      }
+      .process3CR{
+        .process3CRT{
+          h5{
+            font-size: 22px;
+          }
+          p{
+            font-size: 16px;
+          }
+        }
+        .process3CRB{
+          overflow: hidden;
+          gap: 10;
+          img{ 
+            width: 50%;
+            margin-right: 0;
+          }
+        }
+      }
+    } 
+  }
+  .process4{
+    .process4C{
+      .process4Cgrid{
+        gap: 10px;
+        img{
+          width: 100%;
+        }
+      }
+      .process4Cgrid2{
+        margin: 10px 0;
+        .diyBox{
+          overflow: hidden;
+          p{
+            font-size: 36px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:1000px) {
+  .processTitle{
+    h4{
+      font-size: 36px;
+    }
+  }
+  .process1{
+    background-image: none;
+    .process1Box{
+      .process1Top{
+        height: 200px;
+        .process1TopL{
+          padding-left: 20px;
+          h4{
+            font-size: 30px;
+          }
+          p{
+            font-size: 16px;
+          }
+        }
+        .process1TopR{
+          width: 40%;
+          img{
+            width: 80%;
+          }
+        }
+      }
+      .process1Cen{
+        div{
+          p{
+            font-size: 12px;
+          }
+        }
+      }
+      .process1BH{
+        h4{
+          font-size: 30px;
+        }
+        p{
+          font-size: 16px;
+        }
+      }
+      .process1B{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 10px;
+        .process1BItem{
+          height: initial;
+          .process1BItemB{
+            height: 300px;
+          }
+        }
+      }
+    }
+  }
+  .process2{
+    height: initial;
+    padding-bottom: 40px;
+    .process2C{
+      flex-wrap: wrap;
+      text-align: center;
+      .process2CL{
+        width: 100%!important;
+        width: initial;
+        .process2CList{
+          justify-content: center;
+          margin-bottom: 40px;
+        }
+        a{
+          margin: 40px auto;
+        }
+      }
+      .process2CR{
+        margin-top: 20px;
+        width: 100%;
+        .process2CR1,.process2CR2{
+          width: 50%;
+          h4{
+            font-size: 36px;
+            text-align: right;
+          }
+          span{
+            width: 100%;
+            text-align: right;
+            right: 0;
+            padding-right: 20px;
+          }
+        }
+      }
+    }
+  }
+  .process3{
+    h4{
+      font-size: 26px;
+    }
+    .process3Top{
+      div{
+        font-size: 16px;
+      }
+    }
+    .process3C{
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      gap: 10px;
+      .process3CL{
+        width: 100%;
+      }
+      .process3CR{
+        .process3CRT{
+          h5{
+            font-size: 24px;
+          }
+          p{
+            margin-bottom: 20px;
+          }
+        }
+      }
+    } 
+  }
+  .process4{
+    h4{
+      font-size: 24px;
+    }
+    .process4C{
+      .process4Cgrid{
+        gap: 10px;
+        img{
+          width: 100%;
+        }
+      }
+      .process4Cgrid1,.process4Cgrid2{
+        div{
+          height: 180px;
+          span{
+            font-size: 14px;
+          }
+        }
+      }
+      .process4Cgrid2{
+        .diyBox{
+          text-align: center;
+          p{
+            font-size: 26px;
+          }
+          span{
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:720px){
+  .processTitle{
+    h4{
+      font-size: 20px;
+    }
+    span{
+      font-size: 18px;
+    }
+    height: 40px;
+  }
+  .process1{
+    .process1Box{
+      width: 100%;
+      .process1Top{
+        height: 150px;
+        .process1TopL{
+          padding-left: 10px;
+          h4{
+            font-size: 20px;
+          }
+          p{
+            font-size: 14px;
+          }
+        }
+      }
+      .process1Cen{
+        div{
+          padding: 20px 0;
+          p{
+            display: none;
+          }
+          img{
+            width: 36px;
+            height: 36px;
+          }
+        }
+      }
+      .process1BH{
+        h4{
+          font-size: 26px;
+        }
+      }
+      .process1B{
+        width: 96%;
+        margin: auto;
+        .process1BItem{
+          margin: 0;
+          .process1BItemB{
+            height: 270px;
+            padding: 100px 10px 30px;
+            span{
+              font-size: 20px;
+              &::before{
+                bottom: -10px;
+              }
+            }
+            p{
+              margin-top: 30px;
+              b{
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .process2{
+    height: initial;
+    padding-bottom: 40px;
+    .process2C{
+      .process2CL{
+        h4{
+          font-size: 26px;
+        }
+        p{
+          font-size: 14px;
+        }
+        .process2CList{
+          .process2CListI{
+            p{
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      .process2CR{
+        gap: 10px;
+        .process2CR1,.process2CR2{
+          width: 50%;
+          div{
+            height: initial;
+            padding: 10px;
+            b{
+              right: 10px;
+              font-size: 40px;
+            }
+            span{
+              padding-right: 10px;
+              font-size: 18px;
+            }
+            p{
+              font-size: 14px;
+              margin-top: 80px;
+            }
+          }
+          h4{
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+  .process3{
+    h4{
+      font-size: 18px;
+    }
+    .process3Top{
+      width: 100%;
+      div{
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        img{
+          width: 36px;
+        }
+      }
+    } 
+  }
+  .process4{
+    .process4C{
+      .process4Cgrid{
+        gap: 5px;
+        img{
+          width: 100%;
+        }
+      }
+      .process4Cgrid1,.process4Cgrid2{
+        div{
+          height: 120px;
+          span{
+            font-size: 12px;
+          }
+        }
+      }
+      .process4Cgrid2{
+        margin: 5px 0;
+        .diyBox{
+          text-align: center;
+          p{
+            font-size: 20px;
+          }
+          span{
+            font-size: 12px;
+          }
+        }
       }
     }
   }

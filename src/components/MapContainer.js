@@ -15,8 +15,8 @@ function MapComponent() {
         mapRef.current = new AMap.Map('container', {
           // 设置地图容器id
           viewMode: '3D', // 是否为3D地图模式
-          zoom: 19.4, // 初始化地图级别
-          center: [120.74180,31.352870], // 初始化地图中心点位置
+          zoom: 18.4, // 初始化地图级别
+          center: [120.74280,31.352870], // 初始化地图中心点位置
         });
         const marker = new AMap.Marker({
           position: new AMap.LngLat(120.74260, 31.352890),
@@ -49,6 +49,6 @@ function MapComponent() {
     })
   }
 }, [])
-  return (<div id="container" style={{width: "100%",height: "744px",}}/>);
+  return (<div id="container" style={{width: "100%",height: "100%"}}/>);
 }
 export default MapComponent;

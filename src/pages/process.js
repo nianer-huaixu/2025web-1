@@ -178,7 +178,7 @@ export default function Process(){
           })}
         </div>
         <div className={[styles.process3C,'main'].join(' ')}>
-          <img src={data4C[index4].img1}/>
+          <img className={styles.process3CL} src={data4C[index4].img1}/>
           <div className={styles.process3CR}>
             <div className={styles.process3CRT}>
               <h5>{data4C[index4].text1}</h5>

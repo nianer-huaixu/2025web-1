@@ -1,8 +1,11 @@
 import { useState } from "react"
 import useStore from "@/hook/useStore"
 import styles from "@/styles/mark.module.scss"
+import { useRouter } from "next/router"
+import Link from "next/link"
 export default function MarkCom({suf}){
   const store = useStore()
+  const router = useRouter()
   const data = [
     {
       anchor:'lvban',
@@ -134,48 +137,68 @@ export default function MarkCom({suf}){
   function selectLI(i){
     setIndex(i)
   }
+  const cateData = [
+    {label:'lvban',index:1,text:'铝板'},
+    {label:'lvbang',index:2,text:'铝棒'},
+    {label:'lvguan',index:3,text:'铝管'},
+    {label:'lvjuan',index:4,text:'铝卷'},
+    {label:'lvxingcai',index:5,text:'铝型材'},
+    {label:'lvduanjian',index:6,text:'铝锻件'}
+  ]
+  function onSelectCate(cate){
+    router.push({pathname:'/product/' + cate})
+  }
+  function selectMark(mark){
+    router.push({pathname:'/product/' + mark})
+  }
   return <>
     <section className="pb-[60px]" style={{background:`url('${store.common.url}product/牌号/bg-1.webp')no-repeat`,backgroundSize:'cover'}}>
       <div className="main">
         <h4 className={styles.graTitle}>万吨库存 规格齐全<span>我们提供半成品和加工零件，包括板材、管材、棒材、卷材、铝型材和锻件的期货及现货。</span></h4>
-        <div className="grid grid-cols-3 gap-[60px]">
-          {[1,2,3,4,5,6].map((i)=>{
-            return <img key={i} src={store.common.url + 'product/牌号/p-'+ i + '.webp'}/>
+        <div className={["grid grid-cols-3 gap-[60px] h-[900px]",styles.MarkCateBox].join(' ')}>
+          {cateData.map((item)=>{
+            return <div key={item.index} className="relative" style={{width: '100%',aspectRatio: '1/1'}}>
+              <div className={styles.middle} onSelectCate={()=>onSelectCate(item.label)}>
+                <Link href={`/product/${item.label}`} className={styles.front}><img src={store.common.url + 'product/牌号/p-'+ item.index + '.webp'}/></Link>
+                <Link href={`/product/${item.label}`} className={styles.back}><img src={store.common.url + 'product/牌号/p-i-'+ item.index + '.png'}/><span>{item.text}</span></Link>
+              </div>
+            </div>
           })}
         </div>
       </div>
     </section>
     {data.map((item,i)=>{
-      return <section>
+      return <section key={i}>
         <div className='upwards' id={item.anchor}></div>
-        <div style={{background: 'linear-gradient(0deg, #000000 38%, #575B64 100%)',height:'1000px',overflow:'hidden'}}>
-          <div className="main flex justify-between pt-[40px]"
+        <div style={{background: 'linear-gradient(0deg, #000000 38%, #575B64 100%)',overflow:'hidden'}}
+          className={["h-[1000px]",styles.cateSection].join(' ')}>
+          <div className={["main flex justify-between pt-[40px]",styles.cateItemWrap].join(' ')}
             style={{
-              flexDirection:i%2!=0?'row-reverse' : '',
-              textAlign:i%2!=0?'right' : '',
+              flexDirection:i%2!=0?'row-reverse':'',
+              textAlign:i%2!=0?'right':'',
             }}
           >
-            <div>
+            <div className={styles.MarkItemText}>
               <h4 className={styles.cateTitle}><span>{item.cate}</span>{item.text1}</h4>
-              <p className="text-[24px] w-[1030px] mt-[20px] leading-[40px]">{item.text2}</p>
-              <p className="mt-[20px]">{item.list.map((li,l)=>{
-                return <span key={l} className="bg-[#E30212] text-[18px] p-[4px]"
+              <p className={["text-[24px] mt-[20px] leading-[40px]",styles.MarkItemTextP1].join(' ')}
+                
+              >{item.text2}</p>
+              <p className="mt-[20px] flex flex-wrap"
+                style={{justifyContent:i%2!=0?'end':''}}
+              >{item.list.map((li,l)=>{
+                return <span key={l} className="bg-[#E30212] text-[18px] mb-[10px]"
                   style={{
                     marginLeft:i%2!=0?'10px' : '',
                     marginRight:i%2==0?'10px' : '',
                   }}
+                  onClick={()=>{selectMark(item.anchor)}}
                 >{li}</span>
               })}</p>
-              <img className="mt-[40px] mx-auto"
-                style={{
-                  marginLeft:item.img=='x'?'80px' :'',
-                  padding:item.img=='juan'? '80px 0 0 280px ':''
-                }}
-                src={store.common.url + 'product/牌号/' + item.img + '.webp'}/>
+              <img src={store.common.url + 'product/牌号/' + item.img + '.webp'}/>
             </div>
-            <div className="pt-[100px]">
+            <div className={["mt-[100px]",styles.MarkItemImg].join(' ')}>
               {[1,2,3].map((i)=>{
-                return <img className="mb-[40px]" key={i} src={store.common.url + 'product/牌号/' + item.img + '-' + i + '.webp'}/>
+                return <div key={i} className={['border-1 bg-[#fff] mb-[40px]',styles.imgWrap].join(' ')}><img src={store.common.url + 'product/牌号/' + item.img + '-' + i + '.webp'}/></div>
               })}
             </div>
           </div>
@@ -183,22 +206,22 @@ export default function MarkCom({suf}){
       </section>
     })}
     <section style={{background:`url('${store.common.url}product/牌号/bg-2.webp')no-repeat`,backgroundSize:'cover'}}>
-      <div className="main" style={{background:`url('${store.common.url}product/牌号/pai.webp')no-repeat top right`}}>
+      <div className={["main pb-[40px]",styles.flowPai].join(' ')} style={{backgroundImage:`url('${store.common.url}product/牌号/pai.webp')`}}>
         <h4 className={styles.title2}><span>出库流程</span>定制产品·一站式采购</h4>
-        <div className="grid grid-cols-3 gap-[20px] w-fit">
+        <div className={["grid grid-cols-3 gap-[20px] w-fit",styles.markFlow].join(' ')}>
           {data1.map((item,i)=>{
-            return <div key={i} className="border flex rounded-[8px] items-center h-[130px] w-[300px] px-[30px] justify-between">
+            return <div key={i} className={["border flex rounded-[8px] items-center h-[130px] w-[300px] px-[20px] justify-between",styles.markFlowItem].join(' ')}>
               <img src={store.common.url + 'product/牌号/icon-' + (i+1) + '.webp'}/>
               <span className="text-[30px]">{item}</span>
             </div>
           })}
         </div>
         <h4 className={styles.title2}><span>品质管理</span>原厂质保·专业技术服务</h4>
-        <div className='flex justify-between'>
+        <div className={['flex justify-between pb-[40px] gap-[25px]',styles.qualitygridGap].join(' ')}>
           {data2.map((item,i)=>{
             return <div key={i} className={['relative',styles.qualityBox].join(' ')}>
               <img src={store.common.url +'product/牌号/q-' + (i+1) +'.webp'}/>
-              <div className='absolute w-full h-full left-[0] top-[0] bg-[rgba(0,0,0,0.5)]'>
+              <div className={['absolute w-full h-full left-[0] top-[0]',styles.coverBox].join(' ')}>
                 <div>
                 <p className='text-[36px]'>{item.text1}</p>
                 <span>{item.text2}</span>
@@ -210,12 +233,14 @@ export default function MarkCom({suf}){
       </div>
     </section>
     <section style={{background:`url('${store.common.url}product/牌号/a-bg.webp')no-repeat`,backgroundSize:'cover'}}>
-      <div className="main pb-[60px]">
+      <div className={["main pb-[60px]",styles.markApplyBox].join(' ')}>
         <h4 className={styles.title2}><span>应用领域·工程案例</span>产品广泛应用于汽车、机械制造、船舶、模具等工厂</h4>
-        <div className="main flex justify-between">
-          <div className="relative">
-            <img src={store.common.url +'product/牌号/a-'+ (index+1) +'.webp'}/>
-            <div className="bg-[rgba(205,36,29,0.8)] absolute bottom-[0px] w-full py-[20px] px-[40px]">
+        <div className={["flex justify-between",styles.markApplyWrap].join(' ')}>
+          <div className={["relative w-[85%]",styles.markApplyWrapT].join(' ')}>
+            <div className={styles.imgWrap}>
+              <img src={store.common.url +'product/牌号/a-'+ (index+1) +'.webp'}/>
+            </div>
+            <div className={["bg-[rgba(205,36,29,0.8)] w-[100%] absolute bottom-[0px] py-[20px] px-[40px]",styles.markApplyText].join(' ')}>
               <p className="text-[24px]">{data3[index].text1}</p>
             </div>
           </div>
@@ -226,9 +251,10 @@ export default function MarkCom({suf}){
           </ul>
         </div>
       </div>
-      <div className="w-full bg-[#CD241D] flex justify-center py-[40px]">
+      <div className={["w-full bg-[#CD241D] flex justify-center py-[40px]",styles.markQua4Wrap].join(' ')}>
         {data4.map((item,i)=>{
-          return <div key={i} className="text-center px-[40px] border-l" style={{borderLeft:i==0?'none':''}}>
+          return <div key={i} className={["text-center px-[40px] border-l",styles.markQua4].join(' ')}
+          style={{borderLeft:i==0?'none':''}}>
             <p className="text-[16px]">{item.text1}</p>
             <p className="text-[16px]">{item.text2}</p>
             <p className="my-[20px] tracking-[2]">

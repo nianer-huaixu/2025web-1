@@ -76,7 +76,7 @@ export default function Application(){
       title:'船舶用铝合金产品应用',
       e_title:'Application of marine aluminum alloy products',
       content1:'扬东铝业集团供应的海洋系泊链铝用于船舶和石油工业，强度高，韧性好，具备耐海水腐蚀、抗疲劳、耐磨损等特性。其中四级系泊链是目前海洋用的最高级别系链，需求量较大，成功通过国际著名船级社品质认证，填补了国内空白，实物质量达到国际水平，已经形成批量化供应铝产品能力，广泛用于勘探平台、浮时采油平台、海上储油转运站和辅助船队等海洋工程及专用船舶领域。',
-      content2:'铝合金板材在船舶及海洋工程中主要用在船体结构及隔舱等上层建筑上，同时通常用小直径铝合金管材做管道，大直径管材和棒材则用作船体架构、杆构件、梁等，为了使船体轻量化，有时会在船亮结构上使用一些薄壁型材。扬东铝业的产品具有良好的强度、加工性能和耐蚀性，完全能够适应海洋应用需要。通过与国内外专家的合作，掌握了先进的船用铝合金板和各类挤压型材的生产技术，为船舶及海洋工程提供前瞻性的支持。',
+      content2:'铝合金板材在船舶及海洋工程中主要用在船体结构及隔舱等上层建筑上，同时通常用小直径铝合金管材做管道，大直径管材和棒材则用作船体架构、杆构件、梁等，为了使船体轻量化，有时会在船亮结构上使用一些薄壁型材。通过与国内外专家的合作，掌握了先进的船用铝合金板和各类挤压型材的生产技术，为船舶及海洋工程提供前瞻性的支持。',
       model:[
         {lebel:'5052',text:'铝板'},
         {lebel:'5754',text:'铝棒'},
@@ -128,7 +128,7 @@ export default function Application(){
       alt:'化工容器铝合金应用',
       title:'化工容器铝合金产品应用',
       e_title:'Application of chemical container aluminum alloy products',
-      content1:'扬东铝业集团5000系铝合金材料具有良好的抗腐蚀性和可焊接性能，用铝合金制造的体，内部不需要任何防护涂层就可以运输各种液体或者液化气，并且因为没有腐蚀，从而保证油品更清洁，罐体强制报废后回收价值也更高同时，因为铝合金具有良好的导电性能，很少集聚静电在罐体上，所以不会产生火花而导致爆炸，而且铝合金能很好的吸收罐体在碰撞时所产生的照间能力，不会造成罐体开裂而产生泄漏。也因为罐体的重量大大减轻，车身的重心相应降低，从而降低罐车侧翻的可能性。这也是BP,SHELL等国际石油巨头强制使用铝合金体运输石油的原因。适用于油罐车和其他化工运输车罐体所需的5083、5182等铝合金板材产品，具有大规格、中强度、高质量表面、高成形性的特点，并具有良好的抗腐蚀性能和焊接性能，以及可回收性。不但安全可靠也利于环保，特别是5083-H321铝合金在低温下，韧性和强度会提高，很适合用在运输船液化天然气(LNG)贮罐。',
+      content1:'扬东铝业集团5000系铝合金材料具有良好的抗腐蚀性和可焊接性能，用铝合金制造的体，内部不需要任何防护涂层就可以运输各种液体或者液化气，并且因为没有腐蚀，从而保证油品更清洁，罐体强制报废后回收价值也更高同时，因为铝合金具有良好的导电性能，很少集聚静电在罐体上，所以不会产生火花而导致爆炸，不会造成罐体开裂而产生泄漏。也因为罐体的重量大大减轻，车身的重心相应降低，从而降低罐车侧翻的可能性。这也是BP,SHELL等国际石油巨头强制使用铝合金体运输石油的原因。适用于油罐车和其他化工运输车罐体所需的5083、5182等铝合金板材产品，具有大规格、中强度、高质量表面、高成形性的特点，并具有良好的抗腐蚀性能和焊接性能，以及可回收性。不但安全可靠也利于环保，特别是5083-H321铝合金在低温下，韧性和强度会提高，很适合用在运输船液化天然气(LNG)贮罐。',
       content2:null,
       model:[
         {lebel:'5052',text:'铝板'},
@@ -198,7 +198,7 @@ export default function Application(){
   return(
     <>
       <Banner suf='application'/>
-      <section className={styles.application0}>
+      <section className={styles.applyTop}>
         <div className="main">
           <p className={styles.anchorBox}>{linkData.map((item,i)=>{
             return <Link key={i} href={'/applicationfields#'+ item.link}>{item.text}</Link>
@@ -211,18 +211,18 @@ export default function Application(){
             <div className='upwards' id={item.href}></div>
             <div className={styles.applyCaseL}>
               <h4>{item.title}</h4>
-              <p>{item.e_title}</p>
+              <p className={styles.applyEtitle}>{item.e_title}</p>
               <p>{item.content1}</p>
               <p>{item.content2}</p>
               <p>{item.trait}</p>
               <p style={{fontSize:'24px',marginBottom:'20px'}}>典型合金如：</p>
               <div className={styles.linkgroup}>
                 {item.model.map((btn,b)=>{
-                  return <Link key={b} href={{pathname:'/product/detail/',query:{detail:btn.lebel+btn.text}}}>{btn.lebel}</Link>
+                  return <Link key={b} href={{pathname:'/product/'+btn.lebel}}>{btn.lebel}</Link>
                 })}
               </div>
             </div>
-            <div>
+            <div className={styles.hoverEffectWrap}>
               <HoverAnimation
                 image1={item.img}
                 image2={item.img}

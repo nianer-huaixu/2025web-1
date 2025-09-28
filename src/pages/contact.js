@@ -8,8 +8,8 @@ export default function Contact(){
     {icon:store.common.url+'contact/icon1.webp',text1:'销售总机',text2:'0512-62388268',text3:'TEL'},
     {icon:store.common.url+'contact/icon2.webp',text1:'技术咨询',text2:'0512-62388068',text3:'TEL'},
     {icon:store.common.url+'contact/icon3.webp',text1:'急单热线',text2:'0512-62388298',text3:'TEL'},
-    {icon:store.common.url+'contact/icon4.webp',text1:'企业邮箱',text2:'szydtl7075@163.com',text3:'MAILBOX'},
-    {icon:store.common.url+'contact/icon5.webp',text1:'销售传真',text2:'0512-62388198',text3:'FAX'}
+    {icon:store.common.url+'contact/icon5.webp',text1:'销售传真',text2:'0512-62388198',text3:'FAX'},
+    {icon:store.common.url+'contact/icon4.webp',text1:'企业邮箱',text2:'szydtl7075@163.com',text3:'MAILBOX'}
   ]
   const data2 =[
     {text1:'林经理',text:'Sales Executive',text2:'销售主管',text3:'158 5000 6720',img:store.common.url + 'contact/erweima7.webp'},
@@ -17,9 +17,9 @@ export default function Contact(){
     {text1:'黄女士',text:'Sales Specialist',text2:'销售专员',text3:'137 7608 0469',img:store.common.url + 'contact/erweima3.webp'},
     // {text1:'尹小艳',text:'Sales Specialist',text2:'销售专员',text3:'138 6257 6851',img:store.common.url + 'contact/erweima4.webp'},
     // {text1:'黄玲',text:'Sales Specialist',text2:'销售专员',text3:'180 2024 2001',img:store.common.url + 'contact/erweima5.webp'},
-    {text1:'徐小玲',text:'Sales Specialist',text2:'销售专员',text3:'180 2024 2063',img:store.common.url + 'contact/erweima6.webp'},
-    {text1:'郑红玲',text:'Sales Specialist',text2:'销售专员',text3:'180 2024 2001',img:store.common.url + 'contact/erweima9.webp'},
-    {text1:'张智慧',text:'Sales Specialist',text2:'销售专员',text3:'138 6257 6851',img:store.common.url + 'contact/erweima10.webp'},
+    {text1:'徐女士',text:'Sales Specialist',text2:'销售专员',text3:'180 2024 2063',img:store.common.url + 'contact/erweima6.webp'},
+    // {text1:'郑红玲',text:'Sales Specialist',text2:'销售专员',text3:'180 2024 2001',img:store.common.url + 'contact/erweima9.webp'},
+    {text1:'张女士',text:'Sales Specialist',text2:'销售专员',text3:'138 6257 6851',img:store.common.url + 'contact/erweima10.webp'},
     // {text1:'李彬英',text:'Sales Specialist',text2:'销售专员',text3:'180 2024 2069',img:store.common.url + 'contact/erweima8.webp'},
     {text1:'黄经理',text:'Technical Director',text2:'技术总监',text3:'188 5299 6299',img:store.common.url + 'contact/erweima_H1.webp'}
   ]
@@ -28,7 +28,7 @@ export default function Contact(){
       <Banner suf='contact'/>
       <section className={styles.contact1}>
         <div className="main">
-          <h4>联系方式</h4>
+          <h4><span>联系方式</span></h4>
           <div className={styles.contact1C}>
             <div className={styles.contact1L}>
               {data1.map((item,i)=>{
@@ -44,7 +44,7 @@ export default function Contact(){
               <pre>订单咨询</pre>
               <p style={{marginBottom:'40px'}}>0512-62388058</p>
               <pre>技术顾问</pre>
-              <p style={{marginBottom:'40px'}}>188 5299 6299（黄先生）微信同号</p>
+              <p className={styles.contactText} style={{marginBottom:'40px'}}>188 5299 6299<span>(黄先生) 微信同号</span></p>
               <pre>营业时间：8:00-17:30（周一至周六）</pre>
               <div className={styles.imgWrap}>
                 <img src={store.common.url +'contact/erweima.webp'}/>
@@ -60,7 +60,7 @@ export default function Contact(){
       </section>
       <section className={styles.contact2}>
         <div className="main">
-          <h4>业务联系方式<span>专业服务团队，提供一流的产品与服务，有任何问题，随时与我们取得联系，我们真诚为您解答</span></h4>
+          <h4><span>业务联系方式</span>专业服务团队，提供一流的产品与服务，有任何问题，随时与我们取得联系，我们真诚为您解答</h4>
           <div className={styles.contactBox}>
             {data2.map((item,i)=>{
               return <div key={i}>

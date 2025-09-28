@@ -84,7 +84,6 @@ export default function Xingcai(){
     '65*65','65*70','65*75','65*80','65*90','65*100','65*110','65*120','65*130','65*150','70*70','70*75','70*80','70*85','70*90','70*100','70*110','70*120','70*150','70*200',
     '75*75','75*80','75*85','75*90','75*95','75*150','76*86','80*80','80*90','80*100','80*110','80*120','80*150','80*180',
     '90*90','90*100','100*100','100*110','100*120','100*130','100*140','100*150','105*105','110*110','115*115','120*120','125*125','130*130','135*135','145*145','150*150','160*160','170*170','180*180','185*185','90*190','200*200',
-    '','','','','','','','','','','','',''
   ]
   const table3 = [
     '10*10*1','15*15*1','15*15*1.5','15*15*2','15*30*1','20*20*1','20*20*1.5','20*20*2','20*20*3','20*30*1','20*30*2','20*30*3','20*40*2','20*40*2.5','20*40*3',
@@ -96,7 +95,6 @@ export default function Xingcai(){
     '80*80*1.5','80*80*3','80*80*4','80*80*5','80*80*8','80*80*10','80*100*5','90*90*3','90*90*4','90*90*5',
     '100*100*3','100*100*4','100*100*5','100*100*6','100*100*8','100*100*10','100*200*3','100*200*5',
     '110*110*3','120*120*3','120*120*5','120*120*6','120*120*7','150*150*3','150*150*6','150*150*10','150*150*10(R角)','152.4*152.4*9.5','152.4*152.4*12.7','184*184*8','200*200*10','200*200*15','200*200*20','203.2*203.2*9.5','203.2*203.2*12.7','250*250*10','250*250*12',
-    '','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''
   ]
   const table4 = [
     '10*10*1','10*10*2','10*10*3','12*12*1','12*12*2','12*12*3','15*15*1','15*15*2','15*15*3','20*20*1','20*20*1.5','20*20*2','20*20*3','20*20*4','20*20*5','20*30*2','20*30*3','20*40*3','20*40*4','20*40*5',
@@ -105,10 +103,9 @@ export default function Xingcai(){
     '50*50*2','50*50*3','50*50*4','50*50*5','50*50*6','50*50*8','50*50*10','50*75*5','50*100*10','50*100*12','60*60*2','60*60*3','60*60*4','60*60*5','60*60*6','60*60*8','60*60*10','65*65*5',
     '70*70*3','70*70*4','70*70*5','70*70*6','70*70*7','70*70*8','70*70*10','80*80*3','80*80*4','80*80*5','80*80*6','80*80*8','80*80*10','90*90*3','90*90*4','90*90*5','90*90*6','90*90*8','90*90*10',
     '100*100*3','100*100*4','100*100*5','100*100*6','100*100*8','100*100*10','120*120*5','120*120*10','150*150*10','150*150*15','180*180*20','200*200*10','200*200*20','250*250*10',
-    '','','','','','','','','','',''
   ]
   const table5 = [
-    'S6','S6.35','S8','S10','S12','S13','S14','S16','S17','S19','S20','S22','S24','S25','S26','S27','S30','S32','S34','S36','S38','S40','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''
+    'S6','S6.35','S8','S10','S12','S13','S14','S16','S17','S19','S20','S22','S24','S25','S26','S27','S30','S32','S34','S36','S38','S40'
   ]
   const cate4Text = '各行业铝材加工，铝棒加工，大型CNC铝板加工，新能源铝材 加工，全自动印花台板，金属整平加工，电热铝棒加工，铝棒切割加工。'
   return <>
@@ -129,21 +126,21 @@ export default function Xingcai(){
       </div>
     </section> */}
     <section className="bg-[#17161B]">
-      <h4 className={styles.title2}>产品规格&nbsp;&nbsp;&nbsp;&nbsp;<span>一站式采购</span></h4>
+      <h4 className={styles.title2}>产品规格&nbsp;&nbsp;<span>一站式采购</span></h4>
       <Table1 data={table1}/>
-      <div className="main flex">
+      <div className={["main flex",styles.tableBox].join(' ')}>
         <div>
           <div className="text-center border text-[20px] py-[4px] tracking-[2px] border-b">常备型材(铝排、方棒、扁棒)库存</div>
           <div className="text-center text-[20px] border-l border-r">规格mm</div>
           <div className="flex border text-center">
-            <div className="w-full">
-              <div className="grid grid-rows-60 grid-flow-col border border-b-0 border-l-0 border-t-0">
+            <div className={["w-full",styles.gridRowMinWidth].join(' ')}>
+              <div className={["grid grid-rows-60 grid-flow-col border border-b-0 border-l-0 border-t-0",styles.gridRow3].join(' ')}>
                 {table2.map((item,i)=>{
                   return <span key={i} className="border-r border-b text-[16px]">{item}</span>
                 })}
               </div>
             </div>
-            <div className="w-[100px] bg-[#404040]">
+            <div className={["w-[100px] bg-[#404040]",styles.gridRowRight].join(' ')}>
               <div className="grid grid-cols-1">
                 {['常备长度','2500','3000','6000','...'].map((item,i)=>{
                   return <span key={i} className="border-b text-[16px]">{item}</span>
@@ -156,14 +153,14 @@ export default function Xingcai(){
           <div className="text-center border text-[20px] py-[4px] tracking-[2px] border-b">常备(铝方管)库存</div>
           <div className="text-center text-[20px] border-l border-r">高*宽*壁厚mm</div>
           <div className="flex border text-center">
-            <div className="w-full">
-              <div className="grid grid-rows-60 grid-flow-col border border-b-0 border-l-0 border-t-0">
+            <div className={["w-full",styles.gridRowMinWidth].join(' ')}>
+              <div className={["grid grid-rows-60 grid-flow-col border border-b-0 border-l-0 border-t-0",styles.gridRow4].join(' ')}>
                 {table3.map((item,i)=>{
                   return <span key={i} className="border-r border-b text-[16px]">{item}</span>
                 })}
               </div>
             </div>
-            <div className="w-[100px] bg-[#404040]">
+            <div className={["w-[100px] bg-[#404040]",styles.gridRowRight].join(' ')}>
               <div className="grid grid-cols-1">
                 {['常备长度','2500','3000','6000','...'].map((item,i)=>{
                   return <span key={i} className="border-b text-[16px]">{item}</span>
@@ -176,14 +173,14 @@ export default function Xingcai(){
           <div className="text-center border text-[20px] py-[4px] tracking-[2px] border-b">常备(角铝)库存</div>
           <div className="text-center text-[20px] border-l border-r">宽*高*厚mm</div>
           <div className="flex border text-center">
-            <div className="w-full">
-              <div className="grid grid-rows-60 grid-flow-col border border-b-0 border-l-0 border-t-0">
+            <div className={["w-full",styles.gridRowMinWidth].join(' ')}>
+              <div className={["grid grid-rows-60 grid-flow-col border border-b-0 border-l-0 border-t-0",styles.gridRow5].join(' ')}>
                 {table4.map((item,i)=>{
                   return <span key={i} className="border-r border-b text-[16px]">{item}</span>
                 })}
               </div>
             </div>
-            <div className="w-[100px] bg-[#404040]">
+            <div className={["w-[100px] bg-[#404040]",styles.gridRowRight].join(' ')}>
               <div className="grid grid-cols-1">
                 {['常备长度','2500','3000','6000','...'].map((item,i)=>{
                   return <span key={i} className="border-b text-[16px]">{item}</span>
@@ -196,14 +193,14 @@ export default function Xingcai(){
           <div className="text-center border text-[20px] py-[4px] border-b">常备(六角铝棒)库存</div>
           <div className="text-center text-[20px] border-l border-r">S=对边mm</div>
           <div className="flex border text-center">
-            <div className="w-[94px]">
-              <div className="grid grid-rows-60 grid-flow-col border border-b-0 border-l-0 border-t-0">
+            <div className={["w-[94px]",styles.gridRowMinWidth].join(' ')}>
+              <div className={["grid grid-rows-60 grid-flow-col border border-b-0 border-l-0 border-t-0",styles.gridRow6].join(' ')}>
                 {table5.map((item,i)=>{
                   return <span key={i} className="border-r border-b text-[16px]">{item}</span>
                 })}
               </div>
             </div>
-            <div className="w-[100px] bg-[#404040]">
+            <div className={["w-[100px] bg-[#404040]",styles.gridRowRight].join(' ')}>
               <div className="grid grid-cols-1">
                 {['常备长度','2500','3000','6000','...'].map((item,i)=>{
                   return <span key={i} className="border-b text-[16px]">{item}</span>

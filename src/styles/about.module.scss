@@ -141,7 +141,6 @@
           letter-spacing: -0.0063rem;
         }
       }
-      
     }
     .btnGroup{
       display: flex;
@@ -258,12 +257,15 @@
   
 }
 .about4wrap{
-  width: 100%;
-  height: 852px;
-  background: url('https://www.yangdong.co:8443/yangdong-new/about/bg-3.webp');
-  background-size: cover;
+  position: relative;
+  img{
+    width: 100%;
+  }
   div{
-    padding-top: 100px;
+    position: absolute;
+    left: 50%;
+    top: 60px;
+    transform: translateX(-50%);
     h4{
       &::after{
         content: 'Certificate of Honor';
@@ -392,8 +394,6 @@
           text-align: justify;
           line-height: 30px;
           height: 84px;
-          // overflow: hidden;     /* 隐藏溢出内容 */
-          // text-overflow: ellipsis; /* 用省略号代替溢出文本 */
           display: -webkit-box;
           -webkit-line-clamp: 3;
           -webkit-box-orient: vertical;
@@ -402,14 +402,13 @@
       }
       &:nth-child(odd){
         div{
-          padding-top: 40px;
+          padding-top: 18%;
           transition: all 0.4s ease-out;
-          
         }
       }
       &:nth-child(even){
         div{
-          padding-top: 260px;
+          padding-top: 78%;
           transition: all 0.4s ease-out;
         }
       }
@@ -420,11 +419,374 @@
         }
         &:nth-child(odd),&:nth-child(even){
           div{
-            padding-top: 120px;
+            padding-top: 22%;
             p{
               height: 360px;
               -webkit-line-clamp: none;
             }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:1440px) {
+  .about1wrap{
+    // background-position: top 200px;
+    .about1wrapC{
+      z-index: 5;
+    }
+    img{
+      z-index: -1;
+      // width: 80%;
+    }
+  }
+  .about2Wrap{
+    background-position: center;
+    .about2C{
+      .historyText{
+        opacity: 1;
+      }
+      .btnGroup{
+        margin-top: 40px;
+      }
+    }
+  }
+  .about3wrap{
+    height: initial;
+    margin-bottom: 40px;
+    .about3C{
+      .about3L{
+        padding-right: 20px;
+        grid-column-gap: 20px;
+        div{
+          p{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  .about5wrap{
+    height: initial;
+    .about5C{
+      .about5ImgWrap{
+        .about5ImgL{
+          // aspect-ratio: .89 / 1;
+          height: inherit;
+          p{
+            padding: 10px;
+            width: 90%;
+            font-size: 16px;
+            line-height: 26px;
+          }
+        }
+      }
+    }
+  }
+  .about6{
+    .about6C{
+      .about6CItem{
+        div{
+          span{
+            font-size: 20px;
+          }
+          p{
+            font-size: 16px;
+            padding: 10px;
+            height: 76px;
+            line-height: 22px;
+          }
+        }
+        &:nth-child(odd){
+          div{
+            padding-top: 16%;
+            transition: all 0.4s ease-out;
+          }
+        }
+        &:nth-child(even){
+          div{
+            padding-top: 70%;
+          }
+        }
+        &:hover{
+          &:nth-child(odd),&:nth-child(even){
+            div{
+              padding-top: 10%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:1080px){
+  .about1wrap{
+    .about1wrapC{
+      .about1wrapL{
+        p{
+          width: 100%;
+        }
+        .about1wrapList{
+          margin-top: 60px;
+          flex-wrap: wrap;
+          div{
+            margin-bottom: 20px;
+          }
+        }
+      }
+      img{
+        display: none;
+      }
+    }
+  }
+  .about6{
+    .about6C{
+      .about6CItem{
+        div{
+          p{
+            padding-top: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:920px){
+  .about3wrap{
+    .about3C{
+      .about3L{
+        div{
+          padding-top: 70px;
+          p{
+            margin-top: 10px;
+          }
+          &:nth-child(1),&:nth-child(2),&:nth-child(3),&:nth-child(4){
+            background-size: 60px;
+          }
+          &:hover{
+            &:nth-child(1),&:nth-child(2),&:nth-child(3),&:nth-child(4){
+              background-size: 60px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .about6{
+    .about6C{
+      .about6CItem{
+        div{
+          p{
+            height: 60px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:980px){
+  .titleCom{
+    font-size: 36px;
+    &::after{
+      font-size: 26px;
+      width: 100%;
+    }
+  }
+  .about1wrap{
+    background-position: bottom 0px  right -200px;
+    .about1wrapC{
+      padding-top: 60px;
+      .about1wrapL{
+        b{
+          font-size: 20px;
+        }
+        p{
+          margin-top: 40px;
+        }
+      }
+      
+    }
+  }
+  .about2Wrap{
+    .about2C{
+      maring-top: 60px;
+      .about2CTop{
+        .about2CTopItem{
+          p{
+            font-size: 100px;
+          }
+          span{
+            font-size: 20px;
+          }
+        }
+      }
+      .historyText{
+        height: 440px;
+        margin-top: 0;
+        padding-top: 0;
+        opacity: 1;
+        p{
+          font-size: 16px;
+          line-height: 24px;
+        }
+        div{
+          p{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .about3wrap{
+    height: initial;
+    .about3C{
+      flex-direction: column;
+      .about3L{
+        width: 100%;
+        padding-right: 0;
+      }
+      .about3R{
+        margin-top: 10px;
+        width: 100%;
+        overflow: hidden;
+      }
+    }
+  }
+  .about5wrap{
+    h4{
+      &::after{
+        width: 100%;
+        font-size: 26px;
+      }
+    }
+    .about5C{
+      .about5ImgWrap{
+        flex-direction: column;
+        .about5ImgL{
+          width: 100%;
+          img{
+            width: 100%;
+          }
+          p{
+            padding: 20px;
+            line-height: 40px;
+          }
+        }
+        .about5ImgR{
+          margin-top: 10px;
+          margin-left: 0;
+          .about5ImgRgrid1,.about5ImgRgrid2{
+            gap: 10px;
+          }
+        }
+      }
+    }
+  }
+  .about6{
+    .about6C{
+      .about6CItem{
+        div{
+            width: 100%;
+          span{
+            font-size: 16px;
+          }
+          p{
+            display:none;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:500px){
+  .about1wrap{
+    background-position: bottom 0px  right -330px;
+    height: initial;
+    .about1wrapC{
+      .about1wrapL{
+        b,p{
+          font-size: 16px;
+        }
+        .about1wrapList{
+          display: grid;
+          grid-template-columns: repeat(2,1fr);
+          div{
+            margin-right: 0;
+          }
+          pre,pre>i{
+            font-size: 36px;
+          }
+        }
+      }
+    }
+  }
+  .about2Wrap{
+    .titleCom{
+      &::after{
+        top: -8px;
+      }
+    }
+    .about2C{
+      margin-top: 40px;
+      .about2CTop{
+        .about2CTopItem{
+          p{
+            font-size: 80px;
+          }
+          span{
+            font-size: 14px;
+          }
+        }
+      }
+      .historyText{
+        p{
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+  .about3wrap{
+    h4{
+      margin-top: 40px;
+    }
+    .about3C{
+      .about3L{
+        gap: 10px;
+        div{
+          span{
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+  .about4wrap{
+    div{
+      top: 10px;
+    }
+  }
+  .about5wrap{
+    .about5C{
+      .about5ImgWrap{
+        margin-top: 0;
+        .about5ImgL{
+          p{
+            font-size: 14px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+  }
+  .about6{
+    .about6C{
+      .about6CItem{
+        div{
+          span{
+            font-size: 14px;
           }
         }
       }

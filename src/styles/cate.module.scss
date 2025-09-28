@@ -22,25 +22,27 @@
     color: #CD241D;
   }
 }
-.cate1Item{
-  background-size: contain;
-  border-radius: 10px;
-  padding: 20px;
-  p{
-    font-family: Source Han Sans CN;
-    font-weight: bold;
-    font-size: 36px;
-    color: #FD2621;
-    background: linear-gradient(0deg, #585A5A 0%, #6B6D6D 0%, #858788 0%, #7D7E7F 17.4072265625%, #9C9B9E 41.2353515625%, #C7C9CB 58.0322265625%, #FFFFFF 79.5654296875%, #BEBFC0 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  span{
-    font-family: Source Han Sans CN;
-    font-weight: 400;
-    font-size: 16px;
-    color: #939393;
-    display: block;
+.cate1Box{
+  .cate1Item{
+    border-radius: 10px;
+    padding: 20px;
+    Aspect-ratio:1/0.87;
+    p{
+      font-family: Source Han Sans CN;
+      font-weight: bold;
+      font-size: 36px;
+      color: #FD2621;
+      background: linear-gradient(0deg, #585A5A 0%, #6B6D6D 0%, #858788 0%, #7D7E7F 17.4072265625%, #9C9B9E 41.2353515625%, #C7C9CB 58.0322265625%, #FFFFFF 79.5654296875%, #BEBFC0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    span{
+      font-family: Source Han Sans CN;
+      font-weight: 400;
+      font-size: 16px;
+      color: #939393;
+      display: block;
+    }
   }
 }
 .textureMain{
@@ -94,8 +96,39 @@
       padding: 5px 0;
     }
   }
+  .tdLeft{
+    text-align: left;
+    padding-left: 100px;
+  }
+}
+.table2{
+
+}
+.cate2{
+  .cate2Top{
+  }
+  .cate2Bottom{
+    .cate2BottomBox{
+      .iconWrap1{
+        width: 115px; 
+        height: 115px;
+      }
+      .textWrap{
+        width: -webkit-fill-available;
+        p{
+          width: 90%;
+        }
+      }
+    }
+  }
+}
+.cate3{
+  .cate3Bottom{
+
+  }
 }
 .cate4{
+  .cate4textBox{}
   .textSpan{
     font-family: Source Han Sans CN;
     font-weight: 400;
@@ -132,26 +165,607 @@
       margin-right: 20px;
     }
   }
-}
-.qualityBox{
-  div{
+  .qualityBox{
+    overflow: hidden;
+    img{
+    -webkit-transition:all 0.3s linear;
+    transition:all 0.3s linear; 
+    }
+    .coverBox{
+      background-color: rgba(0,0,0,0.5);
+      -webkit-transition:all 0.3s linear;
+      transition:all 0.3s linear;  
+    }
+    &:hover{
+      img{
+        transform: scale(1.1);
+        -webkit-transition:all 0.3s linear;
+        transition:all 0.3s linear;  
+      }
+      .coverBox{
+        background-color: rgba(0,0,0,0.0);
+        -webkit-transition:all 0.3s linear;
+        transition:all 0.3s linear;  
+      }
+    }
     div{
-      width: max-content;
-      margin: 50% auto 0;
+      div{
+        width: max-content;
+        margin: 50% auto 0;
+        p{
+          font-family: Source Han Sans CN;
+          font-weight: bold;
+          font-size: 36px;
+          color: #FFFFFF;
+        }
+        span{
+          font-family: Source Han Sans CN;
+          font-weight: 400;
+          font-size: 24px;
+          color: #FFFFFF;
+          border-bottom: 1px solid #fff;
+        }
+      }
+      
+    }
+  }
+  .imgWrap{
+    overflow: hidden;
+    img{
+      -webkit-transition:all 0.3s linear;
+      transition:all 0.3s linear; 
+    }
+    &:hover{
+      img{
+        transform: scale(1.1);
+        -webkit-transition:all 0.3s linear;
+        transition:all 0.3s linear;  
+      }
+    }
+  }
+}
+.cate5{
+  background-repeat: no-repeat;
+  background-position: 20px 20px;
+  p{
+    &:nth-child(1){
+      padding-left: 90px;
+    }
+  }
+}
+@media screen and (max-width:1440px) {
+  .title2{
+    font-size: 68px;
+  }
+  .textureMain{
+    ul{
+      li{
+        span{
+          font-size: 50px;
+          &::after{
+            width: 100px;
+            bottom: 8px;
+          }
+        }
+      }
+    }
+  }
+  .cate4{
+    .qualityBox{
+      .coverBox{
+        p{
+          font-size: 30px;
+        }
+      }
+    }
+  }
+  .cate5{
+    background-size: 40%;
+    p{
+      &:nth-child(1){
+        padding-left: 60px;
+        b{
+          font-size: 26px;
+        }
+      }
+      &:nth-child(2){
+        font-size: 20px;
+      }
+    }
+  }
+  .tableBox{
+    flex-direction: column;
+    .gridRowMinWidth{
+      width: calc(100% - 87px);
+      overflow-x: scroll;
+    }
+    .gridRow1,.gridRow2,.gridRow3,.gridRow4,.gridRow5{
+      span{
+        width: 85px;
+        font-size: 16px;
+      }
+    }
+    .gridRow1{
+      grid-template-rows: repeat(43, 1fr);
+      span{
+        border-right: none;
+        border-left: 1px solid #fff;
+      }
+    }
+    .gridRow2{
+      grid-template-rows: repeat(37, 1fr);
+      span{
+        border-left: 1px solid #fff;
+        border-left: none;
+      }
+    }
+    .gridRow3{
+      grid-template-rows: repeat(20, 1fr);
+    }
+    .gridRow4{
+      grid-template-rows: repeat(10, 1fr);
+      text-wrap: nowrap;
+      span{
+        width: 125px;
+      }
+    }
+    .gridRow5{
+      grid-template-rows: repeat(4, 1fr);
+    }
+    .gridRow6{
+      grid-template-rows: repeat(4, 1fr);
+    }
+  }
+}
+@media screen and (max-width:1240px){
+  .title,.title2{
+    font-size: 58px;
+  }
+  .cate1Box{
+    .cate1Item{
+      padding: 10px;
       p{
-        font-family: Source Han Sans CN;
-        font-weight: bold;
-        font-size: 36px;
-        color: #FFFFFF;
+        font-size: 30px;
+      }
+    }
+  }
+  .table1{
+    tr{
+      td{
+        font-size: 20px;
+      }
+    }
+  }
+  .table2{
+    span{
+      font-size: 20px;
+      padding-left: 0;
+      text-align: center;
+    }
+  }
+  .cate2{
+    .cate2Bottom{
+      .cate2BottomBox{
+        .iconWrap1{
+          width: 80px;
+          height: 110px;
+          img{
+            width: 90%;
+          }
+        }
+        .textWrap{
+          span{
+            font-size: 26px;
+          }
+          p{
+            font-size: 16px;
+            width: 96%;
+          }
+        }
+      }
+    }
+  }
+  .cate4{
+    .cate4textBox{
+      p{
+        font-size: 20px;
+      }
+    }
+    .qualityBox{
+      .coverBox{
+        p{
+          font-size: 22px;
+        }
+        span{
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .cate5{
+    p{
+      &:nth-child(1){
+        padding-left: 60px;
+        b{
+          font-size: 22px;
+        }
+      }
+      &:nth-child(2){
+        font-size: 16px;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+@media screen and (max-width:1080px){
+  .title,.title2{
+    font-size: 48px;
+  }
+  .textureMain{
+    ul{
+      grid-gap:10px;
+      li{
+        margin-bottom: 10px;
+        span{
+          font-size: 36px;
+          &::after{
+            width: 70px;
+            bottom: 4px;
+          }
+        }
+      }
+    }
+  }
+  .table1{
+    tr{
+      td{
+        font-size: 16px;
+      }
+    }
+  }
+  .table2{
+    span{
+      font-size: 16px;
+    }
+  }
+  .cate3{
+    .cate3Bottom{
+      p{
+        &:nth-child(1){
+          font-size: 20px;
+        }
+        &:nth-child(2){
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .cate4{
+    .cate4Top{
+      p{
+        font-size: 20px;
+      }
+    }
+    .cate4textBox{
+      p{
+        font-size: 16px;
+        &:nth-child(1){
+          margin-bottom: 20px;
+        }
+        &:nth-child(3){
+          margin-top: 20px;
+        }
+      }
+    }
+    .cate4gridGap{
+      gap: 15px;
+    }
+  }
+  .cate5{
+    p{
+      &:nth-child(1){
+        padding-left: 50px;
+        b{
+          font-size: 18px;
+        }
+      }
+      &:nth-child(2){
+        font-size: 14px;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+@media screen and (max-width:900px){
+  .title,.title2{
+    font-size: 36px;
+  }
+  .textureMain{
+    ul{
+      li{
+        span{
+          font-size: 28px;
+          &::after{
+            width: 60px;
+            bottom: 4px;
+          }
+        }
+      }
+    }
+  }
+  .cate1Box{
+    grid-template-columns: repeat(3,1fr);
+    .cate1Item{
+      padding: 10px;
+      p{
+        font-size: 24px;
       }
       span{
-        font-family: Source Han Sans CN;
-        font-weight: 400;
-        font-size: 24px;
-        color: #FFFFFF;
-        border-bottom: 1px solid #fff;
+        font-size: 14px;
+      }
+    }
+  }
+  .table1{
+    .tdLeft{
+      padding-left: 20px;
+    }
+    tr{
+      td{
+        &:nth-child(1){
+          width: 40px;
+        }
+      }
+    }
+  }
+  .cate2{
+    .cate2Top{
+      p{
+        &:nth-child(3){
+          font-size: 20px;
+        }
+        &:nth-child(2){
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .cate2Bottom{
+      grid-template-columns: repeat(1,1fr);
+      row-gap: 20px;
+      .cate2BottomBox{
+        .iconWrap1{
+          width: 150px;
+          height: 120px;
+          img{
+            width: auto;
+          }
+        }
+      }
+      
+    }
+  }
+  .cate3{
+    .cate3Top1{
+      margin-bottom: 10px;
+      gap: 10px;
+    }
+    .cate3Top2{
+      gap: 10px;
+    }
+    .cate3Bottom{
+      div{
+        div{
+          width: 33%;
+          height: 120px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  .cate4{
+    .title2{
+      font-size: 30px;
+    }
+    .qualityTitle{
+      font-size: 20px;
+    }
+    .cate4Top{
+      p{
+        font-size: 14px;
+      }
+    }
+    .cate4Center{
+      flex-direction: column-reverse;
+      .cate4textBox{
+        width: 100%;
+        p{
+          &:nth-child(1){
+            margin-top: 40px;
+          }
+        }
+      }
+    }
+    .cate4gridGap{
+      gap: 10px;
+    }
+    .qualityBox{
+      .coverBox{
+        p{
+          font-size: 16px;
+        }
+        span{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .cate5{
+    background-size: 30%;
+    p{
+      &:nth-child(1){
+        padding-left:28px;
+        padding-top: 0;
+        b{
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:600px){
+  .title,.title2{
+    font-size: 26px;
+  }
+  .cate1Box{
+    grid-template-columns: repeat(2,1fr);
+    .cate1Item{
+      p{
+        font-size: 18px;
+      }
+      span{
+        font-size: 12px;
+      }
+    }
+  }
+  .textureMain{
+    ul{
+      gap: 5px;
+      li{
+        span{
+          font-size: 16px;
+          &::after{
+            width: 100%;
+            height: 4px;
+          }
+        }
+      }
+    }
+    p{
+      font-size: 12px;
+    }
+  }
+  .table1{
+    tbody{
+      tr{
+        td{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .table2Title{
+    font-size: 16px;
+  }
+  .table2{
+    span{
+      font-size: 12px;
+    }
+  }
+  .cate2{
+    .cate2Top{
+      p{
+        &:nth-child(1){
+          font-size: 14px;
+        }
+        &:nth-child(3){
+          font-size: 16px;
+        }
+      }
+    }
+    .cate2Bottom{
+      .cate2BottomBox{
+        .textWrap{
+          span{
+            font-size: 20px;
+          }
+          p{
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  .cate3{
+    .cate3Bottom{
+      img{
+        width: 40px;
+        padding-bottom: 0px;
+      }
+      p{
+        font-size: 16px;
+        &:nth-child(3){
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .cate4{
+    .cate4Top{
+      .title2{
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .cate4Center{
+      .cate4textBox{
+        p{
+          font-size: 14px;
+        }
+      }
+    }
+    .cate4gridGap{
+      gap: 5px;
+    }
+    .qualityTitle{
+      display: flex;
+      flex-direction: column;
+    }
+    .cate4gridGap{
+      .qualityBox{
+        div{
+          p,span{
+            font-size: 10px;
+          }
+        }
+        
       }
     }
     
+  }
+  .tableBox{
+    div{
+    font-size: 14px;
+    }
+    .gridRowMinWidth{
+      div{
+        span{
+          font-size: 12px;
+        }
+      }
+    }
+    .gridRowRight{
+      span{
+        font-size: 14px;
+      }
+      div{
+      span{
+        font-size: 12px;
+        }
+      }
+    }
+
+  }
+  .cate5{
+    background-position: 4px 13px;
+    padding: 5px;
+    background-image: none!important;
+    p{
+      font-size: 12px!important;
+      &:nth-child(1){
+        padding-left:0px;
+        b{
+          font-size: 12px;
+        }
+      }
+    }
   }
 }

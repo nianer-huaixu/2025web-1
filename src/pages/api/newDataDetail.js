@@ -16,7 +16,7 @@ const data =[
     },{
       id:1,
       title:'江苏扬东铝业集团公司开展员工拓展活动',
-      year:'2023',
+      year:'2015',
       month:'10',
       day:'20',
       viewCount:'2796',
@@ -26,7 +26,7 @@ const data =[
     },{
       id:2,
       title:'热烈祝贺扬东集团顺利通过ISO9001质量管理体系认证',
-      year:'2023',
+      year:'2018',
       month:'08',
       day:'13',
       viewCount:'2954',
@@ -36,7 +36,7 @@ const data =[
     },{
       id:3,
       title:'【喜讯】扬东集团荣获3A级企业信用等级证书',
-      year:'2023',
+      year:'2017',
       month:'07',
       day:'20',
       viewCount:'3354',
@@ -46,7 +46,7 @@ const data =[
     },{
       id:4,
       title:'扬东集团被中国兵器工业集团纳入优选供应商名录',
-      year:'2023',
+      year:'2015',
       month:'07',
       day:'15',
       viewCount:'4791',
@@ -56,7 +56,7 @@ const data =[
     },{
       id:5,
       title:'扬东集团荣获3A级信用认证“诚信经营示范单位”',
-      year:'2022',
+      year:'2020',
       month:'06',
       day:'27',
       viewCount:'3246',
@@ -66,7 +66,7 @@ const data =[
     },{
       id:6,
       title:'扬东铝板定制生产注意事项',
-      year:'2024',
+      year:'2021',
       month:'05',
       day:'11',
       viewCount:'3655',
@@ -76,7 +76,7 @@ const data =[
     },{
       id:7,
       title:'铝板定制厂家分享表面裂纹消除办法',
-      year:'2022',
+      year:'2020',
       month:'04',
       day:'25',
       viewCount:'5641',
@@ -96,7 +96,7 @@ const data =[
     },{
       id:9,
       title:'【扬东铝业】铝板铝棒加工注意事项分享',
-      year:'2024',
+      year:'2019',
       month:'02',
       day:'11',
       viewCount:'6465',

@@ -1,10 +1,11 @@
 @tailwind components;
 
 .caseTop{
-  height: 80px;
+  // height: 80px;
   background: #EEEEEE;
   div{
     display: flex;
+    padding-bottom: 20px;
     span{
       font-size: 24px;
       color: #000000;
@@ -59,8 +60,7 @@
     margin-top: 40px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 40px;
-    row-gap: 40px;
+    gap: 40px;
     div{
       img{
         width: 100%;
@@ -74,6 +74,55 @@
         font-size: 24px;
         color: #000000;
         padding: 15px 0;
+      }
+    }
+  }
+}
+@media screen and (max-width:1080px){
+  .caseTop{
+    div{
+      margin: auto;
+      justify-content: space-around;
+      span{
+        margin-right: 0px;
+        padding-right: 0px;
+        border: none;
+        font-size: 20px;
+      }
+    }
+  }
+  .caseC{
+    .caseBox{
+      gap: 20px;
+      div{
+        p{
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:1080px){
+  .caseC{
+    .caseBox{
+      grid-template-columns: repeat(2,1fr);
+    }
+  }
+}
+@media screen and (max-width:530px){
+  .caseTop{
+    height: initial;
+    div{
+      flex-wrap: wrap;
+    }
+  }
+  .caseC{
+    .caseBox{
+      gap: 10px;
+      div{
+        p{
+          font-size: 14px;
+        }
       }
     }
   }

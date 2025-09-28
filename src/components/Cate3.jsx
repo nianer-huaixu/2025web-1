@@ -61,20 +61,20 @@ export default function({title,sup}){
       text2:'FNO UPGRADE'
     }
   ]
-  return <section style={{background:`url('${store.common.url}product/case-bg.webp')no-repeat`,backgroundSize:'cover'}}>
+  return <section className={styles.cate3} style={{background:`url('${store.common.url}product/case-bg.webp')no-repeat`,backgroundSize:'cover'}}>
     <h4 className={styles.title2}>{title}案例&nbsp;&nbsp;&nbsp;&nbsp;<span>来图来样定制</span></h4>
     <div className="slider-container main pb-[48px]">
       <Slider {...settings}>
         {[1,2,3].map((item,i)=>{
           return <div key={i}>
-            <div className="flex mb-[27px]">
-              <div className="mr-[20px]">
-                <img  className="mb-[27px]" src={store.common.url + 'product/' + sup +'/case/'+ item +'-1.webp'}/>
-                <img src={store.common.url + 'product/' + sup +'/case/'+ item +'-2.webp'}/>
+            <div className={["flex gap-[20px] mb-[20px]",styles.cate3Top1].join(' ')}>
+              <div className="flex flex-col justify-between w-[40%]">
+                <div className="h-[48%] overflow-hidden"><img className="h-[100%]" src={store.common.url + 'product/' + sup +'/case/'+ item +'-1.webp'}/></div>
+                <div className="h-[48%] overflow-hidden"><img className="h-[100%]" src={store.common.url + 'product/' + sup +'/case/'+ item +'-2.webp'}/></div>
               </div>
-              <img src={store.common.url + 'product/' + sup +'/case/'+ item +'-3.webp'}/>
+              <div className="h-[60%] overflow-hidden"><img src={store.common.url + 'product/' + sup +'/case/'+ item +'-3.webp'}/></div>
             </div>
-            <div className="grid grid-cols-4 gap-[20px]">
+            <div className={["grid grid-cols-4 gap-[20px]",styles.cate3Top2].join(' ')}>
               <img src={store.common.url + 'product/' + sup +'/case/'+ item +'-4.webp'}/>
               <img src={store.common.url + 'product/' + sup +'/case/'+ item +'-5.webp'}/>
               <img src={store.common.url + 'product/' + sup +'/case/'+ item +'-6.webp'}/>
@@ -84,10 +84,10 @@ export default function({title,sup}){
         })}
       </Slider>
     </div>
-    <div className="w-[100%] bg-[#CD241D]">
-      <div className="main flex justify-between py-[40px]">
+    <div className={["w-[100%] bg-[#CD241D]",styles.cate3Bottom].join(' ')}>
+      <div className="main flex flex-wrap justify-between py-[40px] items-center">
         {data.map((item,i)=>{
-          return <div key={i} className="text-center">
+          return <div key={i} className="h-[140px] flex flex-col text-center">
             <img className="m-auto pb-[20px]" src={item.img}/>
             <p className="text-[25px] tracking-[4]">{item.text1}</p>
             <p className="text-[14px]">{item.text2}</p>

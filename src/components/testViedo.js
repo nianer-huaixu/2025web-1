@@ -30,7 +30,11 @@ export default function VideoPlayerTest() {
     }
   }, [currentVideoIndex]);
   return (
-    <div>
+    <div style={{
+      width: '100%',
+      height: 'auto',
+      aspectRatio: '16/9'
+    }}>
       <video
         width='100%'
         // poster='https://www.yangdong.co:8443/yangdong-new/index/banner1.webp'
